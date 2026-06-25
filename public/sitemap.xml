@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://alisie.app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alisie.app/" />
+  </url>
+  <url>
+    <loc>https://alisie.app/whats-new</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/whats-new" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru/whats-new" />
+  </url>
+  <url>
+    <loc>https://alisie.app/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/support" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru/support" />
+  </url>
+  <url>
+    <loc>https://alisie.app/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/privacy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru/privacy" />
+  </url>
+  <url>
+    <loc>https://alisie.app/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/terms" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru/terms" />
+  </url>
+  <url>
+    <loc>https://alisie.app/ru</loc>
+  </url>
+</urlset>
