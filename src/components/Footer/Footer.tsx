@@ -20,9 +20,9 @@ export default function Footer() {
                 </div>
                 {data.columns.map((column) => (
                     <div key={column.title}>
-                        <h3 className='text-sm font-bold text-color uppercase tracking-wider opacity-80'>
+                        <h2 className='text-sm font-bold text-color uppercase tracking-wider opacity-80'>
                             {column.title}
-                        </h3>
+                        </h2>
                         <ul className='mt-4 flex flex-col gap-3'>
                             {column.links.map((link) => (
                                 <li key={link.label}>
