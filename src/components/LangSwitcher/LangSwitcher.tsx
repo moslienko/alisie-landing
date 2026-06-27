@@ -1,4 +1,5 @@
 'use client'
+import { navigate } from 'astro:transitions/client'
 import { useLocale } from '../../i18n/useLocale'
 import { localizedPath, LOCALES, type Locale } from '../../i18n/locale'
 
@@ -15,9 +16,10 @@ export default function LangSwitcher({ locale: localeProp }: { locale?: Locale }
         } catch {
             void 0
         }
-        // Real URLs now: navigate to the same page in the other locale.
+        // Navigate via the View Transitions router for a smooth, flicker-free
+        // language switch instead of a full page reload.
         const { pathname, hash } = window.location
-        window.location.href = localizedPath(pathname + hash, next)
+        navigate(localizedPath(pathname + hash, next))
     }
 
     return (

@@ -1,5 +1,6 @@
 ---
 import '../index.css'
+import { ClientRouter } from 'astro:transitions'
 
 export interface Props {
   /** Page locale. */
@@ -28,6 +29,7 @@ const ogLocaleAlt = locale === 'ru' ? 'en_US' : 'ru_RU'
 <html lang={locale}>
   <head>
     <meta charset="UTF-8" />
+    <ClientRouter />
     <link rel="preload" as="image" href="/app_icon_192.png" />
     <!-- iOS Safari Smart App Banner - native "Open in App" prompt -->
     <meta name="apple-itunes-app" content="app-id=1485091289" />
@@ -73,17 +75,21 @@ const ogLocaleAlt = locale === 'ru' ? 'en_US' : 'ru_RU'
       rel="stylesheet"
     />
     <title>{title}</title>
-    <!-- Set the theme before first paint to avoid a flash of the wrong theme. -->
+    <!-- Set the theme before first paint to avoid a flash of the wrong theme.
+         Re-runs after each View Transition swap so navigation never flashes. -->
     <script is:inline>
-      ;(function () {
+      function applyTheme() {
         try {
           var saved = localStorage.getItem('theme')
           var theme = saved === 'light' ? 'light' : 'dark'
+          document.documentElement.classList.remove('theme-light', 'theme-dark')
           document.documentElement.classList.add('theme-' + theme)
         } catch (e) {
           document.documentElement.classList.add('theme-dark')
         }
-      })()
+      }
+      applyTheme()
+      document.addEventListener('astro:after-swap', applyTheme)
     </script>
   </head>
   <body>
