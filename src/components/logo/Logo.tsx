@@ -22,6 +22,7 @@ const Logo: React.FC<LogoProps> = ({ size }) => {
                 className={`${iconSizeClasses[size]} aspect-square object-cover mr-2 rounded-[22%]`}
                 src={data.icon}
                 alt='app icon'
+                decoding='async'
             />
             {data.name}
         </a>

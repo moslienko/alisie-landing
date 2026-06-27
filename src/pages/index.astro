@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import HomePage from '../app/HomePage'
+import { ui } from '../i18n/ui'
+
+const locale = 'en'
+const t = ui(locale)
+---
+
+<BaseLayout
+  locale={locale}
+  title={t.metaTitle}
+  description={t.metaDescription}
+  path="/"
+>
+  <!-- Root language redirect: send Russian-preferring visitors to /ru,
+       unless they have an explicit saved preference. Mirrors the old SPA
+       RootRedirect, kept minimal and only on the English home page. -->
+  <script is:inline>
+    ;(function () {
+      try {
+        var saved = localStorage.getItem('locale')
+        if (saved === 'en' || saved === 'ru') {
+          if (saved === 'ru') location.replace('/ru')
+          return
+        }
+        var langs = navigator.languages && navigator.languages.length
+          ? navigator.languages
+          : [navigator.language]
+        for (var i = 0; i < langs.length; i++) {
+          if (langs[i] && langs[i].toLowerCase().indexOf('ru') === 0) {
+            location.replace('/ru')
+            return
+          }
+        }
+      } catch (e) {}
+    })()
+  </script>
+  <HomePage locale={locale} client:load />
+</BaseLayout>

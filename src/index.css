@@ -789,7 +789,7 @@ body {
     opacity: 0;
 }
 .faqAnswerOpen {
-    max-height: 400px;
+    max-height: 1000px;
     opacity: 1;
 }
 

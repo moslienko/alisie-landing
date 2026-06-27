@@ -1,0 +1,18 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro'
+import SupportContent from '../../app/SupportContent'
+import { ui } from '../../i18n/ui'
+
+const locale = 'ru'
+const t = ui(locale)
+const title = `${t.supportTitle} - Alisie`
+---
+
+<PageLayout
+  locale={locale}
+  title={title}
+  description={t.supportIntro}
+  path="/support"
+>
+  <SupportContent locale={locale} />
+</PageLayout>

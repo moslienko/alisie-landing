@@ -1,14 +1,13 @@
 'use client'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { navigate } from 'astro:transitions/client'
 import { useLocale } from '../../i18n/useLocale'
 import { localizedPath, LOCALES, type Locale } from '../../i18n/locale'
 
 const LABELS: Record<Locale, string> = { en: 'EN', ru: 'RU' }
 
-export default function LangSwitcher() {
-    const locale = useLocale()
-    const location = useLocation()
-    const navigate = useNavigate()
+export default function LangSwitcher({ locale: localeProp }: { locale?: Locale } = {}) {
+    const ctxLocale = useLocale()
+    const locale = localeProp ?? ctxLocale
 
     const switchTo = (next: Locale) => {
         if (next === locale) return
@@ -17,7 +16,10 @@ export default function LangSwitcher() {
         } catch {
             void 0
         }
-        navigate(localizedPath(location.pathname + location.hash, next))
+        // Navigate via the View Transitions router for a smooth, flicker-free
+        // language switch instead of a full page reload.
+        const { pathname, hash } = window.location
+        navigate(localizedPath(pathname + hash, next))
     }
 
     return (

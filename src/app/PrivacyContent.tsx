@@ -1,6 +1,7 @@
 'use client'
-import LegalPage from '../components/LegalPage/LegalPage'
-import { useLocale } from '../i18n/useLocale'
+import PageBody from '../components/PageBody/PageBody'
+import { LocaleProvider } from '../i18n/LocaleContext'
+import type { Locale } from '../i18n/locale'
 import { ui } from '../i18n/ui'
 
 const CONTACT_EMAIL = 'alisieapp@proton.me'
@@ -301,12 +302,13 @@ function RussianBody() {
     )
 }
 
-export default function PrivacyPolicy() {
-    const locale = useLocale()
+export default function PrivacyContent({ locale }: { locale: Locale }) {
     const t = ui(locale)
     return (
-        <LegalPage title={t.privacyPolicyTitle} updated={t.legalUpdatedDate}>
-            {locale === 'ru' ? <RussianBody /> : <EnglishBody />}
-        </LegalPage>
+        <LocaleProvider locale={locale}>
+            <PageBody title={t.privacyPolicyTitle} updated={t.legalUpdatedDate}>
+                {locale === 'ru' ? <RussianBody /> : <EnglishBody />}
+            </PageBody>
+        </LocaleProvider>
     )
 }

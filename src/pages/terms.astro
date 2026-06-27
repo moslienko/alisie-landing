@@ -1,0 +1,18 @@
+---
+import PageLayout from '../layouts/PageLayout.astro'
+import TermsContent from '../app/TermsContent'
+import { ui } from '../i18n/ui'
+
+const locale = 'en'
+const t = ui(locale)
+const title = `${t.termsTitle} - Alisie`
+---
+
+<PageLayout
+  locale={locale}
+  title={title}
+  description={t.metaDescription}
+  path="/terms"
+>
+  <TermsContent locale={locale} />
+</PageLayout>

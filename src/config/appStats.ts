@@ -6,7 +6,8 @@ export const appStats = {
   privacyLabel: "100%",
 };
 
-export const APP_STORE_URL = "https://apps.apple.com/app/id1485091289";
+export const APP_STORE_URL =
+  "https://apps.apple.com/app/id1485091289?ct=website&mt=8";
 
 interface LocalizedAppStats {
   privacyDescription: string;
