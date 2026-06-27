@@ -3,7 +3,7 @@ import type { ChangelogEntry } from "./changelog.types";
 export const changelogRu: ChangelogEntry[] = [
   {
     version: "2.0.0",
-    date: "2026-06-24",
+    date: "2026-06-30",
     footer: "Теперь мы - Alisie! То же приложение, новое имя.",
     notes: [
       "Редизайн приложения: новый дизайн и новые иконки на всех версиях iOS. На iOS 26 - поддержка Liquid Glass.",
