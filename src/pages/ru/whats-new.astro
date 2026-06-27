@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import WhatsNewContent from '../../app/WhatsNewContent'
+import { ui } from '../../i18n/ui'
+
+const locale = 'ru'
+const t = ui(locale)
+const title = `${t.whatsNewTitle} - Alisie`
+---
+
+<BaseLayout
+  locale={locale}
+  title={title}
+  description={t.whatsNewIntro}
+  path="/whats-new"
+>
+  <WhatsNewContent locale={locale} client:load />
+</BaseLayout>

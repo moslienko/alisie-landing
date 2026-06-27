@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import SupportContent from '../../app/SupportContent'
+import { ui } from '../../i18n/ui'
+
+const locale = 'ru'
+const t = ui(locale)
+const title = `${t.supportTitle} - Alisie`
+---
+
+<BaseLayout
+  locale={locale}
+  title={title}
+  description={t.supportIntro}
+  path="/support"
+>
+  <SupportContent locale={locale} client:load />
+</BaseLayout>

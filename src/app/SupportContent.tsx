@@ -1,7 +1,7 @@
 'use client'
 import LegalPage from '../components/LegalPage/LegalPage'
-import { LocalizedLink } from '../i18n/LocaleContext'
-import { useLocale } from '../i18n/useLocale'
+import { LocalizedLink, LocaleProvider } from '../i18n/LocaleContext'
+import type { Locale } from '../i18n/locale'
 import { ui } from '../i18n/ui'
 
 const CONTACT_EMAIL = 'alisieapp@proton.me'
@@ -34,10 +34,11 @@ const icons = {
     ),
 }
 
-export default function Support() {
-    const t = ui(useLocale())
+export default function SupportContent({ locale }: { locale: Locale }) {
+    const t = ui(locale)
 
     return (
+        <LocaleProvider locale={locale}>
         <LegalPage title={t.supportTitle}>
             <p className='!mb-8'>{t.supportIntro}</p>
 
@@ -73,6 +74,7 @@ export default function Support() {
                 />
             </div>
         </LegalPage>
+        </LocaleProvider>
     )
 }
 

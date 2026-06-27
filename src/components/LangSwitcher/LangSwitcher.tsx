@@ -1,5 +1,4 @@
 'use client'
-import { useLocation, useNavigate } from 'react-router-dom'
 import { useLocale } from '../../i18n/useLocale'
 import { localizedPath, LOCALES, type Locale } from '../../i18n/locale'
 
@@ -7,8 +6,6 @@ const LABELS: Record<Locale, string> = { en: 'EN', ru: 'RU' }
 
 export default function LangSwitcher() {
     const locale = useLocale()
-    const location = useLocation()
-    const navigate = useNavigate()
 
     const switchTo = (next: Locale) => {
         if (next === locale) return
@@ -17,7 +14,9 @@ export default function LangSwitcher() {
         } catch {
             void 0
         }
-        navigate(localizedPath(location.pathname + location.hash, next))
+        // Real URLs now: navigate to the same page in the other locale.
+        const { pathname, hash } = window.location
+        window.location.href = localizedPath(pathname + hash, next)
     }
 
     return (

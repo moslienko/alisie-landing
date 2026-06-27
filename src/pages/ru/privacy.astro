@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import PrivacyContent from '../../app/PrivacyContent'
+import { ui } from '../../i18n/ui'
+
+const locale = 'ru'
+const t = ui(locale)
+const title = `${t.privacyPolicyTitle} - Alisie`
+---
+
+<BaseLayout
+  locale={locale}
+  title={title}
+  description={t.metaDescription}
+  path="/privacy"
+>
+  <PrivacyContent locale={locale} client:load />
+</BaseLayout>

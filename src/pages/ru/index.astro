@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import HomePage from '../../app/HomePage'
+import { ui } from '../../i18n/ui'
+
+const locale = 'ru'
+const t = ui(locale)
+---
+
+<BaseLayout
+  locale={locale}
+  title={t.metaTitle}
+  description={t.metaDescription}
+  path="/"
+>
+  <HomePage locale={locale} client:load />
+</BaseLayout>

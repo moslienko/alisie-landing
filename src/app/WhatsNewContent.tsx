@@ -2,11 +2,11 @@
 import LegalPage from '../components/LegalPage/LegalPage'
 import { getChangelog } from '../data/changelog'
 import { groupChangelog } from '../data/groupChangelog'
-import { useLocale } from '../i18n/useLocale'
+import { LocaleProvider } from '../i18n/LocaleContext'
+import type { Locale } from '../i18n/locale'
 import { ui } from '../i18n/ui'
 
-export default function WhatsNew() {
-    const locale = useLocale()
+export default function WhatsNewContent({ locale }: { locale: Locale }) {
     const t = ui(locale)
     const localeTag = locale === 'ru' ? 'ru-RU' : 'en-US'
 
@@ -20,6 +20,7 @@ export default function WhatsNew() {
     const groups = groupChangelog(getChangelog(locale))
 
     return (
+        <LocaleProvider locale={locale}>
         <LegalPage title={t.whatsNewTitle}>
             <p className='!mb-10'>{t.whatsNewIntro}</p>
 
@@ -57,5 +58,6 @@ export default function WhatsNew() {
                 ))}
             </ol>
         </LegalPage>
+        </LocaleProvider>
     )
 }

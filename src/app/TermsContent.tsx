@@ -1,6 +1,7 @@
 'use client'
 import LegalPage from '../components/LegalPage/LegalPage'
-import { useLocale } from '../i18n/useLocale'
+import { LocaleProvider } from '../i18n/LocaleContext'
+import type { Locale } from '../i18n/locale'
 import { ui } from '../i18n/ui'
 
 const CONTACT_EMAIL = 'alisieapp@proton.me'
@@ -211,12 +212,13 @@ function RussianBody() {
     )
 }
 
-export default function TermsOfService() {
-    const locale = useLocale()
+export default function TermsContent({ locale }: { locale: Locale }) {
     const t = ui(locale)
     return (
-        <LegalPage title={t.termsTitle} updated={t.legalUpdatedDate}>
-            {locale === 'ru' ? <RussianBody /> : <EnglishBody />}
-        </LegalPage>
+        <LocaleProvider locale={locale}>
+            <LegalPage title={t.termsTitle} updated={t.legalUpdatedDate}>
+                {locale === 'ru' ? <RussianBody /> : <EnglishBody />}
+            </LegalPage>
+        </LocaleProvider>
     )
 }
