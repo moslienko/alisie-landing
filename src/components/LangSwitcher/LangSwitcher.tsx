@@ -4,8 +4,9 @@ import { localizedPath, LOCALES, type Locale } from '../../i18n/locale'
 
 const LABELS: Record<Locale, string> = { en: 'EN', ru: 'RU' }
 
-export default function LangSwitcher() {
-    const locale = useLocale()
+export default function LangSwitcher({ locale: localeProp }: { locale?: Locale } = {}) {
+    const ctxLocale = useLocale()
+    const locale = localeProp ?? ctxLocale
 
     const switchTo = (next: Locale) => {
         if (next === locale) return

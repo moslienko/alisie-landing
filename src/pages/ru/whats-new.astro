@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'
+import LegalLayout from '../../layouts/LegalLayout.astro'
 import WhatsNewContent from '../../app/WhatsNewContent'
 import { ui } from '../../i18n/ui'
 
@@ -8,11 +8,11 @@ const t = ui(locale)
 const title = `${t.whatsNewTitle} - Alisie`
 ---
 
-<BaseLayout
+<LegalLayout
   locale={locale}
   title={title}
   description={t.whatsNewIntro}
   path="/whats-new"
 >
-  <WhatsNewContent locale={locale} client:load />
-</BaseLayout>
+  <WhatsNewContent locale={locale} client:idle />
+</LegalLayout>
