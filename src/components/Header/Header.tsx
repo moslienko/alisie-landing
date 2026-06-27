@@ -1,12 +1,10 @@
 'use client'
 
 import { getData } from "./Header.data"
-import { useTheme } from "../../hooks/useTheme"
 import { useLocale } from "../../i18n/useLocale"
 import { screenshotSrc } from "../../utils/screenshots"
 
 export default function Header() {
-    const { theme } = useTheme();
     const data = getData(useLocale());
 
     return (
@@ -51,11 +49,23 @@ export default function Header() {
                         ))}
                     </div>
                 </div>
-                <img
-                    className='w-80 object-cover mx-auto mt-5 md:-mt-5 md:ml-auto md:mx-0'
-                    src={screenshotSrc(data.screenshot, theme)}
-                    alt='app screenshot'
-                />
+                <span className='heroShot w-80 mx-auto mt-5 md:-mt-5 md:ml-auto md:mx-0'>
+                    <img
+                        className='heroShotDark w-80 object-cover'
+                        src={screenshotSrc(data.screenshot, 'dark')}
+                        alt='app screenshot'
+                        fetchPriority='high'
+                        decoding='async'
+                    />
+                    <img
+                        className='heroShotLight w-80 object-cover'
+                        src={screenshotSrc(data.screenshot, 'light')}
+                        alt=''
+                        aria-hidden='true'
+                        loading='lazy'
+                        decoding='async'
+                    />
+                </span>
             </div>
         </section>
     );
