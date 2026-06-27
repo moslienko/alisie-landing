@@ -10,7 +10,7 @@ export const getData = (locale: Locale) => {
         ctaLabel: 'Download',
         ctaLink: APP_STORE_URL,
         trust: stats.trustPoints,
-        icon: '/app_icon.png',
+        icon: '/app_icon_192.png',
         screenshot: 'journal.png',
     }
     if (locale === 'ru') {
