@@ -1,28 +1,28 @@
 ---
-import '../index.css'
-import { ClientRouter } from 'astro:transitions'
+import "../index.css";
+import { ClientRouter } from "astro:transitions";
 
 export interface Props {
   /** Page locale. */
-  locale: 'en' | 'ru'
+  locale: "en" | "ru";
   /** Document <title>. */
-  title: string
+  title: string;
   /** Meta description. */
-  description: string
+  description: string;
   /** Locale-neutral path (no /ru prefix, leading slash), e.g. "/", "/privacy". */
-  path: string
+  path: string;
 }
 
-const { locale, title, description, path } = Astro.props
+const { locale, title, description, path } = Astro.props;
 
-const SITE = 'https://alisie.app'
+const SITE = "https://alisie.app";
 
 // Build canonical + hreflang alternates from the locale-neutral path.
-const enHref = path === '/' ? `${SITE}/` : `${SITE}${path}`
-const ruHref = path === '/' ? `${SITE}/ru` : `${SITE}/ru${path}`
-const canonical = locale === 'ru' ? ruHref : enHref
-const ogLocale = locale === 'ru' ? 'ru_RU' : 'en_US'
-const ogLocaleAlt = locale === 'ru' ? 'en_US' : 'ru_RU'
+const enHref = path === "/" ? `${SITE}/` : `${SITE}${path}`;
+const ruHref = path === "/" ? `${SITE}/ru` : `${SITE}/ru${path}`;
+const canonical = locale === "ru" ? ruHref : enHref;
+const ogLocale = locale === "ru" ? "ru_RU" : "en_US";
+const ogLocaleAlt = locale === "ru" ? "en_US" : "ru_RU";
 ---
 
 <!doctype html>
@@ -78,57 +78,75 @@ const ogLocaleAlt = locale === 'ru' ? 'en_US' : 'ru_RU'
     <!-- Set the theme before first paint to avoid a flash of the wrong theme.
          Re-runs after each View Transition swap so navigation never flashes. -->
     <script is:inline>
-      function applyTheme() {
+      function currentTheme() {
         try {
-          var saved = localStorage.getItem('theme')
-          var theme = saved === 'light' ? 'light' : 'dark'
-          document.documentElement.classList.remove('theme-light', 'theme-dark')
-          document.documentElement.classList.add('theme-' + theme)
+          return localStorage.getItem("theme") === "light" ? "light" : "dark";
         } catch (e) {
-          document.documentElement.classList.add('theme-dark')
+          return "dark";
         }
       }
-      applyTheme()
-      document.addEventListener('astro:after-swap', applyTheme)
+      function applyTheme() {
+        var theme = currentTheme();
+        document.documentElement.classList.remove("theme-light", "theme-dark");
+        document.documentElement.classList.add("theme-" + theme);
+      }
+      applyTheme();
+      document.addEventListener("astro:after-swap", applyTheme);
     </script>
   </head>
   <body>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" is:inline>
-      ;(function (m, e, t, r, i, k, a) {
-        m[i] =
-          m[i] ||
-          function () {
-            ;(m[i].a = m[i].a || []).push(arguments)
+      function loadMetrika() {
+        (function (m, e, t, r, i, k, a) {
+          m[i] =
+            m[i] ||
+            function () {
+              (m[i].a = m[i].a || []).push(arguments);
+            };
+          m[i].l = 1 * new Date();
+          for (var j = 0; j < document.scripts.length; j++) {
+            if (document.scripts[j].src === r) {
+              return;
+            }
           }
-        m[i].l = 1 * new Date()
-        for (var j = 0; j < document.scripts.length; j++) {
-          if (document.scripts[j].src === r) {
-            return
-          }
-        }
-        ;(k = e.createElement(t)),
-          (a = e.getElementsByTagName(t)[0]),
-          (k.async = 1),
-          (k.src = r),
-          a.parentNode.insertBefore(k, a)
-      })(
-        window,
-        document,
-        'script',
-        'https://mc.yandex.ru/metrika/tag.js?id=110118475',
-        'ym'
-      )
+          ((k = e.createElement(t)),
+            (a = e.getElementsByTagName(t)[0]),
+            (k.async = 1),
+            (k.src = r),
+            a.parentNode.insertBefore(k, a));
+        })(
+          window,
+          document,
+          "script",
+          "https://mc.yandex.ru/metrika/tag.js?id=110118475",
+          "ym",
+        );
 
-      ym(110118475, 'init', {
-        ssr: true,
-        clickmap: true,
-        ecommerce: 'dataLayer',
-        referrer: document.referrer,
-        url: location.href,
-        accurateTrackBounce: true,
-        trackLinks: true,
-      })
+        ym(110118475, "init", {
+          ssr: true,
+          clickmap: true,
+          ecommerce: "dataLayer",
+          referrer: document.referrer,
+          url: location.href,
+          accurateTrackBounce: true,
+          trackLinks: true,
+        });
+      }
+
+      function deferMetrika() {
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(loadMetrika, { timeout: 4000 });
+        } else {
+          setTimeout(loadMetrika, 2000);
+        }
+      }
+
+      if (document.readyState === "complete") {
+        deferMetrika();
+      } else {
+        window.addEventListener("load", deferMetrika);
+      }
     </script>
     <noscript
       ><div>

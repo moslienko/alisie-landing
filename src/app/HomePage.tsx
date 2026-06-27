@@ -7,14 +7,16 @@ export default function HomePage({ locale }: { locale: Locale }) {
         <LocaleProvider locale={locale}>
             <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <Component.Navbar />
-                <Component.Header />
-                <Component.HowItWorks />
-                <Component.Features />
-                <Component.Pricing />
-                <Component.ProMax />
-                <Component.Privacy />
-                <Component.FAQ />
-                <Component.FinalCTA />
+                <main>
+                    <Component.Header />
+                    <Component.HowItWorks />
+                    <Component.Features />
+                    <Component.Pricing />
+                    <Component.ProMax />
+                    <Component.Privacy />
+                    <Component.FAQ />
+                    <Component.FinalCTA />
+                </main>
                 <Component.Footer />
                 <Component.ThemeToggle />
             </div>

@@ -300,6 +300,19 @@ body {
     opacity: 0;
 }
 
+.heroShot {
+    display: block;
+}
+.heroShotDark {
+    display: none;
+}
+.theme-dark .heroShotLight {
+    display: none;
+}
+.theme-dark .heroShotDark {
+    display: block;
+}
+
 .splitPhone {
     isolation: isolate;
 }

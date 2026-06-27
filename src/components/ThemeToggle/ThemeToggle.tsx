@@ -3,11 +3,13 @@ import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../../hooks/useTheme';
 import { useLocale } from '../../i18n/useLocale';
 import { ui } from '../../i18n/ui';
+import type { Locale } from '../../i18n/locale';
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ locale: localeProp }: { locale?: Locale } = {}) {
     const { theme, toggleTheme } = useTheme();
     const isDark = theme === 'dark';
-    const t = ui(useLocale());
+    const ctxLocale = useLocale();
+    const t = ui(localeProp ?? ctxLocale);
 
     return (
         <button
