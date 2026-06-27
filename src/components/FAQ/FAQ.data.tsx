@@ -48,7 +48,7 @@ export const getData = (locale: Locale) => {
             {
                 id: 'q7',
                 question: 'Can I back up and export my dreams?',
-                answer: 'Yes - and backup is free for everyone. Alisie creates a full file backup you can save anywhere and restore later, so you always own your data. Pro adds flexible export in multiple formats (CSV, JSON, PDF, TXT), for everything at once or for individual objects like characters or locations - useful for archiving on your computer or sharing outside the app.',
+                answer: 'Yes - and backup is free for everyone. Alisie creates a full file backup you can save anywhere and restore later, so you always own your data. Pro adds flexible export in multiple formats (PDF, HTML, Markdown, CSV, text, image), for everything at once or for individual objects like characters or locations - useful for archiving on your computer or sharing outside the app.',
             },
         ],
     }
@@ -102,7 +102,7 @@ export const getData = (locale: Locale) => {
                 {
                     id: 'q7',
                     question: 'Можно ли сделать резервную копию и экспортировать сны?',
-                    answer: 'Да - и резервное копирование бесплатно для всех. Alisie создаёт полную файловую резервную копию, которую вы можете сохранить где угодно и восстановить позже, так что ваши данные всегда принадлежат вам. Pro добавляет гибкий экспорт в нескольких форматах (CSV, JSON, PDF, TXT) - для всего сразу или для отдельных объектов, например персонажей или мест, - что удобно для архивирования на компьютере или для обмена за пределами приложения.',
+                    answer: 'Да - и резервное копирование бесплатно для всех. Alisie создаёт полную файловую резервную копию, которую вы можете сохранить где угодно и восстановить позже, так что ваши данные всегда принадлежат вам. Pro добавляет гибкий экспорт в нескольких форматах (PDF, HTML, Markdown, CSV, текст, изображение) - для всего сразу или для отдельных объектов, например персонажей или мест, - что удобно для архивирования на компьютере или для обмена за пределами приложения.',
                 },
             ],
         }
