@@ -2,13 +2,13 @@
 import { useLocale } from '../../i18n/useLocale'
 import { ui } from '../../i18n/ui'
 
-interface LegalPageProps {
+interface PageBodyProps {
     title: string
     updated?: string
     children: React.ReactNode
 }
 
-export default function LegalPage({ title, updated, children }: LegalPageProps) {
+export default function PageBody({ title, updated, children }: PageBodyProps) {
     const t = ui(useLocale())
 
     return (

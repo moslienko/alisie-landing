@@ -1,6 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro'
-import LegalHeader from './LegalHeader.astro'
+import PageHeader from './PageHeader.astro'
 import type { Locale } from '../i18n/locale'
 
 interface Props {
@@ -15,7 +15,7 @@ const { locale, title, description, path } = Astro.props
 
 <BaseLayout locale={locale} title={title} description={description} path={path}>
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <LegalHeader locale={locale} />
+    <PageHeader locale={locale} />
     <main class="mt-12">
       <slot />
     </main>

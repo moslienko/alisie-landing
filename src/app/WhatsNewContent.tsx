@@ -1,5 +1,5 @@
 'use client'
-import LegalPage from '../components/LegalPage/LegalPage'
+import PageBody from '../components/PageBody/PageBody'
 import { getChangelog } from '../data/changelog'
 import { groupChangelog } from '../data/groupChangelog'
 import { LocaleProvider } from '../i18n/LocaleContext'
@@ -21,7 +21,7 @@ export default function WhatsNewContent({ locale }: { locale: Locale }) {
 
     return (
         <LocaleProvider locale={locale}>
-        <LegalPage title={t.whatsNewTitle}>
+        <PageBody title={t.whatsNewTitle}>
             <p className='!mb-10'>{t.whatsNewIntro}</p>
 
             <ol className='changelog'>
@@ -57,7 +57,7 @@ export default function WhatsNewContent({ locale }: { locale: Locale }) {
                     </li>
                 ))}
             </ol>
-        </LegalPage>
+        </PageBody>
         </LocaleProvider>
     )
 }

@@ -1,5 +1,5 @@
 'use client'
-import LegalPage from '../components/LegalPage/LegalPage'
+import PageBody from '../components/PageBody/PageBody'
 import { LocaleProvider } from '../i18n/LocaleContext'
 import type { Locale } from '../i18n/locale'
 import { ui } from '../i18n/ui'
@@ -306,9 +306,9 @@ export default function PrivacyContent({ locale }: { locale: Locale }) {
     const t = ui(locale)
     return (
         <LocaleProvider locale={locale}>
-            <LegalPage title={t.privacyPolicyTitle} updated={t.legalUpdatedDate}>
+            <PageBody title={t.privacyPolicyTitle} updated={t.legalUpdatedDate}>
                 {locale === 'ru' ? <RussianBody /> : <EnglishBody />}
-            </LegalPage>
+            </PageBody>
         </LocaleProvider>
     )
 }

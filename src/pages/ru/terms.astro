@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'
+import PageLayout from '../../layouts/PageLayout.astro'
 import TermsContent from '../../app/TermsContent'
 import { ui } from '../../i18n/ui'
 
@@ -8,11 +8,11 @@ const t = ui(locale)
 const title = `${t.termsTitle} - Alisie`
 ---
 
-<BaseLayout
+<PageLayout
   locale={locale}
   title={title}
   description={t.metaDescription}
   path="/terms"
 >
   <TermsContent locale={locale} client:idle />
-</BaseLayout>
+</PageLayout>

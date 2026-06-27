@@ -1,5 +1,5 @@
 'use client'
-import LegalPage from '../components/LegalPage/LegalPage'
+import PageBody from '../components/PageBody/PageBody'
 import { LocalizedLink, LocaleProvider } from '../i18n/LocaleContext'
 import type { Locale } from '../i18n/locale'
 import { ui } from '../i18n/ui'
@@ -39,7 +39,7 @@ export default function SupportContent({ locale }: { locale: Locale }) {
 
     return (
         <LocaleProvider locale={locale}>
-        <LegalPage title={t.supportTitle}>
+        <PageBody title={t.supportTitle}>
             <p className='!mb-8'>{t.supportIntro}</p>
 
             <div className='not-prose grid grid-cols-1 sm:grid-cols-2 gap-4'>
@@ -73,7 +73,7 @@ export default function SupportContent({ locale }: { locale: Locale }) {
                     hint={t.supportFaqHint}
                 />
             </div>
-        </LegalPage>
+        </PageBody>
         </LocaleProvider>
     )
 }
