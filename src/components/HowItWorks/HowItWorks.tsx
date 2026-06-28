@@ -39,11 +39,11 @@ export default function HowItWorks() {
     return (
         <section id='why' className='flex flex-col py-16 scroll-mt-24'>
             <div className='text-center mb-12'>
-                <h1 className="inline-block text-5xl md:text-6xl font-bold
+                <h2 className="inline-block text-5xl md:text-6xl font-bold
                     bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)]
                     bg-clip-text text-transparent py-2">
                     {data.title}
-                </h1>
+                </h2>
                 <p className='text-xl font-normal text-color mt-4 opacity-70 max-w-2xl mx-auto'>
                     {data.subtitle}
                 </p>

@@ -13,11 +13,11 @@ export default function FinalCTA() {
                 <div className='finalCtaTint absolute inset-0 rounded-3xl pointer-events-none'></div>
                 <div className='relative z-10 flex flex-col md:flex-row items-center gap-10 p-10 md:p-16'>
                     <div className='flex-1 text-center md:text-left'>
-                        <h1 className="inline-block text-4xl md:text-6xl font-bold
+                        <h2 className="inline-block text-4xl md:text-6xl font-bold
                             bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)]
                             bg-clip-text text-transparent py-2 leading-tight">
                             {data.title}
-                        </h1>
+                        </h2>
                         <p className='text-xl font-normal text-color mt-5 opacity-70 max-w-xl mx-auto md:mx-0'>
                             {data.subtitle}
                         </p>

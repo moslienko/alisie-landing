@@ -16,11 +16,11 @@ export default function Header() {
                         src={data.icon}
                         alt='app icon'
                     />
-                    <h1 className="font-playfair inline-block text-6xl font-bold
+                    <p className="font-playfair inline-block text-6xl font-bold
       bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)]
       bg-clip-text text-transparent py-2">
                         {data.name}
-                    </h1>
+                    </p>
 
                     <h1 className="text-6xl font-normal text-color mt-1 whitespace-pre-line">{data.subtitle}</h1>
                     <p className="text-xl font-normal text-color mt-5 opacity-70 max-w-xl mx-auto md:mx-0">{data.caption}</p>

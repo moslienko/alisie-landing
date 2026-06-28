@@ -21,7 +21,7 @@ const ICONS: Record<string, LucideIcon> = {
 function DefaultCard({ item, theme }: { item: FeatureItem; theme: Theme }) {
     const copy = (
         <div>
-            <h1 className='font-sora font-semibold text-fg text-[24px] leading-tight'>{item.name}</h1>
+            <h3 className='font-sora font-semibold text-fg text-[24px] leading-tight'>{item.name}</h3>
             <p className='font-sora font-semibold text-[rgb(var(--fg-rgb)/0.66)] text-[16px] leading-snug mt-2'>{item.subtitle}</p>
         </div>
     );
@@ -104,12 +104,12 @@ function MiniCard({ item, index }: { item: FeatureItem; index: number }) {
                     </span>
                 )}
                 <div className='min-w-0'>
-                    <h1
+                    <h3
                         className='font-sora font-semibold text-[20px] leading-tight bg-clip-text text-transparent'
                         style={textGradient}
                     >
                         {item.name}
-                    </h1>
+                    </h3>
                     {item.subtitle && (
                         <p className='font-sora font-semibold text-[rgb(var(--fg-rgb)/0.66)] text-[14px] leading-snug mt-1'>{item.subtitle}</p>
                     )}
@@ -126,7 +126,7 @@ function LargeCard({ item, theme }: { item: FeatureItem; theme: Theme }) {
             <div className='featureTint absolute inset-0 tintBackground opacity-0 blur-2xl pointer-events-none'></div>
             <div className='featureContent relative z-10 grid grid-cols-1 md:grid-cols-2 items-center'>
                 <div className='p-10 md:p-12 lg:p-14 text-center md:text-left'>
-                    <h1 className='font-sora font-semibold text-fg text-[44px] leading-[1.05]'>{item.name}</h1>
+                    <h3 className='font-sora font-semibold text-fg text-[44px] leading-[1.05]'>{item.name}</h3>
                     <p className='font-sora font-semibold text-[rgb(var(--fg-rgb)/0.66)] text-[24px] leading-snug mt-4'>{item.subtitle}</p>
                 </div>
                 <div className='relative h-full flex items-end justify-center md:justify-end gap-3 md:translate-y-4 overflow-hidden'>
@@ -172,7 +172,7 @@ function SplitCard({ item }: { item: FeatureItem }) {
                         <span>/</span>
                         <Moon className='w-3.5 h-3.5' strokeWidth={2.5} />
                     </span>
-                    <h1 className='font-sora font-semibold text-fg text-[24px] leading-tight'>{item.name}</h1>
+                    <h3 className='font-sora font-semibold text-fg text-[24px] leading-tight'>{item.name}</h3>
                     <p className='font-sora font-semibold text-[rgb(var(--fg-rgb)/0.66)] text-[16px] leading-snug mt-2'>{item.subtitle}</p>
                 </div>
             </div>
@@ -202,11 +202,11 @@ export default function Features() {
     return (
         <section id='features' className='flex flex-col py-16 scroll-mt-24'>
             <div className='text-center mb-12'>
-                <h1 className="inline-block text-5xl md:text-6xl font-bold
+                <h2 className="inline-block text-5xl md:text-6xl font-bold
                     bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)]
                     bg-clip-text text-transparent py-2">
                     {data.title}
-                </h1>
+                </h2>
                 <p className='text-xl font-normal text-color mt-4 opacity-70 max-w-2xl mx-auto'>
                     {data.subtitle}
                 </p>
