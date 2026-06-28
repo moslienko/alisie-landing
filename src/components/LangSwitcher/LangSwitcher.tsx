@@ -17,9 +17,10 @@ export default function LangSwitcher({ locale: localeProp }: { locale?: Locale }
             void 0
         }
         // Navigate via the View Transitions router for a smooth, flicker-free
-        // language switch instead of a full page reload.
-        const { pathname, hash } = window.location
-        navigate(localizedPath(pathname + hash, next))
+        // language switch instead of a full page reload. Preserve the query
+        // string (UTM tags) and hash across the locale change.
+        const { pathname, search, hash } = window.location
+        navigate(localizedPath(pathname, next) + search + hash)
     }
 
     return (
