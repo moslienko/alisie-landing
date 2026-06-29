@@ -4,6 +4,7 @@ import { getData } from './navbar/Navbar.data'
 import { useLocale } from '../i18n/useLocale'
 import { ui } from '../i18n/ui'
 import { useTheme } from '../hooks/useTheme'
+import LangSwitcher from './LangSwitcher/LangSwitcher'
 
 interface MobileMenuProps {
     toggleMenu: () => void;
@@ -56,6 +57,10 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ toggleMenu }) => {
                     />
                 </a>
             )}
+
+            <div className='mt-8' onClick={toggleMenu}>
+                <LangSwitcher />
+            </div>
         </div>
     );
 };
