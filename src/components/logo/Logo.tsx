@@ -21,7 +21,7 @@ const Logo: React.FC<LogoProps> = ({ size }) => {
             <img
                 className={`${iconSizeClasses[size]} aspect-square object-cover mr-2 rounded-[22%]`}
                 src={data.icon}
-                alt='app icon'
+                alt='Alisie logo'
                 decoding='async'
             />
             {data.name}

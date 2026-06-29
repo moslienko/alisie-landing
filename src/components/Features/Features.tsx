@@ -71,7 +71,7 @@ function DefaultCard({ item, theme }: { item: FeatureItem; theme: Theme }) {
                     <img
                         className='featureImage max-h-[280px] w-auto object-contain'
                         src={item.image ? screenshotSrc(item.image, theme) : undefined}
-                        alt='screenshot'
+                        alt={item.name}
                     />
                 </div>
                 {copy}

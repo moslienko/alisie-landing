@@ -14,7 +14,7 @@ export default function Header() {
                     <img
                         className='w-24 aspect-square object-cover mb-10 mx-auto md:mx-0 rounded-[22%]'
                         src={data.icon}
-                        alt='app icon'
+                        alt='Alisie app icon'
                     />
                     <p className="font-playfair inline-block text-6xl font-bold
       bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)]
@@ -73,7 +73,7 @@ export default function Header() {
                     <img
                         className='heroShotDark w-80 object-cover'
                         src={screenshotSrc(data.screenshot, 'dark')}
-                        alt='app screenshot'
+                        alt={data.screenshotAlt}
                         fetchPriority='high'
                         decoding='async'
                     />
