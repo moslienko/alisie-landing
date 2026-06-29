@@ -3,6 +3,8 @@ import type { Locale } from "../i18n/locale";
 export const appStats = {
   launchYear: 2019,
 
+  rating: "4.8",
+
   privacyLabel: "100%",
 };
 
