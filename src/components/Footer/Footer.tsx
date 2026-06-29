@@ -11,13 +11,14 @@ export default function Footer() {
     const data = getData(useLocale())
     return (
         <footer className='footer relative mt-10 pt-12 pb-8 border-t border-[rgb(var(--fg-rgb)/0.1)]'>
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-10'>
-                <div className='md:col-span-1'>
+            <div className='flex flex-col md:flex-row md:justify-between gap-10'>
+                <div className='md:max-w-xs'>
                     <Logo size='big' />
                     <p className='text-base text-color opacity-60 mt-4 max-w-xs'>
                         {data.tagline}
                     </p>
                 </div>
+                <div className='grid grid-cols-2 sm:grid-cols-4 gap-10'>
                 {data.columns.map((column) => (
                     <div key={column.title}>
                         <h2 className='text-sm font-bold text-color uppercase tracking-wider opacity-80'>
@@ -49,6 +50,7 @@ export default function Footer() {
                         </ul>
                     </div>
                 ))}
+                </div>
             </div>
             <div className='mt-12 pt-6 border-t border-[rgb(var(--fg-rgb)/0.1)] text-center'>
                 <p className='text-sm text-color opacity-50'>{data.copyright}</p>

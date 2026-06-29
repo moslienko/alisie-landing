@@ -51,7 +51,7 @@ export default function FinalCTA() {
                     <img
                         className='w-64 md:w-72 object-cover'
                         src={screenshotSrc(data.screenshot, theme)}
-                        alt='app screenshot'
+                        alt='Alisie dream journal app on iPhone'
                     />
                 </div>
             </div>

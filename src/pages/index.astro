@@ -2,9 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HomePage from "../app/HomePage";
 import { ui } from "../i18n/ui";
+import { buildFaqSchema } from "../utils/faqSchema";
 
 const locale = "en";
 const t = ui(locale);
+const faqSchema = buildFaqSchema(locale);
 ---
 
 <BaseLayout
@@ -39,4 +41,9 @@ const t = ui(locale);
     })();
   </script>
   <HomePage locale={locale} client:load />
+  <script
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify(faqSchema)}
+  />
 </BaseLayout>
