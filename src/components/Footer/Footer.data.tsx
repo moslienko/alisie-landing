@@ -25,9 +25,19 @@ export const getData = (locale: Locale) => {
                 title: 'Support',
                 links: [
                     { label: 'Help & Contact', href: '/support' },
-                    { label: 'Telegram', href: 'https://t.me/alisieapp' },
-                    { label: 'Reddit', href: 'https://www.reddit.com/r/alisieapp' },
                     { label: 'App Store', href: APP_STORE_URL },
+                ],
+            },
+            {
+                title: 'Community',
+                links: [
+                    { label: 'Telegram', href: 'https://t.me/alisieapp' },
+                    { label: 'Instagram', href: 'https://www.instagram.com/alisieapp' },
+                    { label: 'Reddit', href: 'https://www.reddit.com/r/alisieapp' },
+                    {
+                        label: 'Product Hunt',
+                        href: 'https://www.producthunt.com/products/alisie-dream-diary?launch=alisie-dream-diary',
+                    },
                 ],
             },
         ],
@@ -59,9 +69,19 @@ export const getData = (locale: Locale) => {
                     title: 'Поддержка',
                     links: [
                         { label: 'Помощь и контакты', href: '/support' },
-                        { label: 'Telegram', href: 'https://t.me/alisieapp' },
-                        { label: 'Reddit', href: 'https://www.reddit.com/r/alisieapp' },
                         { label: 'App Store', href: APP_STORE_URL },
+                    ],
+                },
+                {
+                    title: 'Сообщество',
+                    links: [
+                        { label: 'Telegram', href: 'https://t.me/alisieapp' },
+                        { label: 'Instagram', href: 'https://www.instagram.com/alisieapp' },
+                        { label: 'Reddit', href: 'https://www.reddit.com/r/alisieapp' },
+                        {
+                            label: 'Product Hunt',
+                            href: 'https://www.producthunt.com/products/alisie-dream-diary?launch=alisie-dream-diary',
+                        },
                     ],
                 },
             ],
