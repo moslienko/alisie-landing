@@ -1,6 +1,7 @@
 ---
 import "../index.css";
 import { ClientRouter } from "astro:transitions";
+import { APP_STORE_URL } from "../config/appStats";
 
 export interface Props {
   /** Page locale. */
@@ -24,6 +25,24 @@ const canonical = locale === "ru" ? ruHref : enHref;
 const ogLocale = locale === "ru" ? "ru_RU" : "en_US";
 const ogLocaleAlt = locale === "ru" ? "en_US" : "ru_RU";
 const ogImage = locale === "ru" ? `${SITE}/og-ru.png` : `${SITE}/og-en.png`;
+
+const appSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: locale === "ru" ? "Alisie - Дневник снов" : "Alisie - Dream Diary",
+  description,
+  applicationCategory: "LifestyleApplication",
+  operatingSystem: "iOS",
+  url: canonical,
+  image: ogImage,
+  inLanguage: locale,
+  downloadUrl: APP_STORE_URL,
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+};
 ---
 
 <!doctype html>
@@ -54,6 +73,7 @@ const ogImage = locale === "ru" ? `${SITE}/og-ru.png` : `${SITE}/og-en.png`;
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Alisie — a private dream journal" />
@@ -65,6 +85,9 @@ const ogImage = locale === "ru" ? `${SITE}/og-ru.png` : `${SITE}/og-en.png`;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+
+    <!-- Structured data: SoftwareApplication (mobile app rich snippets) -->
+    <script type="application/ld+json" set:html={JSON.stringify(appSchema)} />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
