@@ -3,6 +3,7 @@
 import { getData } from "./Header.data"
 import { useLocale } from "../../i18n/useLocale"
 import { screenshotSrc } from "../../utils/screenshots"
+import ProductHuntBadge from "../ProductHuntBadge/ProductHuntBadge"
 
 export default function Header() {
     const data = getData(useLocale());
@@ -68,6 +69,7 @@ export default function Header() {
                             </span>
                         ))}
                     </div>
+                    <ProductHuntBadge className='inline-block mt-6 mx-auto md:mx-0' />
                 </div>
                 <span className='heroShot w-80 mx-auto mt-5 md:-mt-5 md:ml-auto md:mx-0'>
                     <img
