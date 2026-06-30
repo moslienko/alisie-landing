@@ -15,6 +15,7 @@ export const getData = (locale: Locale) => {
         icon: '/app_icon_192.png',
         screenshot: 'journal.png',
         screenshotAlt: 'Alisie dream journal — list of recorded dreams on iPhone',
+        phLabel: "We're live on Product Hunt — your support means a lot 🚀",
     }
     if (locale === 'ru') {
         return {
@@ -25,6 +26,7 @@ export const getData = (locale: Locale) => {
             rating: appStats.rating,
             sinceLabel: `Радуем сновидцев с ${appStats.launchYear} года`,
             screenshotAlt: 'Дневник снов Alisie — список записанных снов на iPhone',
+            phLabel: 'Мы на Product Hunt — ваша поддержка очень важна 🚀',
             trust: stats.trustPoints,
         }
     }
