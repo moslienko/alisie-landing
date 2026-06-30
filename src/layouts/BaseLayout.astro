@@ -43,6 +43,13 @@ const appSchema = {
     priceCurrency: "USD",
   },
 };
+
+const siteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Alisie",
+  url: SITE,
+};
 ---
 
 <!doctype html>
@@ -88,6 +95,7 @@ const appSchema = {
 
     <!-- Structured data: SoftwareApplication (mobile app rich snippets) -->
     <script type="application/ld+json" set:html={JSON.stringify(appSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(siteSchema)} />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
