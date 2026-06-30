@@ -104,6 +104,8 @@ export default function Header() {
                         className='heroShotDark w-80 object-cover'
                         src={screenshotSrc(data.screenshot, 'dark')}
                         alt={data.screenshotAlt}
+                        width={1160}
+                        height={2362}
                         fetchPriority='high'
                         decoding='async'
                     />
@@ -112,6 +114,8 @@ export default function Header() {
                         src={screenshotSrc(data.screenshot, 'light')}
                         alt=''
                         aria-hidden='true'
+                        width={1160}
+                        height={2362}
                         loading='lazy'
                         decoding='async'
                     />
