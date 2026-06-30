@@ -1,0 +1,84 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+
+// Static 404 served at /404.html
+const locale = "en";
+---
+
+<PageLayout
+  locale={locale}
+  title="Page not found - Alisie"
+  description="The page you were looking for doesn't exist."
+  path="/404"
+  hideLangSwitcher
+>
+  <section class="text-center py-20">
+    <p
+      class="font-playfair text-[8rem] md:text-[14rem] leading-none font-bold
+        bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)]
+        bg-clip-text text-transparent"
+    >
+      404
+    </p>
+
+    <div data-lang="en">
+      <h1 class="text-3xl md:text-4xl font-semibold text-color mt-4">
+        This page drifted off
+      </h1>
+      <p class="text-lg text-color opacity-70 mt-4 max-w-md mx-auto">
+        The page you were looking for doesn't exist or has moved.
+      </p>
+    </div>
+
+    <div data-lang="ru" hidden>
+      <h1 class="text-3xl md:text-4xl font-semibold text-color mt-4">
+        Эта страница ускользнула
+      </h1>
+      <p class="text-lg text-color opacity-70 mt-4 max-w-md mx-auto">
+        Страница, которую вы искали, не существует или была перемещена.
+      </p>
+    </div>
+
+    <a
+      data-home
+      href="/"
+      class="downloadBtn inline-flex h-12 px-8 text-white text-lg font-bold
+        rounded-xl mt-8 items-center justify-center"
+    >
+      Back to home
+    </a>
+  </section>
+
+  <script is:inline>
+    (function () {
+      // Locale comes from the URL, not the browser: /ru/* is Russian, everything
+      // else is English — same rule as the rest of the site's routing.
+      function wantsRu() {
+        var p = location.pathname;
+        return p === "/ru" || p.indexOf("/ru/") === 0;
+      }
+
+      if (wantsRu()) {
+        var en = document.querySelector('[data-lang="en"]');
+        var ru = document.querySelector('[data-lang="ru"]');
+        if (en) en.hidden = true;
+        if (ru) ru.hidden = false;
+        document.documentElement.lang = "ru";
+        var home = document.querySelector("[data-home]");
+        if (home) {
+          home.setAttribute("href", "/ru");
+          home.textContent = "На главную";
+        }
+        // The page header is rendered server-side as English; point its links to
+        // /ru and translate the "Back to home" link for RU visitors.
+        var headerLinks = document.querySelectorAll('header a[href="/"]');
+        for (var i = 0; i < headerLinks.length; i++) {
+          headerLinks[i].setAttribute("href", "/ru");
+          if (headerLinks[i].textContent.indexOf("Back to home") !== -1) {
+            headerLinks[i].textContent = "← На главную";
+          }
+        }
+      }
+    })();
+  </script>
+</PageLayout>

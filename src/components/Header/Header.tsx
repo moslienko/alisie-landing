@@ -3,6 +3,7 @@
 import { getData } from "./Header.data"
 import { useLocale } from "../../i18n/useLocale"
 import { screenshotSrc } from "../../utils/screenshots"
+import ProductHuntBadge from "../ProductHuntBadge/ProductHuntBadge"
 
 export default function Header() {
     const data = getData(useLocale());
@@ -68,12 +69,43 @@ export default function Header() {
                             </span>
                         ))}
                     </div>
+                    <div className='mt-6 flex flex-col items-center md:items-start gap-1'>
+                        <p className='phHandwritten text-base text-color opacity-80'>
+                            {data.phLabel}
+                        </p>
+                        <div className='flex items-center gap-1'>
+                            <svg
+                                className='phArrow w-12 h-10 text-[var(--color-tint-start)] flex-shrink-0 -mt-1'
+                                viewBox='0 0 60 50'
+                                fill='none'
+                                aria-hidden='true'
+                            >
+                                <path
+                                    d='M8 6 C 10 28, 22 40, 46 40'
+                                    stroke='currentColor'
+                                    strokeWidth='2'
+                                    strokeLinecap='round'
+                                    strokeDasharray='1 6'
+                                />
+                                <path
+                                    d='M38 32 L 47 40 L 37 44'
+                                    stroke='currentColor'
+                                    strokeWidth='2'
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                />
+                            </svg>
+                            <ProductHuntBadge className='inline-block' />
+                        </div>
+                    </div>
                 </div>
                 <span className='heroShot w-80 mx-auto mt-5 md:-mt-5 md:ml-auto md:mx-0'>
                     <img
                         className='heroShotDark w-80 object-cover'
                         src={screenshotSrc(data.screenshot, 'dark')}
                         alt={data.screenshotAlt}
+                        width={1160}
+                        height={2362}
                         fetchPriority='high'
                         decoding='async'
                     />
@@ -82,6 +114,8 @@ export default function Header() {
                         src={screenshotSrc(data.screenshot, 'light')}
                         alt=''
                         aria-hidden='true'
+                        width={1160}
+                        height={2362}
                         loading='lazy'
                         decoding='async'
                     />
