@@ -9,14 +9,15 @@ interface Props {
   title: string
   description: string
   path: string
+  hideLangSwitcher?: boolean
 }
 
-const { locale, title, description, path } = Astro.props
+const { locale, title, description, path, hideLangSwitcher = false } = Astro.props
 ---
 
 <BaseLayout locale={locale} title={title} description={description} path={path}>
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <PageHeader locale={locale} />
+    <PageHeader locale={locale} hideLangSwitcher={hideLangSwitcher} />
     <main class="mt-12">
       <slot />
     </main>

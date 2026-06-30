@@ -2,7 +2,7 @@ import type { ChangelogEntry } from "./changelog.types";
 
 export const changelogEn: ChangelogEntry[] = [
   {
-    version: "2.0.0",
+    version: "2.0.1",
     date: "2026-06-30",
     footer: "We're now Alisie! Same app, new name.",
     notes: [

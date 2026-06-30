@@ -6,9 +6,11 @@ import type { Locale } from '../i18n/locale'
 
 interface Props {
   locale: Locale
+  /** Hide the language switcher (e.g. on the static 404, which has no localized twin). */
+  hideLangSwitcher?: boolean
 }
 
-const { locale } = Astro.props
+const { locale, hideLangSwitcher = false } = Astro.props
 const t = ui(locale)
 const homeHref = localizedPath('/', locale)
 ---
@@ -28,7 +30,7 @@ const homeHref = localizedPath('/', locale)
     Alisie
   </a>
   <div class="flex items-center gap-4">
-    <LangSwitcher locale={locale} client:idle />
+    {!hideLangSwitcher && <LangSwitcher locale={locale} client:idle />}
     <a
       href={homeHref}
       class="footerLink text-base text-color opacity-60 whitespace-nowrap"
