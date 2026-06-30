@@ -94,6 +94,7 @@ const appSchema = {
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#030303" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -115,6 +116,10 @@ const appSchema = {
         var theme = currentTheme();
         document.documentElement.classList.remove("theme-light", "theme-dark");
         document.documentElement.classList.add("theme-" + theme);
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) {
+          meta.setAttribute("content", theme === "light" ? "#f7f6fb" : "#030303");
+        }
       }
       applyTheme();
       document.addEventListener("astro:after-swap", applyTheme);
