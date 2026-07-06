@@ -1,0 +1,62 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro'
+import { blogPosts } from '../../data/blogPosts'
+import { ui } from '../../i18n/ui'
+import type { Locale } from '../../i18n/locale'
+
+interface Props {
+  locale?: Locale
+}
+
+const { locale = 'en' } = Astro.props as Props
+const t = ui(locale)
+
+// One shared pool of posts. Newest first (registry is already sorted).
+// A post whose language differs from the current UI locale is still shown,
+// flagged with an "EN" badge so the reader knows the article is in English.
+const posts = blogPosts
+const fmt = (iso: string) =>
+  new Date(iso).toLocaleDateString(locale === 'ru' ? 'ru-RU' : 'en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  })
+---
+
+<PageLayout
+  locale={locale}
+  title={`${t.blogTitle} - Alisie`}
+  description={t.blogMetaDescription}
+  path="/blog"
+>
+  <h1
+    class="inline-block text-4xl md:text-5xl font-bold py-2
+      bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)]
+      bg-clip-text text-transparent"
+  >
+    {t.blogTitle}
+  </h1>
+  <p class="text-lg text-color opacity-70 mt-2">{t.blogIntro}</p>
+
+  <div class="mt-10 flex flex-col gap-8">
+    {
+      posts.map((post) => (
+        <a href={`/blog/${post.slug}`} class="blogCard block group">
+          <div class="flex items-center gap-3">
+            <h2 class="text-xl md:text-2xl font-semibold text-color group-hover:text-[var(--color-tint-start)] transition-colors">
+              {post.title}
+            </h2>
+            {post.lang !== locale && (
+              <span class="shrink-0 text-[0.7rem] font-semibold tracking-wider px-2 py-0.5 rounded-full border border-[rgb(var(--fg-rgb)/0.2)] text-color opacity-60">
+                {t.blogEnBadge}
+              </span>
+            )}
+          </div>
+          <p class="text-sm text-color opacity-50 mt-1">{fmt(post.pubDate)}</p>
+          <p class="text-base text-color opacity-70 mt-2">{post.description}</p>
+        </a>
+      ))
+    }
+    {posts.length === 0 && <p class="text-color opacity-60">{t.blogEmpty}</p>}
+  </div>
+</PageLayout>

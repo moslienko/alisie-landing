@@ -9,6 +9,7 @@ export const getData = (locale: Locale) => {
       { title: "Features", link: "#features" },
       { title: "Pricing", link: "#pricing" },
       { title: "FAQ", link: "#faq" },
+      { title: "Blog", link: "/blog" },
     ],
     links: {
       appStore: APP_STORE_URL,
@@ -23,6 +24,7 @@ export const getData = (locale: Locale) => {
         { title: "Возможности", link: "#features" },
         { title: "Цены", link: "#pricing" },
         { title: "Вопросы", link: "#faq" },
+        { title: "Блог", link: "/blog" },
       ],
     }
   }

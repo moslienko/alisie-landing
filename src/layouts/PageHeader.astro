@@ -8,11 +8,17 @@ interface Props {
   locale: Locale
   /** Hide the language switcher (e.g. on the static 404, which has no localized twin). */
   hideLangSwitcher?: boolean
+  /** Override the "back" link target (defaults to home). */
+  backHref?: string
+  /** Override the "back" link label (defaults to "Back to home"). */
+  backLabel?: string
 }
 
-const { locale, hideLangSwitcher = false } = Astro.props
+const { locale, hideLangSwitcher = false, backHref, backLabel } = Astro.props
 const t = ui(locale)
 const homeHref = localizedPath('/', locale)
+const backTo = backHref ?? homeHref
+const backText = backLabel ?? t.backToHome
 ---
 
 <header class="flex items-center justify-between gap-4">
@@ -32,10 +38,10 @@ const homeHref = localizedPath('/', locale)
   <div class="flex items-center gap-4">
     {!hideLangSwitcher && <LangSwitcher locale={locale} client:idle />}
     <a
-      href={homeHref}
+      href={backTo}
       class="footerLink text-base text-color opacity-60 whitespace-nowrap"
     >
-      {t.backToHome}
+      {backText}
     </a>
   </div>
 </header>

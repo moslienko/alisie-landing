@@ -1,0 +1,99 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import PageHeader from './PageHeader.astro'
+import ThemeToggle from '../components/ThemeToggle/ThemeToggle'
+import { localizedPath } from '../i18n/locale'
+import { ui } from '../i18n/ui'
+import { APP_STORE_URL } from '../config/appStats'
+import type { Locale } from '../i18n/locale'
+
+interface Props {
+  locale: Locale
+  title: string
+  description: string
+  path: string
+  pubDate: Date
+  updatedDate?: Date
+  /** Article body HTML, base64-encoded in the source; decoded here at build time. */
+  encodedBody?: string
+  /** Per-article end-of-post CTA. Falls back to the generic ui strings if absent. */
+  ctaTitle?: string
+  ctaText?: string
+}
+
+const { locale, title, description, path, pubDate, updatedDate, encodedBody, ctaTitle, ctaText } = Astro.props
+const t = ui(locale)
+// The CTA copy is per-article (from frontmatter). No generic fallback — if an
+// article ships without ctaTitle, the card simply isn't rendered.
+const showCta = Boolean(ctaTitle && ctaText)
+
+// Decode at build time (SSG) so the deployed page ships plain, indexable HTML.
+// atob gives Latin-1 bytes; re-decode as UTF-8 so em-dashes etc. survive.
+const bodyHtml = encodedBody
+  ? new TextDecoder().decode(Uint8Array.from(atob(encodedBody), (c) => c.charCodeAt(0)))
+  : ''
+
+const SITE = 'https://alisie.app'
+const localeTag = locale === 'ru' ? 'ru-RU' : 'en-US'
+const fmt = (d: Date) =>
+  d.toLocaleDateString(localeTag, { year: 'numeric', month: 'long', day: 'numeric' })
+
+// BlogPosting structured data — tells Google this is an article, with author,
+// dates and a canonical URL, which helps it rank as content (not a code file).
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description,
+  inLanguage: locale,
+  datePublished: pubDate.toISOString(),
+  dateModified: (updatedDate ?? pubDate).toISOString(),
+  url: `${SITE}${path}`,
+  mainEntityOfPage: `${SITE}${path}`,
+  author: { '@type': 'Organization', name: 'Alisie' },
+  publisher: { '@type': 'Organization', name: 'Alisie' },
+}
+---
+
+<BaseLayout locale={locale} title={title} description={description} path={path} noAlternates>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <PageHeader
+      locale={locale}
+      backHref={localizedPath('/blog', locale)}
+      backLabel={t.backToBlog}
+      hideLangSwitcher
+    />
+    <main class="mt-12">
+      <article>
+        <h1
+          class="text-3xl md:text-4xl font-bold leading-tight
+            bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)]
+            bg-clip-text text-transparent"
+        >
+          {title}
+        </h1>
+        <p class="text-sm text-color opacity-50 mt-3">
+          <time datetime={pubDate.toISOString()}>{fmt(pubDate)}</time>
+          {updatedDate && <> · updated <time datetime={updatedDate.toISOString()}>{fmt(updatedDate)}</time></>}
+        </p>
+        <div class="legalBody blogBody mt-8 text-color opacity-90" set:html={bodyHtml} />
+      </article>
+
+      {showCta && (
+        <aside class="blogCta mt-14">
+          <img class="blogCtaIcon" src="/app_icon_192.png" alt="Alisie" width="56" height="56" />
+          <div class="blogCtaBody">
+            <p class="blogCtaTitle">{ctaTitle}</p>
+            <p class="blogCtaText">{ctaText}</p>
+          </div>
+          <a class="blogCtaBadge" href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+            <img src={`/app_store_dark_${locale}.svg`} class="blogImgDark" alt={t.appStoreAlt} height="40" />
+            <img src={`/app_store_light_${locale}.svg`} class="blogImgLight" alt={t.appStoreAlt} height="40" />
+          </a>
+        </aside>
+      )}
+    </main>
+  </div>
+  <ThemeToggle locale={locale} client:idle />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} />
+</BaseLayout>

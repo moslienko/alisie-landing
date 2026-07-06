@@ -15,6 +15,19 @@ export const changelogEn: ChangelogEntry[] = [
     ],
   },
   {
+    version: "2.0.0",
+    date: "2026-06-29",
+    footer: "We're now Alisie! Same app, new name.",
+    notes: [
+      "App Redesign: a refreshed design and new icons across all iOS versions, with Liquid Glass support on iOS 26.",
+      "Statistics: new screens, redesigned charts, custom date ranges, and improved performance.",
+      "Pro Max: introducing the new Pro Max Extensions catalog - additional modules available as one-time purchases, with no subscription required.",
+      "Trends: discover how your dreams change over time. Track nightmare frequency, emerging emotions, shifts in tags, characters, and locations, and uncover recurring patterns - such as which days lucid dreams occur most often.",
+      "Dream Connections: explore an interactive graph of relationships between dream characters, locations, and objects. Discover frequent pairs, key nodes, and unexpected connections.",
+      "Improvements: faster performance, improved stability, and numerous refinements throughout the app.",
+    ],
+  },
+  {
     version: "1.10.2",
     date: "2025-11-26",
     notes: ["Improvements: the app is faster and more stable, with bug fixes."],
