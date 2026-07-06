@@ -935,6 +935,47 @@ body {
     background-color: rgb(var(--fg-rgb) / 0.03);
 }
 
+/* Restrained end-of-article CTA (rendered by BlogPostLayout under every post) */
+.blogCta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid rgb(var(--fg-rgb) / 0.1);
+    border-radius: 1rem;
+    background: rgb(var(--fg-rgb) / 0.02);
+}
+.blogCtaIcon {
+    width: 56px;
+    height: 56px;
+    border-radius: 22%;
+    flex-shrink: 0;
+}
+.blogCtaBody {
+    flex: 1 1 12rem;
+    min-width: 0;
+}
+.blogCtaTitle {
+    font-weight: 700;
+    color: var(--color-fg);
+    margin: 0;
+}
+.blogCtaText {
+    font-size: 0.95rem;
+    color: var(--color);
+    opacity: 0.7;
+    margin: 0.15rem 0 0;
+}
+.blogCtaBadge {
+    flex-shrink: 0;
+    display: inline-flex;
+}
+.blogCtaBadge img {
+    height: 40px;
+    width: auto;
+}
+
 .changelog {
     position: relative;
     list-style: none;
