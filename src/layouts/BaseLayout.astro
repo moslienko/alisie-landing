@@ -12,9 +12,15 @@ export interface Props {
   description: string;
   /** Locale-neutral path (no /ru prefix, leading slash), e.g. "/", "/privacy". */
   path: string;
+  /**
+   * Set when the page has no translated twin (e.g. an English-only blog post).
+   * Suppresses the hreflang / og:locale:alternate links so we don't point Google
+   * at a non-existent /ru URL.
+   */
+  noAlternates?: boolean;
 }
 
-const { locale, title, description, path } = Astro.props;
+const { locale, title, description, path, noAlternates = false } = Astro.props;
 
 const SITE = "https://alisie.app";
 
@@ -68,10 +74,14 @@ const siteSchema = {
     />
     <link rel="canonical" href={canonical} />
 
-    <!-- Language alternates -->
-    <link rel="alternate" hreflang="en" href={enHref} />
-    <link rel="alternate" hreflang="ru" href={ruHref} />
-    <link rel="alternate" hreflang="x-default" href={enHref} />
+    <!-- Language alternates (omitted for pages with no translated twin) -->
+    {!noAlternates && (
+      <>
+        <link rel="alternate" hreflang="en" href={enHref} />
+        <link rel="alternate" hreflang="ru" href={ruHref} />
+        <link rel="alternate" hreflang="x-default" href={enHref} />
+      </>
+    )}
 
     <!-- Open Graph (Facebook, Telegram, VK, LinkedIn) -->
     <meta property="og:type" content="website" />
@@ -85,7 +95,7 @@ const siteSchema = {
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Alisie — a private dream journal" />
     <meta property="og:locale" content={ogLocale} />
-    <meta property="og:locale:alternate" content={ogLocaleAlt} />
+    {!noAlternates && <meta property="og:locale:alternate" content={ogLocaleAlt} />}
 
     <!-- Twitter / X card -->
     <meta name="twitter:card" content="summary_large_image" />

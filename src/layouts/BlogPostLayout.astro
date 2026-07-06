@@ -1,0 +1,72 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import PageHeader from './PageHeader.astro'
+import ThemeToggle from '../components/ThemeToggle/ThemeToggle'
+import { localizedPath } from '../i18n/locale'
+import { ui } from '../i18n/ui'
+import type { Locale } from '../i18n/locale'
+
+interface Props {
+  locale: Locale
+  title: string
+  description: string
+  path: string
+  pubDate: Date
+  updatedDate?: Date
+}
+
+const { locale, title, description, path, pubDate, updatedDate } = Astro.props
+const t = ui(locale)
+
+const SITE = 'https://alisie.app'
+const localeTag = locale === 'ru' ? 'ru-RU' : 'en-US'
+const fmt = (d: Date) =>
+  d.toLocaleDateString(localeTag, { year: 'numeric', month: 'long', day: 'numeric' })
+
+// BlogPosting structured data — tells Google this is an article, with author,
+// dates and a canonical URL, which helps it rank as content (not a code file).
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description,
+  inLanguage: locale,
+  datePublished: pubDate.toISOString(),
+  dateModified: (updatedDate ?? pubDate).toISOString(),
+  url: `${SITE}${path}`,
+  mainEntityOfPage: `${SITE}${path}`,
+  author: { '@type': 'Organization', name: 'Alisie' },
+  publisher: { '@type': 'Organization', name: 'Alisie' },
+}
+---
+
+<BaseLayout locale={locale} title={title} description={description} path={path} noAlternates>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <PageHeader
+      locale={locale}
+      backHref={localizedPath('/blog', locale)}
+      backLabel={t.backToBlog}
+      hideLangSwitcher
+    />
+    <main class="mt-12">
+      <article>
+        <h1
+          class="text-3xl md:text-4xl font-bold leading-tight
+            bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)]
+            bg-clip-text text-transparent"
+        >
+          {title}
+        </h1>
+        <p class="text-sm text-color opacity-50 mt-3">
+          <time datetime={pubDate.toISOString()}>{fmt(pubDate)}</time>
+          {updatedDate && <> · updated <time datetime={updatedDate.toISOString()}>{fmt(updatedDate)}</time></>}
+        </p>
+        <div class="legalBody blogBody mt-8 text-color opacity-90">
+          <slot />
+        </div>
+      </article>
+    </main>
+  </div>
+  <ThemeToggle locale={locale} client:idle />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} />
+</BaseLayout>

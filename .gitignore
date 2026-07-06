@@ -11,6 +11,9 @@ dist
 /.svelte-kit
 /build
 
+# Blog article sources
+src/_drafts
+
 # OS
 .DS_Store
 Thumbs.db
