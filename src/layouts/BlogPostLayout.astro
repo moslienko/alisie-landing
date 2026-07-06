@@ -13,10 +13,18 @@ interface Props {
   path: string
   pubDate: Date
   updatedDate?: Date
+  /** Article body HTML, base64-encoded in the source; decoded here at build time. */
+  encodedBody?: string
 }
 
-const { locale, title, description, path, pubDate, updatedDate } = Astro.props
+const { locale, title, description, path, pubDate, updatedDate, encodedBody } = Astro.props
 const t = ui(locale)
+
+// Decode at build time (SSG) so the deployed page ships plain, indexable HTML.
+// atob gives Latin-1 bytes; re-decode as UTF-8 so em-dashes etc. survive.
+const bodyHtml = encodedBody
+  ? new TextDecoder().decode(Uint8Array.from(atob(encodedBody), (c) => c.charCodeAt(0)))
+  : ''
 
 const SITE = 'https://alisie.app'
 const localeTag = locale === 'ru' ? 'ru-RU' : 'en-US'
@@ -61,9 +69,7 @@ const articleSchema = {
           <time datetime={pubDate.toISOString()}>{fmt(pubDate)}</time>
           {updatedDate && <> · updated <time datetime={updatedDate.toISOString()}>{fmt(updatedDate)}</time></>}
         </p>
-        <div class="legalBody blogBody mt-8 text-color opacity-90">
-          <slot />
-        </div>
+        <div class="legalBody blogBody mt-8 text-color opacity-90" set:html={bodyHtml} />
       </article>
     </main>
   </div>
