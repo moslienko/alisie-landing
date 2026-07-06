@@ -75,13 +75,15 @@ const siteSchema = {
     <link rel="canonical" href={canonical} />
 
     <!-- Language alternates (omitted for pages with no translated twin) -->
-    {!noAlternates && (
-      <>
-        <link rel="alternate" hreflang="en" href={enHref} />
-        <link rel="alternate" hreflang="ru" href={ruHref} />
-        <link rel="alternate" hreflang="x-default" href={enHref} />
-      </>
-    )}
+    {
+      !noAlternates && (
+        <>
+          <link rel="alternate" hreflang="en" href={enHref} />
+          <link rel="alternate" hreflang="ru" href={ruHref} />
+          <link rel="alternate" hreflang="x-default" href={enHref} />
+        </>
+      )
+    }
 
     <!-- Open Graph (Facebook, Telegram, VK, LinkedIn) -->
     <meta property="og:type" content="website" />
@@ -95,7 +97,11 @@ const siteSchema = {
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Alisie — a private dream journal" />
     <meta property="og:locale" content={ogLocale} />
-    {!noAlternates && <meta property="og:locale:alternate" content={ogLocaleAlt} />}
+    {
+      !noAlternates && (
+        <meta property="og:locale:alternate" content={ogLocaleAlt} />
+      )
+    }
 
     <!-- Twitter / X card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -113,11 +119,12 @@ const siteSchema = {
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#030303" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair:ital,wght@1,700&family=Sora:wght@400;600;700&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="/fonts/sora.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
     <title>{title}</title>
     <!-- Set the theme before first paint to avoid a flash of the wrong theme.
@@ -136,7 +143,10 @@ const siteSchema = {
         document.documentElement.classList.add("theme-" + theme);
         var meta = document.querySelector('meta[name="theme-color"]');
         if (meta) {
-          meta.setAttribute("content", theme === "light" ? "#f7f6fb" : "#030303");
+          meta.setAttribute(
+            "content",
+            theme === "light" ? "#f7f6fb" : "#030303",
+          );
         }
       }
       applyTheme();
