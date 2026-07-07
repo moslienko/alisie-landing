@@ -11,10 +11,9 @@ interface Props {
 const { locale = 'en' } = Astro.props as Props
 const t = ui(locale)
 
-// One shared pool of posts. Newest first (registry is already sorted).
-// A post whose language differs from the current UI locale is still shown,
-// flagged with an "EN" badge so the reader knows the article is in English.
-const posts = blogPosts
+// Each locale's blog lists only its own-language posts. An article is authored
+// in both languages (en → /blog, ru → /ru/blog), so there's no cross-locale mixing.
+const posts = blogPosts.filter((p) => p.lang === locale)
 const fmt = (iso: string) =>
   new Date(iso).toLocaleDateString(locale === 'ru' ? 'ru-RU' : 'en-US', {
     year: 'numeric',
@@ -41,17 +40,10 @@ const fmt = (iso: string) =>
   <div class="mt-10 flex flex-col gap-8">
     {
       posts.map((post) => (
-        <a href={`/blog/${post.slug}`} class="blogCard block group">
-          <div class="flex items-center gap-3">
-            <h2 class="text-xl md:text-2xl font-semibold text-color group-hover:text-[var(--color-tint-start)] transition-colors">
-              {post.title}
-            </h2>
-            {post.lang !== locale && (
-              <span class="shrink-0 text-[0.7rem] font-semibold tracking-wider px-2 py-0.5 rounded-full border border-[rgb(var(--fg-rgb)/0.2)] text-color opacity-60">
-                {t.blogEnBadge}
-              </span>
-            )}
-          </div>
+        <a href={post.lang === 'ru' ? `/ru/blog/${post.slug}` : `/blog/${post.slug}`} class="blogCard block group">
+          <h2 class="text-xl md:text-2xl font-semibold text-color group-hover:text-[var(--color-tint-start)] transition-colors">
+            {post.title}
+          </h2>
           <p class="text-sm text-color opacity-50 mt-1">{fmt(post.pubDate)}</p>
           <p class="text-base text-color opacity-70 mt-2">{post.description}</p>
         </a>
