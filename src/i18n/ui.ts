@@ -31,7 +31,6 @@ export interface UiStrings {
   blogIntro: string;
   blogMetaDescription: string;
   blogEmpty: string;
-  blogEnBadge: string;
   backToBlog: string;
 }
 
@@ -64,11 +63,10 @@ const en: UiStrings = {
   metaDescription:
     "Alisie is a dream journal designed to help you rediscover and explore your dream world. Record your dreams in vivid detail and build a personal encyclopedia of your dream life.",
   blogTitle: "Blog",
-  blogIntro: "Evidence-based writing about dreams, recall and the science of sleep.",
+  blogIntro: "Evidence-based writing on dreams and lucid dreaming, grounded in research into what happens while we sleep.",
   blogMetaDescription:
     "Evidence-based articles about dreams, dream recall, lucid dreaming and the science of sleep.",
   blogEmpty: "No posts yet.",
-  blogEnBadge: "EN",
   backToBlog: "← Back to blog",
 };
 
@@ -101,11 +99,10 @@ const ru: UiStrings = {
   metaDescription:
     "Alisie — это дневник снов, созданный для того, чтобы помочь вам исследовать и лучше понимать свой мир сновидений. Записывайте свои сны во всех подробностях и создавайте собственную энциклопедию сновидений.",
   blogTitle: "Блог",
-  blogIntro: "Материалы о снах, запоминании сновидений и науке о сне — с опорой на исследования.",
+  blogIntro: "Материалы о снах и осознанных сновидениях — с опорой на исследования того, что происходит, пока мы спим.",
   blogMetaDescription:
     "Статьи о снах, запоминании сновидений, осознанных снах и науке о сне — с опорой на исследования.",
   blogEmpty: "Пока нет статей.",
-  blogEnBadge: "EN",
   backToBlog: "← Назад к блогу",
 };
 
