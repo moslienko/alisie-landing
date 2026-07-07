@@ -150,12 +150,19 @@ function build(name) {
   // fully-rendered, indexable HTML — only the git source is obscured.
   const encodedBody = Buffer.from(html, 'utf8').toString('base64')
 
+  // RU posts render under /ru/blog/, EN under /blog/. That extra directory level
+  // changes the relative import depth to the layout. `path` stays locale-neutral
+  // ("/blog/<slug>") — BaseLayout prefixes "/ru" itself for the ru canonical.
+  const outDir = lang === 'ru' ? join(ROOT, 'src', 'pages', 'ru', 'blog') : OUT
+  const layoutImport =
+    lang === 'ru' ? '../../../layouts/BlogPostLayout.astro' : '../../layouts/BlogPostLayout.astro'
+
   const page = `---
 // AUTO-GENERATED
 // Do not edit by hand — edit the .md source and rebuild.
 // body is base64-encoded on purpose; decoded at build time by BlogPostLayout.
 // draft: ${draft}
-import BlogPostLayout from '../../layouts/BlogPostLayout.astro'
+import BlogPostLayout from '${layoutImport}'
 ---
 
 <BlogPostLayout
@@ -168,24 +175,31 @@ ${data.updatedDate ? `  updatedDate={new Date('${data.updatedDate}')}\n` : ''}${
 />
 `
 
-  if (!existsSync(OUT)) mkdirSync(OUT, { recursive: true })
-  writeFileSync(join(OUT, `${slug}.astro`), page)
+  if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true })
+  writeFileSync(join(outDir, `${slug}.astro`), page)
   return { slug, title: data.title, description: data.description, pubDate: data.pubDate, lang, draft }
 }
 
 // ---------- registry (metadata only, for the blog index) ----------
+function readPostsFrom(dir) {
+  if (!existsSync(dir)) return []
+  return readdirSync(dir)
+    .filter((f) => f.endsWith('.astro') && f !== 'index.astro')
+    .map((f) => {
+      const content = readFileSync(join(dir, f), 'utf8')
+      const title = content.match(/title="([^"]*)"/)?.[1] ?? ''
+      const description = content.match(/description="([^"]*)"/)?.[1] ?? ''
+      const path = content.match(/path="([^"]*)"/)?.[1] ?? ''
+      const pubDate = content.match(/pubDate=\{new Date\('([^']*)'\)\}/)?.[1] ?? ''
+      const lang = content.match(/locale="([^"]*)"/)?.[1] ?? 'en'
+      const draft = /\/\/ draft: true/.test(content)
+      return { slug: path.replace('/blog/', ''), title, description, pubDate, lang, draft }
+    })
+}
+
 function rebuildRegistry() {
-  const files = readdirSync(OUT).filter((f) => f.endsWith('.astro') && f !== 'index.astro')
-  const posts = files.map((f) => {
-    const content = readFileSync(join(OUT, f), 'utf8')
-    const title = content.match(/title="([^"]*)"/)?.[1] ?? ''
-    const description = content.match(/description="([^"]*)"/)?.[1] ?? ''
-    const path = content.match(/path="([^"]*)"/)?.[1] ?? ''
-    const pubDate = content.match(/pubDate=\{new Date\('([^']*)'\)\}/)?.[1] ?? ''
-    const lang = content.match(/locale="([^"]*)"/)?.[1] ?? 'en'
-    const draft = /\/\/ draft: true/.test(content)
-    return { slug: path.replace('/blog/', ''), title, description, pubDate, lang, draft }
-  })
+  // EN posts live in src/pages/blog/, RU posts in src/pages/ru/blog/.
+  const posts = [...readPostsFrom(OUT), ...readPostsFrom(join(ROOT, 'src', 'pages', 'ru', 'blog'))]
   posts.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate))
   // Drafts don't show in the public blog index — strip the draft flag and the
   // draft posts themselves from the registry that /blog renders from.
@@ -248,14 +262,22 @@ if (!arg) {
 }
 try {
   if (arg === '--all') {
-    const names = readdirSync(DRAFTS).filter((f) => f.endsWith('.md')).map((f) => f.replace(/\.md$/, ''))
+    // Only real articles: a .md whose first non-empty line is a "---" frontmatter
+    // block. This skips README, *.schema.md, notes and any other helper files the
+    // pipeline drops into _drafts.
+    const names = readdirSync(DRAFTS)
+      .filter((f) => f.endsWith('.md'))
+      .filter((f) => readFileSync(join(DRAFTS, f), 'utf8').trimStart().startsWith('---'))
+      .map((f) => f.replace(/\.md$/, ''))
     names.forEach((n) => {
       const r = build(n)
-      console.log(`✓ ${n}.md → src/pages/blog/${r.slug}.astro`)
+      const dir = r.lang === 'ru' ? 'src/pages/ru/blog' : 'src/pages/blog'
+      console.log(`✓ ${n}.md → ${dir}/${r.slug}.astro`)
     })
   } else {
     const r = build(arg)
-    console.log(`✓ ${arg}.md → src/pages/blog/${r.slug}.astro`)
+    const dir = r.lang === 'ru' ? 'src/pages/ru/blog' : 'src/pages/blog'
+    console.log(`✓ ${arg}.md → ${dir}/${r.slug}.astro`)
   }
   const posts = rebuildRegistry()
   console.log('✓ updated src/data/blogPosts.ts')
