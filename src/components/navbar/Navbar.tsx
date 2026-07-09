@@ -7,8 +7,13 @@ import Logo from '../logo/Logo';
 import LangSwitcher from '../LangSwitcher/LangSwitcher';
 import { getData } from './Navbar.data';
 import { useLocale } from '../../i18n/useLocale';
+import { localizedPath } from '../../i18n/locale';
 import { ui } from '../../i18n/ui';
 import { useTheme } from '../../hooks/useTheme';
+
+// Localize page link
+export const navHref = (link: string, locale: 'en' | 'ru') =>
+    link.startsWith('/') ? localizedPath(link, locale) : link;
 
 export default function Navbar() {
     const locale = useLocale();
@@ -45,7 +50,7 @@ export default function Navbar() {
                         {data.menu.map((item) => (
                             <a
                                 key={item.title}
-                                href={item.link}
+                                href={navHref(item.link, locale)}
                                 className='font-normal text-sl ml-4 mr-4 text-[rgb(var(--fg-rgb)/0.7)] hover:text-[var(--color-tint-start)] transition-colors duration-200'
                             >
                                 {item.title}

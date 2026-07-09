@@ -1,6 +1,7 @@
 
 import { X } from 'lucide-react';
 import { getData } from './navbar/Navbar.data'
+import { navHref } from './navbar/Navbar'
 import { useLocale } from '../i18n/useLocale'
 import { ui } from '../i18n/ui'
 import { useTheme } from '../hooks/useTheme'
@@ -30,7 +31,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ toggleMenu }) => {
                     {data.menu.map((item) => (
                         <li key={item.title}>
                             <a
-                                href={item.link}
+                                href={navHref(item.link, locale)}
                                 onClick={toggleMenu}
                                 className='block px-8 py-3 rounded-2xl font-sora font-semibold text-4xl
                                     text-[rgb(var(--fg-rgb)/0.8)] hover:text-[var(--color-tint-start)] hover:bg-[rgb(var(--tint-start-rgb)/0.08)]
