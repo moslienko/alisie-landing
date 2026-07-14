@@ -2,6 +2,13 @@ import { useCallback, useSyncExternalStore } from "react";
 
 export type Theme = "dark" | "light";
 
+declare global {
+  interface Window {
+    /** Swaps article-diagram <img> sources by theme. Defined in BaseLayout.astro. */
+    __applyThemeImages?: (theme: Theme) => void;
+  }
+}
+
 const STORAGE_KEY = "theme";
 
 const listeners = new Set<() => void>();
@@ -24,6 +31,10 @@ function applyTheme(theme: Theme) {
   if (meta) {
     meta.setAttribute("content", theme === "light" ? "#f7f6fb" : "#030303");
   }
+  // Article diagrams are a single <img> whose src is swapped by theme (a CSS-hidden
+  // image would never be indexed by Google). Defined by the inline script in
+  // BaseLayout, which owns that swap.
+  window.__applyThemeImages?.(theme);
 }
 
 function setThemeGlobal(theme: Theme) {
