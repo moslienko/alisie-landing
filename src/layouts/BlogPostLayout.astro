@@ -19,9 +19,26 @@ interface Props {
   /** Per-article end-of-post CTA. Falls back to the generic ui strings if absent. */
   ctaTitle?: string
   ctaText?: string
+  /** Article cover (lead diagram), site-root-absolute. Falls back to the site banner. */
+  ogImage?: string
+  ogImageWidth?: number
+  ogImageHeight?: number
 }
 
-const { locale, title, description, path, pubDate, updatedDate, encodedBody, ctaTitle, ctaText } = Astro.props
+const {
+  locale,
+  title,
+  description,
+  path,
+  pubDate,
+  updatedDate,
+  encodedBody,
+  ctaTitle,
+  ctaText,
+  ogImage,
+  ogImageWidth,
+  ogImageHeight,
+} = Astro.props
 const t = ui(locale)
 // The CTA copy is per-article (from frontmatter). No generic fallback — if an
 // article ships without ctaTitle, the card simply isn't rendered.
@@ -52,10 +69,21 @@ const articleSchema = {
   mainEntityOfPage: `${SITE}${path}`,
   author: { '@type': 'Organization', name: 'Alisie' },
   publisher: { '@type': 'Organization', name: 'Alisie' },
+  ...(ogImage && { image: `${SITE}${ogImage}` }),
 }
 ---
 
-<BaseLayout locale={locale} title={title} description={description} path={path} noAlternates>
+<BaseLayout
+  locale={locale}
+  title={title}
+  description={description}
+  path={path}
+  noAlternates
+  ogImage={ogImage}
+  ogImageWidth={ogImageWidth}
+  ogImageHeight={ogImageHeight}
+  ogImageAlt={ogImage ? title : undefined}
+>
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <PageHeader
       locale={locale}

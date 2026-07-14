@@ -18,9 +18,29 @@ export interface Props {
    * at a non-existent /ru URL.
    */
   noAlternates?: boolean;
+  /**
+   * Page-specific social/search cover (site-root-absolute, e.g.
+   * "/blog-img/<slug>/cover-<slug>.png"). Blog posts pass their lead diagram:
+   * someone searching "dream forgetting curve" wants the curve, not a gradient
+   * with a headline on it. Falls back to the shared site banner.
+   */
+  ogImage?: string;
+  ogImageWidth?: number;
+  ogImageHeight?: number;
+  ogImageAlt?: string;
 }
 
-const { locale, title, description, path, noAlternates = false } = Astro.props;
+const {
+  locale,
+  title,
+  description,
+  path,
+  noAlternates = false,
+  ogImage: ogImageProp,
+  ogImageWidth = 1200,
+  ogImageHeight = 630,
+  ogImageAlt = "Alisie — a private dream journal",
+} = Astro.props;
 
 const SITE = "https://alisie.app";
 
@@ -30,7 +50,9 @@ const ruHref = path === "/" ? `${SITE}/ru` : `${SITE}/ru${path}`;
 const canonical = locale === "ru" ? ruHref : enHref;
 const ogLocale = locale === "ru" ? "ru_RU" : "en_US";
 const ogLocaleAlt = locale === "ru" ? "en_US" : "ru_RU";
-const ogImage = locale === "ru" ? `${SITE}/og-ru.png` : `${SITE}/og-en.png`;
+const defaultOgImage =
+  locale === "ru" ? `${SITE}/og-ru.png` : `${SITE}/og-en.png`;
+const ogImage = ogImageProp ? `${SITE}${ogImageProp}` : defaultOgImage;
 
 const appSchema = {
   "@context": "https://schema.org",
@@ -93,9 +115,9 @@ const siteSchema = {
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Alisie — a private dream journal" />
+    <meta property="og:image:width" content={String(ogImageWidth)} />
+    <meta property="og:image:height" content={String(ogImageHeight)} />
+    <meta property="og:image:alt" content={ogImageAlt} />
     <meta property="og:locale" content={ogLocale} />
     {
       !noAlternates && (
@@ -137,6 +159,26 @@ const siteSchema = {
           return "dark";
         }
       }
+      // Article diagrams ship as a single <img> carrying the dark PNG, with the
+      // light one on data-light. Swapping src — rather than hiding one of two
+      // <img>s with CSS — is what makes them indexable: Google never indexes a
+      // CSS-hidden image. src and data-light trade places, so repeated toggles
+      // stay correct.
+      //
+      // On window so the React theme toggle (src/hooks/useTheme.ts) can call it
+      // too — it sets the theme without going through this script.
+      window.__applyThemeImages = function (theme) {
+        var imgs = document.querySelectorAll("img[data-light]");
+        for (var i = 0; i < imgs.length; i++) {
+          var img = imgs[i];
+          var isLight = img.getAttribute("data-theme") === "light";
+          if (isLight === (theme === "light")) continue;
+          var other = img.getAttribute("data-light");
+          img.setAttribute("data-light", img.getAttribute("src"));
+          img.setAttribute("src", other);
+          img.setAttribute("data-theme", theme);
+        }
+      };
       function applyTheme() {
         var theme = currentTheme();
         document.documentElement.classList.remove("theme-light", "theme-dark");
@@ -147,6 +189,15 @@ const siteSchema = {
             "content",
             theme === "light" ? "#f7f6fb" : "#030303",
           );
+        }
+        // This script runs in <head>, before the body exists — so the first pass
+        // waits for the parsed DOM. After a View Transition the DOM is already there.
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", function () {
+            window.__applyThemeImages(theme);
+          });
+        } else {
+          window.__applyThemeImages(theme);
         }
       }
       applyTheme();

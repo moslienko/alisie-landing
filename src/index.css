@@ -932,7 +932,28 @@ body {
     border-radius: 0.75rem;
 }
 
-/* Theme-aware article images */
+/* Article illustrations.
+   One <img> per diagram, never a hidden dark/light pair: an image hidden with
+   CSS is not indexed by Google, which is why none of these ever reached Image
+   search. The src holds the dark PNG (what a crawler renders — its localStorage
+   is empty, so the theme script falls through to dark); the theme script swaps in
+   data-light when the reader is on the light theme. */
+.blogFigure {
+    margin: 1.5rem 0;
+}
+.blogFigure img {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+.blogFigure figcaption {
+    margin-top: 0.625rem;
+    font-size: 0.875rem;
+    font-style: italic;
+    opacity: 0.65;
+}
+
+/* Theme-aware App Store badge (an icon inside a link, not indexable content) */
 .theme-dark .blogImgLight,
 .theme-light .blogImgDark {
     display: none;
