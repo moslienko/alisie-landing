@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://alisie.app/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/" />
@@ -37,10 +38,72 @@
   </url>
   <!-- BLOG:START (auto-generated) -->
   <url>
+    <loc>https://alisie.app/blog/what-is-lucid-dreaming</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/cover-what-is-lucid-dreaming.png</image:loc>
+      <image:title>Lucid Dreaming: How It Works and How to Learn It</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/lucid-dreaming-brain-state-dark.png</image:loc>
+      <image:title>A spectrum from ordinary REM sleep to full waking, with lucid dreaming placed in between: prefrontal self-awareness is off in REM, partly on in lucid dreaming, and fully on when awake.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/lucid-dream-induction-methods-dark.png</image:loc>
+      <image:title>Three lucid-dreaming induction methods shown as steps: reality testing during the day, MILD (rehearsing the intention on waking), and Wake Back To Bed, with a note that combining them works best.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/osoznannye-sny</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/osoznannye-sny/cover-osoznannye-sny.png</image:loc>
+      <image:title>Осознанные сны: как это работает и можно ли научиться</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/osoznannye-sny/osoznannyy-son-gibridnoe-sostoyanie-dark.png</image:loc>
+      <image:title>Шкала от обычного REM-сна к полному бодрствованию, где осознанный сон расположен между ними: префронтальное самосознание выключено в REM-сне, частично включено в осознанном сне и полностью включено при бодрствовании.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/osoznannye-sny/tehniki-osoznannyh-snov-dark.png</image:loc>
+      <image:title>Три техники наведения осознанных снов по шагам: проверка реальности днём, MILD (проговаривание намерения при пробуждении) и Wake Back To Bed, с пометкой, что лучше всего они работают вместе.</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://alisie.app/blog/how-to-remember-your-dreams</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/how-to-remember-your-dreams/cover-how-to-remember-your-dreams.png</image:loc>
+      <image:title>How to Remember Your Dreams: Techniques That Work</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/how-to-remember-your-dreams/dream-forgetting-curve-dark.png</image:loc>
+      <image:title>Illustrative curve showing that dream recall is nearly complete the moment you wake, then drops sharply within the first few minutes and flattens close to zero.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/how-to-remember-your-dreams/high-vs-low-dream-recallers-dark.png</image:loc>
+      <image:title>Schematic comparison of two brains: in high recallers the medial prefrontal cortex and temporoparietal junction are brightly active, while in low recallers the same two regions are much fainter.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/how-to-remember-your-dreams/how-to-train-dream-recall-dark.png</image:loc>
+      <image:title>Three-step routine for training dream recall: 1) set the intention before sleep, 2) stay still on waking, 3) write the dream down immediately.</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://alisie.app/ru/blog/kak-zapominat-sny</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/kak-zapominat-sny/cover-kak-zapominat-sny.png</image:loc>
+      <image:title>Как запоминать сны: техники, которые работают</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/kak-zapominat-sny/krivaya-zabyvaniya-snov-dark.png</image:loc>
+      <image:title>Кривая, показывающая, что сразу после пробуждения сон помнится почти полностью, затем резко забывается за первые минуты и сходит почти к нулю.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/kak-zapominat-sny/pochemu-odni-zapominayut-sny-dark.png</image:loc>
+      <image:title>Схематичное сравнение двух мозгов: у хорошо запоминающих медиальная префронтальная кора и височно-теменной узел активны ярко, у плохо запоминающих те же две области гораздо бледнее.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/kak-zapominat-sny/kak-trenirovat-zapominanie-snov-dark.png</image:loc>
+      <image:title>Три шага для тренировки запоминания снов: 1) настроиться перед сном на то, что хотите запомнить сон, 2) не двигаться после пробуждения, 3) сразу записать сон.</image:title>
+    </image:image>
   </url>
   <!-- BLOG:END -->
 </urlset>
