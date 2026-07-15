@@ -11,14 +11,14 @@ export const blogPosts: BlogPostMeta[] = [
   {
     "slug": "what-is-lucid-dreaming",
     "title": "What a Lucid Dream Is and How to Have One",
-    "description": "A lucid dream is one you know you're in while it's happening. What's proven, what's promising, and what the evidence says about training it — without the hype.",
+    "description": "A lucid dream is one you know you're in while it's happening. What's proven, what's promising, and what the evidence says about training it - without the hype.",
     "pubDate": "2026-07-14",
     "lang": "en"
   },
   {
     "slug": "osoznannye-sny",
     "title": "Что такое осознанный сон и как в него попасть",
-    "description": "Осознанный сон — это сон, в котором вы понимаете, что спите. Что доказано, что перспективно и что известно о тренировке осознанности — без преувеличений.",
+    "description": "Осознанный сон - это сон, в котором вы понимаете, что спите. Что доказано, что перспективно и что известно о тренировке осознанности - без преувеличений.",
     "pubDate": "2026-07-14",
     "lang": "ru"
   },
