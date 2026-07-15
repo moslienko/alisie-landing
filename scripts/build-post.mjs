@@ -368,7 +368,10 @@ function rebuildSitemap(posts) {
   const urls = posts
     .filter((p) => !p.draft) // drafts stay out of the sitemap until released
     .map((p) => {
-      const loc = p.lang === 'ru' ? `${SITE}/ru/blog/${p.slug}` : `${SITE}/blog/${p.slug}`
+      // Trailing slash: the server serves /blog/<slug>/index.html and 301s the
+      // slash-less URL. sitemap <loc> must be the final (non-redirecting) URL,
+      // matching <link rel="canonical">, or Google reports "Redirect error".
+      const loc = p.lang === 'ru' ? `${SITE}/ru/blog/${p.slug}/` : `${SITE}/blog/${p.slug}/`
       const imgs = (p.images ?? [])
         .map(
           (img) =>

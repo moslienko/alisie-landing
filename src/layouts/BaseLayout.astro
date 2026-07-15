@@ -45,8 +45,14 @@ const {
 const SITE = "https://alisie.app";
 
 // Build canonical + hreflang alternates from the locale-neutral path.
-const enHref = path === "/" ? `${SITE}/` : `${SITE}${path}`;
-const ruHref = path === "/" ? `${SITE}/ru` : `${SITE}/ru${path}`;
+// GitHub Pages serves every page as /slug/index.html and 301-redirects the
+// slash-less URL to the trailing-slash one (astro build.format: 'directory').
+// Canonical/og:url/hreflang MUST match what the server actually serves, or
+// Google sees the canonical URL 301 away and refuses to index it ("Redirect
+// error" / "Alternate page with canonical tag"). So every href ends in a slash.
+const withSlash = (u) => (u.endsWith("/") ? u : `${u}/`);
+const enHref = withSlash(path === "/" ? `${SITE}/` : `${SITE}${path}`);
+const ruHref = withSlash(path === "/" ? `${SITE}/ru` : `${SITE}/ru${path}`);
 const canonical = locale === "ru" ? ruHref : enHref;
 const ogLocale = locale === "ru" ? "ru_RU" : "en_US";
 const ogLocaleAlt = locale === "ru" ? "en_US" : "ru_RU";

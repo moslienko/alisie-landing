@@ -5,40 +5,40 @@
   <url>
     <loc>https://alisie.app/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alisie.app/" />
   </url>
   <url>
-    <loc>https://alisie.app/whats-new</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/whats-new" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru/whats-new" />
+    <loc>https://alisie.app/whats-new/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/whats-new/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru/whats-new/" />
   </url>
   <url>
-    <loc>https://alisie.app/support</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/support" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru/support" />
+    <loc>https://alisie.app/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/support/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru/support/" />
   </url>
   <url>
-    <loc>https://alisie.app/privacy</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/privacy" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru/privacy" />
+    <loc>https://alisie.app/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru/privacy/" />
   </url>
   <url>
-    <loc>https://alisie.app/terms</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/terms" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru/terms" />
+    <loc>https://alisie.app/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/terms/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru/terms/" />
   </url>
   <url>
-    <loc>https://alisie.app/ru</loc>
+    <loc>https://alisie.app/ru/</loc>
   </url>
   <url>
-    <loc>https://alisie.app/blog</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/blog" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru/blog" />
+    <loc>https://alisie.app/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alisie.app/blog/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://alisie.app/ru/blog/" />
   </url>
   <!-- BLOG:START (auto-generated) -->
   <url>
-    <loc>https://alisie.app/blog/what-is-lucid-dreaming</loc>
+    <loc>https://alisie.app/blog/what-is-lucid-dreaming/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/cover-what-is-lucid-dreaming.png</image:loc>
       <image:title>What a Lucid Dream Is and How to Have One</image:title>
@@ -53,7 +53,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://alisie.app/ru/blog/osoznannye-sny</loc>
+    <loc>https://alisie.app/ru/blog/osoznannye-sny/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/osoznannye-sny/cover-osoznannye-sny.png</image:loc>
       <image:title>Что такое осознанный сон и как в него попасть</image:title>
@@ -68,7 +68,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://alisie.app/blog/how-to-remember-your-dreams</loc>
+    <loc>https://alisie.app/blog/how-to-remember-your-dreams/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/how-to-remember-your-dreams/cover-how-to-remember-your-dreams.png</image:loc>
       <image:title>How to Remember Your Dreams: Techniques That Work</image:title>
@@ -87,7 +87,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://alisie.app/ru/blog/kak-zapominat-sny</loc>
+    <loc>https://alisie.app/ru/blog/kak-zapominat-sny/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/kak-zapominat-sny/cover-kak-zapominat-sny.png</image:loc>
       <image:title>Как запоминать сны: техники, которые работают</image:title>
