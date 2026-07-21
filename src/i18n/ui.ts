@@ -15,7 +15,9 @@ export interface UiStrings {
   lightTheme: string;
   darkTheme: string;
   privacyPolicyTitle: string;
+  privacyMetaDescription: string;
   termsTitle: string;
+  termsMetaDescription: string;
   legalUpdatedDate: string;
   supportTitle: string;
   supportIntro: string;
@@ -49,7 +51,11 @@ const en: UiStrings = {
   lightTheme: "Light theme",
   darkTheme: "Dark theme",
   privacyPolicyTitle: "Privacy Policy",
+  privacyMetaDescription:
+    "How Alisie handles your data: dream entries stay on your devices and sync through your own iCloud. No servers, no accounts, no tracking of what you write.",
   termsTitle: "Terms & Conditions",
+  termsMetaDescription:
+    "The terms for using Alisie: purchases and one-time unlocks, what the app does and doesn't guarantee, and how the agreement can change.",
   legalUpdatedDate: "June 24, 2026",
   supportTitle: "Support",
   supportIntro: "Need help, found a bug, or have an idea? The best place to reach us is Telegram or Reddit — there's an active community there and we check it often, so you'll usually get the fastest answer.",
@@ -85,7 +91,11 @@ const ru: UiStrings = {
   lightTheme: "Светлая тема",
   darkTheme: "Тёмная тема",
   privacyPolicyTitle: "Политика конфиденциальности",
+  privacyMetaDescription:
+    "Как Alisie обращается с вашими данными: записи снов остаются на ваших устройствах и синхронизируются через ваш iCloud. Без серверов, аккаунтов и отслеживания того, что вы пишете.",
   termsTitle: "Условия использования",
+  termsMetaDescription:
+    "Условия использования Alisie: покупки и разовые разблокировки, что приложение гарантирует и что нет, и как эти условия могут меняться.",
   legalUpdatedDate: "24 июня 2026",
   supportTitle: "Поддержка",
   supportIntro: "Нужна помощь, нашли ошибку или есть идея? Лучше всего написать в Telegram или на Reddit — там активное сообщество, и мы часто их проверяем, так что ответ обычно приходит быстрее всего.",
