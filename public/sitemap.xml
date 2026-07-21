@@ -38,6 +38,44 @@
   </url>
   <!-- BLOG:START (auto-generated) -->
   <url>
+    <loc>https://alisie.app/blog/why-we-have-nightmares/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/why-we-have-nightmares/cover-why-we-have-nightmares.png</image:loc>
+      <image:title>Why You Have Nightmares and How to Stop Them</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/why-we-have-nightmares/nightmare-triggers-dark.png</image:loc>
+      <image:title>Diagram grouping common nightmare triggers into four clusters: psychological (stress, anxiety, trauma), sleep-related (irregular schedule, deprivation, REM rebound, apnea), substances (alcohol, certain medications and their withdrawal), and situational (scary media, fever, illness).</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/why-we-have-nightmares/nightmare-frequency-chart-dark.png</image:loc>
+      <image:title>A simple scale showing that about 85% of adults have at least one nightmare per year, while only about 2 to 6 percent have frequent nightmares weekly or more, the range where it may become a treatable disorder.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/why-we-have-nightmares/imagery-rehearsal-therapy-steps-dark.png</image:loc>
+      <image:title>Three-step illustration of Imagery Rehearsal Therapy: 1) write down the nightmare, 2) rewrite its ending into something less threatening, 3) rehearse the new version in your imagination for a few minutes a day.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/koshmary-prichiny/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/koshmary-prichiny/cover-koshmary-prichiny.png</image:loc>
+      <image:title>Отчего снятся кошмары и как от них избавиться</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/koshmary-prichiny/prichiny-koshmarov-dark.png</image:loc>
+      <image:title>Схема, группирующая частые триггеры кошмаров в четыре блока: психологические (стресс, тревога, травма), связанные со сном (нерегулярный режим, недосып, REM-отскок, апноэ), вещества (алкоголь, отдельные лекарства и их отмена) и ситуативные (пугающий контент, температура, болезнь).</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/koshmary-prichiny/chastota-koshmarov-dark.png</image:loc>
+      <image:title>Простая шкала: хотя бы один кошмар за год бывает примерно у 85% взрослых, тогда как частые кошмары - раз в неделю и чаще - лишь у 2-6%, и это тот диапазон, где речь может идти об излечимом расстройстве.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/koshmary-prichiny/terapiya-repeticii-obrazov-dark.png</image:loc>
+      <image:title>Иллюстрация терапии репетиции образов из трёх шагов: 1) записать кошмар, 2) переписать его концовку на менее угрожающую, 3) несколько минут в день проигрывать новую версию в воображении.</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://alisie.app/blog/what-is-lucid-dreaming/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/cover-what-is-lucid-dreaming.png</image:loc>
