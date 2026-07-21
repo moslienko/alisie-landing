@@ -9,6 +9,20 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "why-we-have-nightmares",
+    "title": "Why You Have Nightmares and How to Stop Them",
+    "description": "Nightmares are a normal REM-sleep event with identifiable triggers and a proven treatment. What causes them, how often is too often, and what the evidence says works.",
+    "pubDate": "2026-07-21",
+    "lang": "en"
+  },
+  {
+    "slug": "koshmary-prichiny",
+    "title": "Отчего снятся кошмары и как от них избавиться",
+    "description": "Кошмары - это нормальное явление REM-сна с понятными причинами и доказанным лечением. Отчего они бывают, какая частота - уже перебор, и что действительно работает.",
+    "pubDate": "2026-07-21",
+    "lang": "ru"
+  },
+  {
     "slug": "what-is-lucid-dreaming",
     "title": "What a Lucid Dream Is and How to Have One",
     "description": "A lucid dream is one you know you're in while it's happening. What's proven, what's promising, and what the evidence says about training it - without the hype.",
@@ -20,20 +34,6 @@ export const blogPosts: BlogPostMeta[] = [
     "title": "Что такое осознанный сон и как в него попасть",
     "description": "Осознанный сон - это сон, в котором вы понимаете, что спите. Что доказано, что перспективно и что известно о тренировке осознанности - без преувеличений.",
     "pubDate": "2026-07-14",
-    "lang": "ru"
-  },
-  {
-    "slug": "why-we-have-nightmares",
-    "title": "Why You Have Nightmares and How to Stop Them",
-    "description": "Nightmares are a normal REM-sleep event with identifiable triggers and a proven treatment. What causes them, how often is too often, and what the evidence says works.",
-    "pubDate": "2026-07-12",
-    "lang": "en"
-  },
-  {
-    "slug": "koshmary-prichiny",
-    "title": "Отчего снятся кошмары и как от них избавиться",
-    "description": "Кошмары - это нормальное явление REM-сна с понятными причинами и доказанным лечением. Отчего они бывают, какая частота - уже перебор, и что действительно работает.",
-    "pubDate": "2026-07-12",
     "lang": "ru"
   },
   {

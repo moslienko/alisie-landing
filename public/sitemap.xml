@@ -38,36 +38,6 @@
   </url>
   <!-- BLOG:START (auto-generated) -->
   <url>
-    <loc>https://alisie.app/blog/what-is-lucid-dreaming/</loc>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/cover-what-is-lucid-dreaming.png</image:loc>
-      <image:title>What a Lucid Dream Is and How to Have One</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/lucid-dreaming-brain-state-dark.png</image:loc>
-      <image:title>A spectrum from ordinary REM sleep to full waking, with lucid dreaming placed in between: prefrontal self-awareness is off in REM, partly on in lucid dreaming, and fully on when awake.</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/lucid-dream-induction-methods-dark.png</image:loc>
-      <image:title>Three lucid-dreaming induction methods shown as steps: reality testing during the day, MILD (rehearsing the intention on waking), and Wake Back To Bed, with a note that combining them works best.</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://alisie.app/ru/blog/osoznannye-sny/</loc>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/osoznannye-sny/cover-osoznannye-sny.png</image:loc>
-      <image:title>Что такое осознанный сон и как в него попасть</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/osoznannye-sny/osoznannyy-son-gibridnoe-sostoyanie-dark.png</image:loc>
-      <image:title>Шкала от обычного REM-сна к полному бодрствованию, где осознанный сон расположен между ними: префронтальное самосознание выключено в REM-сне, частично включено в осознанном сне и полностью включено при бодрствовании.</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/osoznannye-sny/tehniki-osoznannyh-snov-dark.png</image:loc>
-      <image:title>Три техники наведения осознанных снов по шагам: проверка реальности днём, MILD (проговаривание намерения при пробуждении) и Wake Back To Bed, с пометкой, что лучше всего они работают вместе.</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://alisie.app/blog/why-we-have-nightmares/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/why-we-have-nightmares/cover-why-we-have-nightmares.png</image:loc>
@@ -103,6 +73,36 @@
     <image:image>
       <image:loc>https://alisie.app/blog-img/koshmary-prichiny/terapiya-repeticii-obrazov-dark.png</image:loc>
       <image:title>Иллюстрация терапии репетиции образов из трёх шагов: 1) записать кошмар, 2) переписать его концовку на менее угрожающую, 3) несколько минут в день проигрывать новую версию в воображении.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/blog/what-is-lucid-dreaming/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/cover-what-is-lucid-dreaming.png</image:loc>
+      <image:title>What a Lucid Dream Is and How to Have One</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/lucid-dreaming-brain-state-dark.png</image:loc>
+      <image:title>A spectrum from ordinary REM sleep to full waking, with lucid dreaming placed in between: prefrontal self-awareness is off in REM, partly on in lucid dreaming, and fully on when awake.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/lucid-dream-induction-methods-dark.png</image:loc>
+      <image:title>Three lucid-dreaming induction methods shown as steps: reality testing during the day, MILD (rehearsing the intention on waking), and Wake Back To Bed, with a note that combining them works best.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/osoznannye-sny/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/osoznannye-sny/cover-osoznannye-sny.png</image:loc>
+      <image:title>Что такое осознанный сон и как в него попасть</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/osoznannye-sny/osoznannyy-son-gibridnoe-sostoyanie-dark.png</image:loc>
+      <image:title>Шкала от обычного REM-сна к полному бодрствованию, где осознанный сон расположен между ними: префронтальное самосознание выключено в REM-сне, частично включено в осознанном сне и полностью включено при бодрствовании.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/osoznannye-sny/tehniki-osoznannyh-snov-dark.png</image:loc>
+      <image:title>Три техники наведения осознанных снов по шагам: проверка реальности днём, MILD (проговаривание намерения при пробуждении) и Wake Back To Bed, с пометкой, что лучше всего они работают вместе.</image:title>
     </image:image>
   </url>
   <url>
