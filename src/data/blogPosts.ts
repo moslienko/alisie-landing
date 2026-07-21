@@ -23,6 +23,20 @@ export const blogPosts: BlogPostMeta[] = [
     "lang": "ru"
   },
   {
+    "slug": "why-we-have-nightmares",
+    "title": "Why You Have Nightmares and How to Stop Them",
+    "description": "Nightmares are a normal REM-sleep event with identifiable triggers and a proven treatment. What causes them, how often is too often, and what the evidence says works.",
+    "pubDate": "2026-07-12",
+    "lang": "en"
+  },
+  {
+    "slug": "koshmary-prichiny",
+    "title": "Отчего снятся кошмары и как от них избавиться",
+    "description": "Кошмары - это нормальное явление REM-сна с понятными причинами и доказанным лечением. Отчего они бывают, какая частота - уже перебор, и что действительно работает.",
+    "pubDate": "2026-07-12",
+    "lang": "ru"
+  },
+  {
     "slug": "how-to-remember-your-dreams",
     "title": "How to Remember Your Dreams: Techniques That Work",
     "description": "Most people can remember far more of their dreams than they do. What dream recall depends on, why dreams vanish so fast, and the evidence-based habits that improve it.",
