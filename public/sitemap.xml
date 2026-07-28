@@ -38,9 +38,47 @@
   </url>
   <!-- BLOG:START (auto-generated) -->
   <url>
+    <loc>https://alisie.app/blog/the-psychology-of-dreams/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/the-psychology-of-dreams.png</image:loc>
+      <image:title>The Psychology of Dreams and Why Dream Dictionaries Fail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/the-psychology-of-dreams/what-dreams-are-about-data-dark.png</image:loc>
+      <image:title>Bar chart of coded dream content: 60-80% of dream reports are rated highly coherent and talking appears in 86-100% of them, while physical exertion appears in only 15-20%, exotic settings in about 5%, and only about 2% are rated highly bizarre.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/the-psychology-of-dreams/most-common-dreams-dark.png</image:loc>
+      <image:title>Bar chart of lifetime prevalence of typical dreams - the share of people who have ever had the dream: being chased or pursued 81.5%, falling 73.8%, teeth falling out 18.8% in Nielsen's sample.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/the-psychology-of-dreams/dream-theories-diagram-dark.png</image:loc>
+      <image:title>Four cards on why we dream: emotional processing (real support, actively contested in 2026), memory consolidation (replicated link, causation unproven), threat simulation (elegant but only about 21% of dreams contain a physical threat), and no evolutionary function (a byproduct of the default mode network). The argument is about what dreaming is for - not about what it is made of: all four take the content to be built from the dreamer's own life.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/psihologiya-snov/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/the-psychology-of-dreams.png</image:loc>
+      <image:title>Психология снов - почему сонники не работают</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/psihologiya-snov/soderzhanie-snov-statistika-dark.png</image:loc>
+      <image:title>Диаграмма содержания снов: 60-80% отчётов оцениваются как связные, разговор встречается в 86-100% снов, физическая активность - лишь в 15-20%, необычная обстановка - примерно в 5%, а очень странными признаны около 2% снов.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/psihologiya-snov/samye-chastye-sny-dark.png</image:loc>
+      <image:title>Диаграмма распространённости типичных снов за всю жизнь - доля людей, которым такой сон снился хотя бы раз: погоня или преследование 81,5%, падение 73,8%, выпадение зубов 18,8% в выборке Нильсена.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/psihologiya-snov/teorii-snovideniy-dark.png</image:loc>
+      <image:title>Четыре карточки о том, зачем мы видим сны: переработка эмоций (поддержка есть, но гипотезу оспаривают, 2026), консолидация памяти (связь воспроизводится, причинность не доказана), симуляция угрозы (физическая угроза есть лишь примерно в 21% снов) и никакой эволюционной функции (побочный продукт сети пассивного режима). Спор идёт о том, зачем нужно сновидение, а не о том, из чего оно сделано: во всех четырёх версиях содержание берётся из жизни самого сновидца.</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://alisie.app/blog/why-we-have-nightmares/</loc>
     <image:image>
-      <image:loc>https://alisie.app/blog-img/why-we-have-nightmares/cover-why-we-have-nightmares.png</image:loc>
+      <image:loc>https://alisie.app/blog-img/_covers/why-we-have-nightmares.png</image:loc>
       <image:title>Why You Have Nightmares and How to Stop Them</image:title>
     </image:image>
     <image:image>
@@ -59,7 +97,7 @@
   <url>
     <loc>https://alisie.app/ru/blog/koshmary-prichiny/</loc>
     <image:image>
-      <image:loc>https://alisie.app/blog-img/koshmary-prichiny/cover-koshmary-prichiny.png</image:loc>
+      <image:loc>https://alisie.app/blog-img/_covers/why-we-have-nightmares.png</image:loc>
       <image:title>Отчего снятся кошмары и как от них избавиться</image:title>
     </image:image>
     <image:image>
@@ -78,7 +116,7 @@
   <url>
     <loc>https://alisie.app/blog/what-is-lucid-dreaming/</loc>
     <image:image>
-      <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/cover-what-is-lucid-dreaming.png</image:loc>
+      <image:loc>https://alisie.app/blog-img/_covers/what-is-lucid-dreaming.png</image:loc>
       <image:title>What a Lucid Dream Is and How to Have One</image:title>
     </image:image>
     <image:image>
@@ -93,7 +131,7 @@
   <url>
     <loc>https://alisie.app/ru/blog/osoznannye-sny/</loc>
     <image:image>
-      <image:loc>https://alisie.app/blog-img/osoznannye-sny/cover-osoznannye-sny.png</image:loc>
+      <image:loc>https://alisie.app/blog-img/_covers/what-is-lucid-dreaming.png</image:loc>
       <image:title>Что такое осознанный сон и как в него попасть</image:title>
     </image:image>
     <image:image>
@@ -108,7 +146,7 @@
   <url>
     <loc>https://alisie.app/blog/how-to-remember-your-dreams/</loc>
     <image:image>
-      <image:loc>https://alisie.app/blog-img/how-to-remember-your-dreams/cover-how-to-remember-your-dreams.png</image:loc>
+      <image:loc>https://alisie.app/blog-img/_covers/how-to-remember-your-dreams.png</image:loc>
       <image:title>How to Remember Your Dreams: Techniques That Work</image:title>
     </image:image>
     <image:image>
@@ -127,7 +165,7 @@
   <url>
     <loc>https://alisie.app/ru/blog/kak-zapominat-sny/</loc>
     <image:image>
-      <image:loc>https://alisie.app/blog-img/kak-zapominat-sny/cover-kak-zapominat-sny.png</image:loc>
+      <image:loc>https://alisie.app/blog-img/_covers/how-to-remember-your-dreams.png</image:loc>
       <image:title>Как запоминать сны: техники, которые работают</image:title>
     </image:image>
     <image:image>

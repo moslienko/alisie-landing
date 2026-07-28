@@ -37,18 +37,30 @@ const fmt = (iso: string) =>
   </h1>
   <p class="text-lg text-color opacity-70 mt-2">{t.blogIntro}</p>
 
-  <div class="mt-10 flex flex-col gap-8">
+  <div class="mt-10 grid gap-8 sm:grid-cols-2">
     {
       posts.map((post) => (
-        <a href={post.lang === 'ru' ? `/ru/blog/${post.slug}` : `/blog/${post.slug}`} class="blogCard block group">
-          <h2 class="text-xl md:text-2xl font-semibold text-color group-hover:text-[var(--color-tint-start)] transition-colors">
-            {post.title}
-          </h2>
-          <p class="text-sm text-color opacity-50 mt-1">{fmt(post.pubDate)}</p>
-          <p class="text-base text-color opacity-70 mt-2">{post.description}</p>
+        <a href={post.lang === 'ru' ? `/ru/blog/${post.slug}` : `/blog/${post.slug}`} class="blogCard group">
+          <div class="blogCardCover">
+            <img
+              src={`/blog-img/_covers/${post.cover}.png`}
+              alt={post.title}
+              width="1200"
+              height="630"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="blogCardBody">
+            <h2 class="text-xl md:text-2xl font-semibold text-color group-hover:text-[var(--color-tint-start)] transition-colors">
+              {post.title}
+            </h2>
+            <p class="text-sm text-color opacity-50 mt-1">{fmt(post.pubDate)}</p>
+            <p class="text-base text-color opacity-70 mt-2">{post.description}</p>
+          </div>
         </a>
       ))
     }
-    {posts.length === 0 && <p class="text-color opacity-60">{t.blogEmpty}</p>}
+    {posts.length === 0 && <p class="text-color opacity-60 sm:col-span-2">{t.blogEmpty}</p>}
   </div>
 </PageLayout>
