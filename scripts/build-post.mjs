@@ -220,6 +220,23 @@ function pageImages(html, cover) {
   return cover ? [{ src: cover.src, alt: cover.alt }, ...imgs] : imgs
 }
 
+// en-слаг для обложки: en-статья — это она сама; ru-статья берёт en-пару по общей
+// дате выхода, найдя её среди уже сгенерированных en-страниц (src/pages/blog/*.astro).
+// Если пары ещё нет (первый прогон, en не собран) — падаем на собственный slug, чтобы
+// не сломать сборку; повторный npm run post исправит на общий файл.
+function coverSlugFor(slug, lang, pubDate) {
+  if (lang === 'en') return slug
+  try {
+    for (const f of readdirSync(OUT)) {
+      if (!f.endsWith('.astro') || f === 'index.astro') continue
+      const c = readFileSync(join(OUT, f), 'utf8')
+      const d = c.match(/pubDate=\{new Date\('([^']*)'\)\}/)?.[1]
+      if (d && d === pubDate) return f.replace(/\.astro$/, '')
+    }
+  } catch {}
+  return slug
+}
+
 // ---------- build one post ----------
 function build(name) {
   const src = join(DRAFTS, `${name}.md`)
@@ -239,11 +256,12 @@ function build(name) {
   const cleanBody = body.replace(/^\s*#\s+.*\n?/, '')
   const html = collapseFigures(mdToHtml(cleanBody, lang))
 
-  // Per-article social/search cover, by convention: /blog-img/<slug>/cover-<slug>.png.
-  // Falls back to the shared site banner (BaseLayout's default) when absent. The
-  // cover is one image per locale — no dark/light pair: Telegram, Facebook and
-  // Google render it where the site's theme toggle doesn't exist.
-  const coverSrc = `/blog-img/${slug}/cover-${slug}.png`
+  // Обложка блога — иллюстрация без текста, ОДНА на обе локали. Лежит в
+  // /blog-img/_covers/<en-slug>.png; ru-версия ссылается на тот же файл. И карточка
+  // списка, и og:image берут его отсюда — дублей cover-<slug>.png в папках слагов
+  // больше нет. Пара en↔ru находится по общей дате выхода (statoc mapping ниже).
+  const coverSlug = coverSlugFor(slug, lang, data.pubDate)
+  const coverSrc = `/blog-img/_covers/${coverSlug}.png`
   const coverSize = pngSize(coverSrc)
   const cover = coverSize ? { src: coverSrc, alt: data.title, ...coverSize } : null
 
@@ -322,9 +340,18 @@ function rebuildRegistry() {
   // Drafts don't show in the public blog index — strip the draft flag and the
   // draft posts themselves from the registry that /blog renders from. Images are
   // for the sitemap only; the index doesn't render them.
+  // Обложка блога — иллюстрация без текста, ОДНА на обе локали. Кладётся в
+  // /blog-img/_covers/<en-slug>.png, и ru-версия ссылается на тот же файл.
+  // en-слаг для пары находим по общей дате выхода (en и ru статьи выходят вместе).
+  const enByDate = new Map(
+    posts.filter((p) => p.lang === 'en').map((p) => [p.pubDate, p.slug]),
+  )
   const published = posts
     .filter((p) => !p.draft)
-    .map(({ draft: _draft, images: _images, ...rest }) => rest)
+    .map(({ draft: _draft, images: _images, ...rest }) => ({
+      ...rest,
+      cover: rest.lang === 'en' ? rest.slug : (enByDate.get(rest.pubDate) ?? rest.slug),
+    }))
   const ts = `// AUTO-GENERATED
 export interface BlogPostMeta {
   slug: string
@@ -332,6 +359,7 @@ export interface BlogPostMeta {
   description: string
   pubDate: string
   lang: 'en' | 'ru'
+  cover: string
 }
 
 export const blogPosts: BlogPostMeta[] = ${JSON.stringify(published, null, 2)}
