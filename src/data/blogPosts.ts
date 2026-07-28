@@ -9,6 +9,20 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "the-psychology-of-dreams",
+    "title": "The Psychology of Dreams and Why Dream Dictionaries Fail",
+    "description": "Dream psychology is a real science - it just doesn't decode symbols, because every dreamer has a private vocabulary. What it found, and how to read yours.",
+    "pubDate": "2026-07-28",
+    "lang": "en"
+  },
+  {
+    "slug": "psihologiya-snov",
+    "title": "Психология снов - почему сонники не работают",
+    "description": "Психология снов - настоящая наука, но она не расшифровывает символы: у каждого свой словарь. Что установлено на самом деле и как прочитать собственные сны.",
+    "pubDate": "2026-07-28",
+    "lang": "ru"
+  },
+  {
     "slug": "why-we-have-nightmares",
     "title": "Why You Have Nightmares and How to Stop Them",
     "description": "Nightmares are a normal REM-sleep event with identifiable triggers and a proven treatment. What causes them, how often is too often, and what the evidence says works.",
