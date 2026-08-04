@@ -38,6 +38,44 @@
   </url>
   <!-- BLOG:START (auto-generated) -->
   <url>
+    <loc>https://alisie.app/blog/sleep-stages-explained/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/sleep-stages-explained.png</image:loc>
+      <image:title>The Sleep Cycle and Why Dreams Arrive Before Dawn</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/sleep-stages-explained/rem-sleep-by-age-dark.png</image:loc>
+      <image:title>Bar chart: REM makes up about 50% of a newborn's sleep, roughly 30% in young children, 20-25% in adults, and about 18% in older adults.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/sleep-stages-explained/sleep-cycles-through-the-night-dark.png</image:loc>
+      <image:title>Timeline of one night split into blocks by stage: deep sleep blocks are largest early in the night, and REM blocks grow longer toward morning, with light sleep filling most of the rest.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/sleep-stages-explained/sleep-stages-diagram-dark.png</image:loc>
+      <image:title>Four cards summarizing the sleep stages: N1 (5-10%, falling asleep), N2 (45-55%, light sleep), N3 (10-20%, deep sleep), and REM (20-25%, dreaming).</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/fazy-sna/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/sleep-stages-explained.png</image:loc>
+      <image:title>Фазы сна и почему сны приходят под утро</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/fazy-sna/rem-son-po-vozrastu-dark.png</image:loc>
+      <image:title>Столбчатая диаграмма: REM занимает около 50% сна новорождённого, примерно 30% у детей, 20-25% у взрослых и около 18% у пожилых.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/fazy-sna/cikly-sna-za-noch-dark.png</image:loc>
+      <image:title>Лента одной ночи, разбитая на блоки по фазам: блоки глубокого сна крупнее в начале ночи, блоки REM удлиняются к утру, а лёгкий сон занимает большую часть остального времени.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/fazy-sna/fazy-sna-shema-dark.png</image:loc>
+      <image:title>Четыре карточки с обзором фаз сна: N1 (5-10%, засыпание), N2 (45-55%, лёгкий сон), N3 (10-20%, глубокий сон) и REM (20-25%, сновидения).</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://alisie.app/blog/the-psychology-of-dreams/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/_covers/the-psychology-of-dreams.png</image:loc>
