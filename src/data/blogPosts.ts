@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "sleep-stages-explained",
+    "title": "The Sleep Cycle and Why Dreams Arrive Before Dawn",
+    "description": "Sleep isn't one state but a cycle of distinct stages. What N1, N2, N3 and REM each do, how they shift across the night, and why the timing matters as much as the hours.",
+    "pubDate": "2026-08-04",
+    "lang": "en",
+    "cover": "sleep-stages-explained"
+  },
+  {
+    "slug": "fazy-sna",
+    "title": "Фазы сна и почему сны приходят под утро",
+    "description": "Сон - не одно состояние, а цикл из четырёх фаз. Чем заняты N1, N2, N3 и REM, как они сменяются за ночь и почему время сна важно не меньше его длительности.",
+    "pubDate": "2026-08-04",
+    "lang": "ru",
+    "cover": "sleep-stages-explained"
+  },
+  {
     "slug": "the-psychology-of-dreams",
     "title": "The Psychology of Dreams and Why Dream Dictionaries Fail",
     "description": "Dream psychology is a real science - it just doesn't decode symbols, because every dreamer has a private vocabulary. What it found, and how to read yours.",
