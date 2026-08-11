@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "falling-dreams",
+    "title": "Falling Dreams",
+    "description": "More people dream of falling than of flying. What separates a hypnic jerk from a falling dream, where the setting comes from, and whether hitting the ground really kills you.",
+    "pubDate": "2026-08-11",
+    "lang": "en",
+    "cover": "falling-dreams"
+  },
+  {
+    "slug": "son-pro-padenie",
+    "title": "Сон про падение",
+    "description": "Падение снится чаще полёта. Чем гипнический рывок отличается от сна о падении, откуда мозг берёт подробности и правда ли, что долетишь до земли - умрёшь.",
+    "pubDate": "2026-08-11",
+    "lang": "ru",
+    "cover": "falling-dreams"
+  },
+  {
     "slug": "sleep-stages-explained",
     "title": "The Sleep Cycle and Why Dreams Arrive Before Dawn",
     "description": "Sleep isn't one state but a cycle of distinct stages. What N1, N2, N3 and REM each do, how they shift across the night, and why the timing matters as much as the hours.",
