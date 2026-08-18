@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "how-sleep-consolidates-memory",
+    "title": "How Sleep Rebuilds Memory While You Dream",
+    "description": "Sleep doesn't store your day - it takes it apart and rebuilds it. What consolidation actually does, which famous claims failed to replicate, and how to see it.",
+    "pubDate": "2026-08-18",
+    "lang": "en",
+    "cover": "how-sleep-consolidates-memory"
+  },
+  {
+    "slug": "son-i-pamyat",
+    "title": "Как сон влияет на память и почему день возвращается в снах",
+    "description": "Ночью мозг не складывает воспоминания на полку, а разбирает прожитый день и складывает по-новому. Что про сон и память доказано, что нет и как увидеть это у себя.",
+    "pubDate": "2026-08-18",
+    "lang": "ru",
+    "cover": "how-sleep-consolidates-memory"
+  },
+  {
     "slug": "falling-dreams",
     "title": "Falling Dreams",
     "description": "More people dream of falling than of flying. What separates a hypnic jerk from a falling dream, where the setting comes from, and whether hitting the ground really kills you.",
