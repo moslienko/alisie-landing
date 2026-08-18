@@ -38,6 +38,36 @@
   </url>
   <!-- BLOG:START (auto-generated) -->
   <url>
+    <loc>https://alisie.app/blog/how-sleep-consolidates-memory/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/how-sleep-consolidates-memory.png</image:loc>
+      <image:title>How Sleep Rebuilds Memory While You Dream</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/how-sleep-consolidates-memory/sleep-oscillation-nesting-dark.png</image:loc>
+      <image:title>Diagram of nested sleep rhythms: a slow oscillation under 1 Hz, with sleep spindles at 11 to 16 Hz nested inside it, and fast sharp-wave ripples nested inside the spindles, illustrating the timing hierarchy of memory consolidation during non-REM sleep.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/how-sleep-consolidates-memory/dreams-rebuild-not-replay-dark.png</image:loc>
+      <image:title>Comparison diagram showing that about 65 percent of dreams contain traceable elements of recent waking life, while only 1 to 2 percent are episodic replays of an actual event, illustrating that dreams recombine fragments rather than replaying memories.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/son-i-pamyat/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/how-sleep-consolidates-memory.png</image:loc>
+      <image:title>Как сон влияет на память и почему день возвращается в снах</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/son-i-pamyat/ritmy-mozga-vo-sne-dark.png</image:loc>
+      <image:title>Схема вложенных ритмов сна: медленная осцилляция ниже 1 Гц, на её гребнях - сонные веретёна 11-16 Гц, а внутри веретён быстрые острые волны; временная иерархия консолидации памяти в медленном сне.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/son-i-pamyat/sny-ne-povtoryayut-den-dark.png</image:loc>
+      <image:title>Сравнение: примерно 65% снов содержат следы недавних событий наяву, но лишь 1-2% воспроизводят реальное событие таким, каким оно было; сны пересобирают фрагменты, а не проигрывают воспоминания.</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://alisie.app/blog/falling-dreams/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/_covers/falling-dreams.png</image:loc>
