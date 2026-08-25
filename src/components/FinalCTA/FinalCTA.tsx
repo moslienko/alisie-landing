@@ -52,6 +52,8 @@ export default function FinalCTA() {
                         className='w-64 md:w-72 object-cover'
                         src={screenshotSrc(data.screenshot, theme)}
                         alt='Alisie dream journal app on iPhone'
+                        loading='lazy'
+                        decoding='async'
                     />
                 </div>
             </div>
