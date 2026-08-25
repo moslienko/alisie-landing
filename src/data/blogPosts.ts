@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "rem-rebound",
+    "title": "Why Vivid Dreams Follow a Week of Short Nights",
+    "description": "REM keeps its own ledger. Lose it and your brain pays it back at the first opportunity, in minutes of sleep and in how much happens inside them.",
+    "pubDate": "2026-08-25",
+    "lang": "en",
+    "cover": "rem-rebound"
+  },
+  {
+    "slug": "rem-otskok",
+    "title": "Почему после недосыпа снятся яркие сны",
+    "description": "У REM-сна отдельный счёт: потерянное мозг возвращает при первой возможности - и не только минутами. Что такое REM-отскок и когда он случается.",
+    "pubDate": "2026-08-25",
+    "lang": "ru",
+    "cover": "rem-rebound"
+  },
+  {
     "slug": "how-sleep-consolidates-memory",
     "title": "How Sleep Rebuilds Memory While You Dream",
     "description": "Sleep doesn't store your day - it takes it apart and rebuilds it. What consolidation actually does, which famous claims failed to replicate, and how to see it.",

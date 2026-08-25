@@ -38,6 +38,28 @@
   </url>
   <!-- BLOG:START (auto-generated) -->
   <url>
+    <loc>https://alisie.app/blog/rem-rebound/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/rem-rebound.png</image:loc>
+      <image:title>Why Vivid Dreams Follow a Week of Short Nights</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/rem-rebound/three-nights-rem-dark.png</image:loc>
+      <image:title>Bar chart of three nights in the Nielsen experiment: 74 minutes of REM sleep on the first night, 44.7 minutes on the deprivation night and 98.9 minutes on the recovery night.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/rem-otskok/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/rem-rebound.png</image:loc>
+      <image:title>Почему после недосыпа снятся яркие сны</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/rem-otskok/tri-nochi-eksperimenta-dark.png</image:loc>
+      <image:title>Столбчатая диаграмма трёх ночей эксперимента Нильсена: 74 минуты REM-сна в первую ночь, 44,7 минуты в ночь с пробуждениями и 98,9 минуты в восстановительную ночь.</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://alisie.app/blog/how-sleep-consolidates-memory/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/_covers/how-sleep-consolidates-memory.png</image:loc>
