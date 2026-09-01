@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "exam-dreams",
+    "title": "Dreams About Exams and Being Late",
+    "description": "School, exams and arriving late are among the most common scenes in dreams. Why a dream of failing predicts nothing, and why it returns years after graduation.",
+    "pubDate": "2026-09-01",
+    "lang": "en",
+    "cover": "exam-dreams"
+  },
+  {
+    "slug": "son-pro-ekzamen",
+    "title": "Сон про экзамен и опоздание",
+    "description": "Школа, экзамен и опоздание входят в самые частые сцены сна. Почему сон про провал ничего не предсказывает и почему он возвращается через годы после выпуска.",
+    "pubDate": "2026-09-01",
+    "lang": "ru",
+    "cover": "exam-dreams"
+  },
+  {
     "slug": "falling-dreams",
     "title": "Falling Dreams",
     "description": "More people dream of falling than of flying. What separates a hypnic jerk from a falling dream, where the setting comes from, and whether hitting the ground really kills you.",
