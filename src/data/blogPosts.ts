@@ -42,10 +42,26 @@ export const blogPosts: BlogPostMeta[] = [
     "cover": "rem-rebound"
   },
   {
+    "slug": "how-sleep-consolidates-memory",
+    "title": "How Sleep Rebuilds Memory While You Dream",
+    "description": "Sleep doesn't store your day - it takes it apart and rebuilds it. What consolidation actually does, which famous claims failed to replicate, and how to see it.",
+    "pubDate": "2026-08-18",
+    "lang": "en",
+    "cover": "how-sleep-consolidates-memory"
+  },
+  {
+    "slug": "son-i-pamyat",
+    "title": "Как сон влияет на память и почему день возвращается в снах",
+    "description": "Ночью мозг не складывает воспоминания на полку, а разбирает прожитый день и складывает по-новому. Что про сон и память доказано, что нет и как увидеть это у себя.",
+    "pubDate": "2026-08-18",
+    "lang": "ru",
+    "cover": "how-sleep-consolidates-memory"
+  },
+  {
     "slug": "falling-dreams",
     "title": "Falling Dreams",
     "description": "More people dream of falling than of flying. What separates a hypnic jerk from a falling dream, where the setting comes from, and whether hitting the ground really kills you.",
-    "pubDate": "2026-08-13",
+    "pubDate": "2026-08-11",
     "lang": "en",
     "cover": "falling-dreams"
   },
@@ -53,9 +69,25 @@ export const blogPosts: BlogPostMeta[] = [
     "slug": "son-pro-padenie",
     "title": "Сон про падение",
     "description": "Падение снится чаще полёта. Чем гипнический рывок отличается от сна о падении, откуда мозг берёт подробности и правда ли, что долетишь до земли - умрёшь.",
-    "pubDate": "2026-08-13",
+    "pubDate": "2026-08-11",
     "lang": "ru",
     "cover": "falling-dreams"
+  },
+  {
+    "slug": "sleep-stages-explained",
+    "title": "The Sleep Cycle and Why Dreams Arrive Before Dawn",
+    "description": "Sleep isn't one state but a cycle of distinct stages. What N1, N2, N3 and REM each do, how they shift across the night, and why the timing matters as much as the hours.",
+    "pubDate": "2026-08-04",
+    "lang": "en",
+    "cover": "sleep-stages-explained"
+  },
+  {
+    "slug": "fazy-sna",
+    "title": "Фазы сна и почему сны приходят под утро",
+    "description": "Сон - не одно состояние, а цикл из четырёх фаз. Чем заняты N1, N2, N3 и REM, как они сменяются за ночь и почему время сна важно не меньше его длительности.",
+    "pubDate": "2026-08-04",
+    "lang": "ru",
+    "cover": "sleep-stages-explained"
   },
   {
     "slug": "the-psychology-of-dreams",
@@ -74,6 +106,22 @@ export const blogPosts: BlogPostMeta[] = [
     "cover": "the-psychology-of-dreams"
   },
   {
+    "slug": "why-we-have-nightmares",
+    "title": "Why You Have Nightmares and How to Stop Them",
+    "description": "Nightmares are a normal REM-sleep event with identifiable triggers and a proven treatment. What causes them, how often is too often, and what the evidence says works.",
+    "pubDate": "2026-07-21",
+    "lang": "en",
+    "cover": "why-we-have-nightmares"
+  },
+  {
+    "slug": "koshmary-prichiny",
+    "title": "Отчего снятся кошмары и как от них избавиться",
+    "description": "Кошмары - это нормальное явление REM-сна с понятными причинами и доказанным лечением. Отчего они бывают, какая частота - уже перебор, и что действительно работает.",
+    "pubDate": "2026-07-21",
+    "lang": "ru",
+    "cover": "why-we-have-nightmares"
+  },
+  {
     "slug": "what-is-lucid-dreaming",
     "title": "What a Lucid Dream Is and How to Have One",
     "description": "A lucid dream is one you know you're in while it's happening. What's proven, what's promising, and what the evidence says about training it - without the hype.",
@@ -90,38 +138,6 @@ export const blogPosts: BlogPostMeta[] = [
     "cover": "what-is-lucid-dreaming"
   },
   {
-    "slug": "how-sleep-consolidates-memory",
-    "title": "How Sleep Rebuilds Memory While You Dream",
-    "description": "Sleep doesn't store your day - it takes it apart and rebuilds it. What consolidation actually does, which famous claims failed to replicate, and how to see it.",
-    "pubDate": "2026-07-13",
-    "lang": "en",
-    "cover": "how-sleep-consolidates-memory"
-  },
-  {
-    "slug": "son-i-pamyat",
-    "title": "Как сон влияет на память и почему день возвращается в снах",
-    "description": "Ночью мозг не складывает воспоминания на полку, а разбирает прожитый день и складывает по-новому. Что про сон и память доказано, что нет и как увидеть это у себя.",
-    "pubDate": "2026-07-13",
-    "lang": "ru",
-    "cover": "how-sleep-consolidates-memory"
-  },
-  {
-    "slug": "why-we-have-nightmares",
-    "title": "Why You Have Nightmares and How to Stop Them",
-    "description": "Nightmares are a normal REM-sleep event with identifiable triggers and a proven treatment. What causes them, how often is too often, and what the evidence says works.",
-    "pubDate": "2026-07-12",
-    "lang": "en",
-    "cover": "why-we-have-nightmares"
-  },
-  {
-    "slug": "koshmary-prichiny",
-    "title": "Отчего снятся кошмары и как от них избавиться",
-    "description": "Кошмары - это нормальное явление REM-сна с понятными причинами и доказанным лечением. Отчего они бывают, какая частота - уже перебор, и что действительно работает.",
-    "pubDate": "2026-07-12",
-    "lang": "ru",
-    "cover": "why-we-have-nightmares"
-  },
-  {
     "slug": "how-to-remember-your-dreams",
     "title": "How to Remember Your Dreams: Techniques That Work",
     "description": "Most people can remember far more of their dreams than they do. What dream recall depends on, why dreams vanish so fast, and the evidence-based habits that improve it.",
@@ -136,21 +152,5 @@ export const blogPosts: BlogPostMeta[] = [
     "pubDate": "2026-07-07",
     "lang": "ru",
     "cover": "how-to-remember-your-dreams"
-  },
-  {
-    "slug": "sleep-stages-explained",
-    "title": "The Sleep Cycle and Why Dreams Arrive Before Dawn",
-    "description": "Sleep isn't one state but a cycle of distinct stages. What N1, N2, N3 and REM each do, how they shift across the night, and why the timing matters as much as the hours.",
-    "pubDate": "2026-07-06",
-    "lang": "en",
-    "cover": "sleep-stages-explained"
-  },
-  {
-    "slug": "fazy-sna",
-    "title": "Фазы сна и почему сны приходят под утро",
-    "description": "Сон - не одно состояние, а цикл из четырёх фаз. Чем заняты N1, N2, N3 и REM, как они сменяются за ночь и почему время сна важно не меньше его длительности.",
-    "pubDate": "2026-07-06",
-    "lang": "ru",
-    "cover": "sleep-stages-explained"
   }
 ]
