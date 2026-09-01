@@ -38,6 +38,36 @@
   </url>
   <!-- BLOG:START (auto-generated) -->
   <url>
+    <loc>https://alisie.app/blog/exam-dreams/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/exam-dreams.png</image:loc>
+      <image:title>Dreams About Exams and Being Late</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/exam-dreams/how-common-are-school-dreams-dark.png</image:loc>
+      <image:title>Horizontal bar chart from the Nielsen 2003 survey of 1,181 students: being chased 81.5%, sexual dreams 76.5%, falling 73.8%, school and studying 67.1%, arriving too late 59.5%, failing an exam 45.0%.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/exam-dreams/exam-dreams-by-age-dark.png</image:loc>
+      <image:title>Chart from the Nielsen 2003 sample: failing an exam was reported by 51.1% of participants aged 18 and under against 41.7% of those aged 19 and over, while school and studying held at 68.3% against 67.0%.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/son-pro-ekzamen/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/exam-dreams.png</image:loc>
+      <image:title>Сон про экзамен и опоздание</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/son-pro-ekzamen/kak-chasto-snitsya-shkola-dark.png</image:loc>
+      <image:title>Горизонтальная столбчатая диаграмма по опросу Нильсена 2003 года среди 1181 студента: погоня 81,5%, сексуальные сны 76,5%, падение 73,8%, школа и учёба 67,1%, опоздание 59,5%, провал экзамена 45,0%.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/son-pro-ekzamen/son-pro-ekzamen-i-vozrast-dark.png</image:loc>
+      <image:title>Диаграмма по выборке Нильсена 2003 года: сон про провал экзамена видели 51,1% участников 18 лет и младше против 41,7% тех, кому 19 и больше, а школу и учёбу 68,3% против 67,0%.</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://alisie.app/blog/rem-rebound/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/_covers/rem-rebound.png</image:loc>
@@ -60,36 +90,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://alisie.app/blog/how-sleep-consolidates-memory/</loc>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/_covers/how-sleep-consolidates-memory.png</image:loc>
-      <image:title>How Sleep Rebuilds Memory While You Dream</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/how-sleep-consolidates-memory/sleep-oscillation-nesting-dark.png</image:loc>
-      <image:title>Diagram of nested sleep rhythms: a slow oscillation under 1 Hz, with sleep spindles at 11 to 16 Hz nested inside it, and fast sharp-wave ripples nested inside the spindles, illustrating the timing hierarchy of memory consolidation during non-REM sleep.</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/how-sleep-consolidates-memory/dreams-rebuild-not-replay-dark.png</image:loc>
-      <image:title>Comparison diagram showing that about 65 percent of dreams contain traceable elements of recent waking life, while only 1 to 2 percent are episodic replays of an actual event, illustrating that dreams recombine fragments rather than replaying memories.</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://alisie.app/ru/blog/son-i-pamyat/</loc>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/_covers/how-sleep-consolidates-memory.png</image:loc>
-      <image:title>Как сон влияет на память и почему день возвращается в снах</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/son-i-pamyat/ritmy-mozga-vo-sne-dark.png</image:loc>
-      <image:title>Схема вложенных ритмов сна: медленная осцилляция ниже 1 Гц, на её гребнях - сонные веретёна 11-16 Гц, а внутри веретён быстрые острые волны; временная иерархия консолидации памяти в медленном сне.</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/son-i-pamyat/sny-ne-povtoryayut-den-dark.png</image:loc>
-      <image:title>Сравнение: примерно 65% снов содержат следы недавних событий наяву, но лишь 1-2% воспроизводят реальное событие таким, каким оно было; сны пересобирают фрагменты, а не проигрывают воспоминания.</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://alisie.app/blog/falling-dreams/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/_covers/falling-dreams.png</image:loc>
@@ -109,44 +109,6 @@
     <image:image>
       <image:loc>https://alisie.app/blog-img/son-pro-padenie/pochemu-snitsya-padenie-dark.png</image:loc>
       <image:title>Откуда мозг берёт подробности падения: балкон, крыша, край пирса, шахта лифта, тёмный провал без дна - либо один полёт вниз без всякой обстановки. Общего для всех места нет, и доли эти наукой не подсчитаны.</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://alisie.app/blog/sleep-stages-explained/</loc>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/_covers/sleep-stages-explained.png</image:loc>
-      <image:title>The Sleep Cycle and Why Dreams Arrive Before Dawn</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/sleep-stages-explained/rem-sleep-by-age-dark.png</image:loc>
-      <image:title>Bar chart: REM makes up about 50% of a newborn's sleep, roughly 30% in young children, 20-25% in adults, and about 18% in older adults.</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/sleep-stages-explained/sleep-cycles-through-the-night-dark.png</image:loc>
-      <image:title>Timeline of one night split into blocks by stage: deep sleep blocks are largest early in the night, and REM blocks grow longer toward morning, with light sleep filling most of the rest.</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/sleep-stages-explained/sleep-stages-diagram-dark.png</image:loc>
-      <image:title>Four cards summarizing the sleep stages: N1 (5-10%, falling asleep), N2 (45-55%, light sleep), N3 (10-20%, deep sleep), and REM (20-25%, dreaming).</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://alisie.app/ru/blog/fazy-sna/</loc>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/_covers/sleep-stages-explained.png</image:loc>
-      <image:title>Фазы сна и почему сны приходят под утро</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/fazy-sna/rem-son-po-vozrastu-dark.png</image:loc>
-      <image:title>Столбчатая диаграмма: REM занимает около 50% сна новорождённого, примерно 30% у детей, 20-25% у взрослых и около 18% у пожилых.</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/fazy-sna/cikly-sna-za-noch-dark.png</image:loc>
-      <image:title>Лента одной ночи, разбитая на блоки по фазам: блоки глубокого сна крупнее в начале ночи, блоки REM удлиняются к утру, а лёгкий сон занимает большую часть остального времени.</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/fazy-sna/fazy-sna-shema-dark.png</image:loc>
-      <image:title>Четыре карточки с обзором фаз сна: N1 (5-10%, засыпание), N2 (45-55%, лёгкий сон), N3 (10-20%, глубокий сон) и REM (20-25%, сновидения).</image:title>
     </image:image>
   </url>
   <url>
@@ -188,6 +150,66 @@
     </image:image>
   </url>
   <url>
+    <loc>https://alisie.app/blog/what-is-lucid-dreaming/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/what-is-lucid-dreaming.png</image:loc>
+      <image:title>What a Lucid Dream Is and How to Have One</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/lucid-dreaming-brain-state-dark.png</image:loc>
+      <image:title>A spectrum from ordinary REM sleep to full waking, with lucid dreaming placed in between: prefrontal self-awareness is off in REM, partly on in lucid dreaming, and fully on when awake.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/lucid-dream-induction-methods-dark.png</image:loc>
+      <image:title>Three lucid-dreaming induction methods shown as steps: reality testing during the day, MILD (rehearsing the intention on waking), and Wake Back To Bed, with a note that combining them works best.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/osoznannye-sny/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/what-is-lucid-dreaming.png</image:loc>
+      <image:title>Что такое осознанный сон и как в него попасть</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/osoznannye-sny/osoznannyy-son-gibridnoe-sostoyanie-dark.png</image:loc>
+      <image:title>Шкала от обычного REM-сна к полному бодрствованию, где осознанный сон расположен между ними: префронтальное самосознание выключено в REM-сне, частично включено в осознанном сне и полностью включено при бодрствовании.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/osoznannye-sny/tehniki-osoznannyh-snov-dark.png</image:loc>
+      <image:title>Три техники наведения осознанных снов по шагам: проверка реальности днём, MILD (проговаривание намерения при пробуждении) и Wake Back To Bed, с пометкой, что лучше всего они работают вместе.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/blog/how-sleep-consolidates-memory/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/how-sleep-consolidates-memory.png</image:loc>
+      <image:title>How Sleep Rebuilds Memory While You Dream</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/how-sleep-consolidates-memory/sleep-oscillation-nesting-dark.png</image:loc>
+      <image:title>Diagram of nested sleep rhythms: a slow oscillation under 1 Hz, with sleep spindles at 11 to 16 Hz nested inside it, and fast sharp-wave ripples nested inside the spindles, illustrating the timing hierarchy of memory consolidation during non-REM sleep.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/how-sleep-consolidates-memory/dreams-rebuild-not-replay-dark.png</image:loc>
+      <image:title>Comparison diagram showing that about 65 percent of dreams contain traceable elements of recent waking life, while only 1 to 2 percent are episodic replays of an actual event, illustrating that dreams recombine fragments rather than replaying memories.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/son-i-pamyat/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/how-sleep-consolidates-memory.png</image:loc>
+      <image:title>Как сон влияет на память и почему день возвращается в снах</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/son-i-pamyat/ritmy-mozga-vo-sne-dark.png</image:loc>
+      <image:title>Схема вложенных ритмов сна: медленная осцилляция ниже 1 Гц, на её гребнях - сонные веретёна 11-16 Гц, а внутри веретён быстрые острые волны; временная иерархия консолидации памяти в медленном сне.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/son-i-pamyat/sny-ne-povtoryayut-den-dark.png</image:loc>
+      <image:title>Сравнение: примерно 65% снов содержат следы недавних событий наяву, но лишь 1-2% воспроизводят реальное событие таким, каким оно было; сны пересобирают фрагменты, а не проигрывают воспоминания.</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://alisie.app/blog/why-we-have-nightmares/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/_covers/why-we-have-nightmares.png</image:loc>
@@ -226,36 +248,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://alisie.app/blog/what-is-lucid-dreaming/</loc>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/_covers/what-is-lucid-dreaming.png</image:loc>
-      <image:title>What a Lucid Dream Is and How to Have One</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/lucid-dreaming-brain-state-dark.png</image:loc>
-      <image:title>A spectrum from ordinary REM sleep to full waking, with lucid dreaming placed in between: prefrontal self-awareness is off in REM, partly on in lucid dreaming, and fully on when awake.</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/what-is-lucid-dreaming/lucid-dream-induction-methods-dark.png</image:loc>
-      <image:title>Three lucid-dreaming induction methods shown as steps: reality testing during the day, MILD (rehearsing the intention on waking), and Wake Back To Bed, with a note that combining them works best.</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://alisie.app/ru/blog/osoznannye-sny/</loc>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/_covers/what-is-lucid-dreaming.png</image:loc>
-      <image:title>Что такое осознанный сон и как в него попасть</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/osoznannye-sny/osoznannyy-son-gibridnoe-sostoyanie-dark.png</image:loc>
-      <image:title>Шкала от обычного REM-сна к полному бодрствованию, где осознанный сон расположен между ними: префронтальное самосознание выключено в REM-сне, частично включено в осознанном сне и полностью включено при бодрствовании.</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://alisie.app/blog-img/osoznannye-sny/tehniki-osoznannyh-snov-dark.png</image:loc>
-      <image:title>Три техники наведения осознанных снов по шагам: проверка реальности днём, MILD (проговаривание намерения при пробуждении) и Wake Back To Bed, с пометкой, что лучше всего они работают вместе.</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://alisie.app/blog/how-to-remember-your-dreams/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/_covers/how-to-remember-your-dreams.png</image:loc>
@@ -291,6 +283,44 @@
     <image:image>
       <image:loc>https://alisie.app/blog-img/kak-zapominat-sny/kak-trenirovat-zapominanie-snov-dark.png</image:loc>
       <image:title>Три шага для тренировки запоминания снов: 1) настроиться перед сном на то, что хотите запомнить сон, 2) не двигаться после пробуждения, 3) сразу записать сон.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/blog/sleep-stages-explained/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/sleep-stages-explained.png</image:loc>
+      <image:title>The Sleep Cycle and Why Dreams Arrive Before Dawn</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/sleep-stages-explained/rem-sleep-by-age-dark.png</image:loc>
+      <image:title>Bar chart: REM makes up about 50% of a newborn's sleep, roughly 30% in young children, 20-25% in adults, and about 18% in older adults.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/sleep-stages-explained/sleep-cycles-through-the-night-dark.png</image:loc>
+      <image:title>Timeline of one night split into blocks by stage: deep sleep blocks are largest early in the night, and REM blocks grow longer toward morning, with light sleep filling most of the rest.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/sleep-stages-explained/sleep-stages-diagram-dark.png</image:loc>
+      <image:title>Four cards summarizing the sleep stages: N1 (5-10%, falling asleep), N2 (45-55%, light sleep), N3 (10-20%, deep sleep), and REM (20-25%, dreaming).</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/fazy-sna/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/sleep-stages-explained.png</image:loc>
+      <image:title>Фазы сна и почему сны приходят под утро</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/fazy-sna/rem-son-po-vozrastu-dark.png</image:loc>
+      <image:title>Столбчатая диаграмма: REM занимает около 50% сна новорождённого, примерно 30% у детей, 20-25% у взрослых и около 18% у пожилых.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/fazy-sna/cikly-sna-za-noch-dark.png</image:loc>
+      <image:title>Лента одной ночи, разбитая на блоки по фазам: блоки глубокого сна крупнее в начале ночи, блоки REM удлиняются к утру, а лёгкий сон занимает большую часть остального времени.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/fazy-sna/fazy-sna-shema-dark.png</image:loc>
+      <image:title>Четыре карточки с обзором фаз сна: N1 (5-10%, засыпание), N2 (45-55%, лёгкий сон), N3 (10-20%, глубокий сон) и REM (20-25%, сновидения).</image:title>
     </image:image>
   </url>
   <!-- BLOG:END -->
