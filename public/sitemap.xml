@@ -38,6 +38,36 @@
   </url>
   <!-- BLOG:START (auto-generated) -->
   <url>
+    <loc>https://alisie.app/blog/exam-dreams/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/exam-dreams.png</image:loc>
+      <image:title>Dreams About Exams and Being Late</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/exam-dreams/how-common-are-school-dreams-dark.png</image:loc>
+      <image:title>Horizontal bar chart from the Nielsen 2003 survey of 1,181 students: being chased 81.5%, sexual dreams 76.5%, falling 73.8%, school and studying 67.1%, arriving too late 59.5%, failing an exam 45.0%.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/exam-dreams/exam-dreams-by-age-dark.png</image:loc>
+      <image:title>Chart from the Nielsen 2003 sample: failing an exam was reported by 51.1% of participants aged 18 and under against 41.7% of those aged 19 and over, while school and studying held at 68.3% against 67.0%.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/son-pro-ekzamen/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/exam-dreams.png</image:loc>
+      <image:title>Сон про экзамен и опоздание</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/son-pro-ekzamen/kak-chasto-snitsya-shkola-dark.png</image:loc>
+      <image:title>Горизонтальная столбчатая диаграмма по опросу Нильсена 2003 года среди 1181 студента: погоня 81,5%, сексуальные сны 76,5%, падение 73,8%, школа и учёба 67,1%, опоздание 59,5%, провал экзамена 45,0%.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/son-pro-ekzamen/son-pro-ekzamen-i-vozrast-dark.png</image:loc>
+      <image:title>Диаграмма по выборке Нильсена 2003 года: сон про провал экзамена видели 51,1% участников 18 лет и младше против 41,7% тех, кому 19 и больше, а школу и учёбу 68,3% против 67,0%.</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://alisie.app/blog/rem-rebound/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/_covers/rem-rebound.png</image:loc>

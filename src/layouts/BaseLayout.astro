@@ -60,10 +60,20 @@ const defaultOgImage =
   locale === "ru" ? `${SITE}/og-ru.png` : `${SITE}/og-en.png`;
 const ogImage = ogImageProp ? `${SITE}${ogImageProp}` : defaultOgImage;
 
+// Official Alisie profiles.
+const BRAND_PROFILES = [
+  "https://apps.apple.com/app/id1485091289",
+  "https://t.me/alisieapp",
+  "https://www.instagram.com/alisieapp",
+  "https://www.reddit.com/r/alisieapp",
+  "https://www.producthunt.com/products/alisie-dream-diary",
+];
+
 const appSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: locale === "ru" ? "Alisie - Дневник снов" : "Alisie - Dream Diary",
+  alternateName: "Alisie",
   description,
   applicationCategory: "LifestyleApplication",
   operatingSystem: "iOS",
@@ -71,6 +81,7 @@ const appSchema = {
   image: ogImage,
   inLanguage: locale,
   downloadUrl: APP_STORE_URL,
+  sameAs: BRAND_PROFILES,
   offers: {
     "@type": "Offer",
     price: "0",
@@ -82,7 +93,10 @@ const siteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Alisie",
+  alternateName:
+    locale === "ru" ? "Alisie — Дневник снов" : "Alisie — Dream Diary",
   url: SITE,
+  sameAs: BRAND_PROFILES,
 };
 ---
 

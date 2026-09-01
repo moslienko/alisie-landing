@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "exam-dreams",
+    "title": "Dreams About Exams and Being Late",
+    "description": "School, exams and arriving late are among the most common scenes in dreams. Why a dream of failing predicts nothing, and why it returns years after graduation.",
+    "pubDate": "2026-09-01",
+    "lang": "en",
+    "cover": "exam-dreams"
+  },
+  {
+    "slug": "son-pro-ekzamen",
+    "title": "Сон про экзамен и опоздание",
+    "description": "Школа, экзамен и опоздание входят в самые частые сцены сна. Почему сон про провал ничего не предсказывает и почему он возвращается через годы после выпуска.",
+    "pubDate": "2026-09-01",
+    "lang": "ru",
+    "cover": "exam-dreams"
+  },
+  {
     "slug": "rem-rebound",
     "title": "Why Vivid Dreams Follow a Week of Short Nights",
     "description": "REM keeps its own ledger. Lose it and your brain pays it back at the first opportunity, in minutes of sleep and in how much happens inside them.",
@@ -84,7 +100,7 @@ export const blogPosts: BlogPostMeta[] = [
   {
     "slug": "psihologiya-snov",
     "title": "Психология снов - почему сонники не работают",
-    "description": "Психология снов - настоящая наука, но она не расшифровывает символы: у каждого свой словарь. Что установлено на самом деле и как прочитать собственные сны.",
+    "description": "Психология снов это настоящая наука, но она не расшифровывает символы: у каждого свой словарь. Что установлено на самом деле и как прочитать собственные сны.",
     "pubDate": "2026-07-28",
     "lang": "ru",
     "cover": "the-psychology-of-dreams"
@@ -116,7 +132,7 @@ export const blogPosts: BlogPostMeta[] = [
   {
     "slug": "osoznannye-sny",
     "title": "Что такое осознанный сон и как в него попасть",
-    "description": "Осознанный сон - это сон, в котором вы понимаете, что спите. Что доказано, что перспективно и что известно о тренировке осознанности - без преувеличений.",
+    "description": "Осознанный сон это сон, в котором вы понимаете, что спите. Что доказано, что перспективно и что известно о тренировке осознанности - без преувеличений.",
     "pubDate": "2026-07-14",
     "lang": "ru",
     "cover": "what-is-lucid-dreaming"
