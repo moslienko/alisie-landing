@@ -14,6 +14,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { execSync } from 'node:child_process'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
@@ -35,6 +36,21 @@ function pngSize(publicSrc) {
   const buf = readFileSync(file)
   if (buf.length < 24 || buf.readUInt32BE(0) !== 0x89504e47) return null
   return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) }
+}
+
+// Make a WebP twin of a PNG (blog card serves it via <picture>). Idempotent:
+// skips if the .webp already exists. Needs `cwebp` on PATH; if it's missing we
+// warn but don't fail the build — the card just falls back to the PNG.
+function generateWebp(publicSrc) {
+  const png = join(PUBLIC, publicSrc.replace(/^\//, ''))
+  const webp = png.replace(/\.png$/i, '.webp')
+  if (!existsSync(png) || existsSync(webp)) return
+  try {
+    execSync(`cwebp -q 82 "${png}" -o "${webp}"`, { stdio: 'ignore' })
+    console.log(`✓ webp ${publicSrc.replace(/\.png$/i, '.webp')}`)
+  } catch {
+    console.warn(`⚠ cwebp not found — cover ships as PNG only (${publicSrc})`)
+  }
 }
 
 // ---------- frontmatter ----------
@@ -264,6 +280,12 @@ function build(name) {
   const coverSrc = `/blog-img/_covers/${coverSlug}.png`
   const coverSize = pngSize(coverSrc)
   const cover = coverSize ? { src: coverSrc, alt: data.title, ...coverSize } : null
+
+  // Ship a WebP twin of the cover (the blog card serves it via <picture>, PNG is
+  // the fallback). Covers are RGB gradients — WebP ~q82 cuts 440KB → ~20KB with no
+  // visible loss, which is what keeps the blog index LCP down. Generated on demand
+  // so a new article's cover is optimised without a manual step.
+  if (cover) generateWebp(coverSrc)
 
   // Encode the article body as base64 so the raw prose is NOT readable in the
   // public repo (avoids the .astro source being scraped/indexed as duplicate

@@ -40,6 +40,8 @@ function DefaultCard({ item, theme }: { item: FeatureItem; theme: Theme }) {
                     )}
                     src={item.image ? screenshotSrc(item.image, theme) : undefined}
                     alt={item.name}
+                    loading='lazy'
+                    decoding='async'
                 />
             </div>
         );
@@ -72,6 +74,8 @@ function DefaultCard({ item, theme }: { item: FeatureItem; theme: Theme }) {
                         className='featureImage max-h-[280px] w-auto object-contain'
                         src={item.image ? screenshotSrc(item.image, theme) : undefined}
                         alt={item.name}
+                        loading='lazy'
+                        decoding='async'
                     />
                 </div>
                 {copy}
@@ -136,6 +140,8 @@ function LargeCard({ item, theme }: { item: FeatureItem; theme: Theme }) {
                             className='featureImage w-1/3 max-w-[220px] object-contain object-bottom'
                             src={screenshotSrc(src, theme)}
                             alt={item.name}
+                            loading='lazy'
+                            decoding='async'
                         />
                     ))}
                 </div>
@@ -156,12 +162,16 @@ function SplitCard({ item }: { item: FeatureItem }) {
                             className='featureImage max-h-[280px] w-auto object-contain'
                             src={screenshotSrc(file, 'light')}
                             alt={`${item.name} - light`}
+                            loading='lazy'
+                            decoding='async'
                         />
                         <img
                             className='splitPhoneDark featureImage absolute inset-0 w-full h-full object-contain'
                             src={screenshotSrc(file, 'dark')}
                             alt={`${item.name} - dark`}
                             aria-hidden='true'
+                            loading='lazy'
+                            decoding='async'
                         />
                         <span className='splitDivider' aria-hidden='true' />
                     </div>

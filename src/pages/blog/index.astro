@@ -27,6 +27,7 @@ const fmt = (iso: string) =>
   title={`${t.blogTitle} - Alisie`}
   description={t.blogMetaDescription}
   path="/blog"
+  maxWidth="max-w-6xl"
 >
   <h1
     class="inline-block text-4xl md:text-5xl font-bold py-2
@@ -37,19 +38,23 @@ const fmt = (iso: string) =>
   </h1>
   <p class="text-lg text-color opacity-70 mt-2">{t.blogIntro}</p>
 
-  <div class="mt-10 grid gap-8 sm:grid-cols-2">
+  <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
     {
-      posts.map((post) => (
+      posts.map((post, i) => (
         <a href={post.lang === 'ru' ? `/ru/blog/${post.slug}` : `/blog/${post.slug}`} class="blogCard group">
           <div class="blogCardCover">
-            <img
-              src={`/blog-img/_covers/${post.cover}.png`}
-              alt={post.title}
-              width="1200"
-              height="630"
-              loading="lazy"
-              decoding="async"
-            />
+            <picture>
+              <source srcset={`/blog-img/_covers/${post.cover}.webp`} type="image/webp" />
+              <img
+                src={`/blog-img/_covers/${post.cover}.png`}
+                alt={post.title}
+                width="1200"
+                height="630"
+                loading={i < 3 ? 'eager' : 'lazy'}
+                fetchpriority={i === 0 ? 'high' : undefined}
+                decoding="async"
+              />
+            </picture>
           </div>
           <div class="blogCardBody">
             <h2 class="text-xl md:text-2xl font-semibold text-color group-hover:text-[var(--color-tint-start)] transition-colors">
@@ -61,6 +66,6 @@ const fmt = (iso: string) =>
         </a>
       ))
     }
-    {posts.length === 0 && <p class="text-color opacity-60 sm:col-span-2">{t.blogEmpty}</p>}
+    {posts.length === 0 && <p class="text-color opacity-60 sm:col-span-2 lg:col-span-3">{t.blogEmpty}</p>}
   </div>
 </PageLayout>

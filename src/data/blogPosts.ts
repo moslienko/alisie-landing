@@ -10,20 +10,36 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
-    "slug": "exam-dreams",
-    "title": "Dreams About Exams and Being Late",
-    "description": "School, exams and arriving late are among the most common scenes in dreams. Why a dream of failing predicts nothing, and why it returns years after graduation.",
-    "pubDate": "2026-09-01",
+    "slug": "rem-rebound",
+    "title": "Why Vivid Dreams Follow a Week of Short Nights",
+    "description": "REM keeps its own ledger. Lose it and your brain pays it back at the first opportunity, in minutes of sleep and in how much happens inside them.",
+    "pubDate": "2026-08-25",
     "lang": "en",
-    "cover": "exam-dreams"
+    "cover": "rem-rebound"
   },
   {
-    "slug": "son-pro-ekzamen",
-    "title": "Сон про экзамен и опоздание",
-    "description": "Школа, экзамен и опоздание входят в самые частые сцены сна. Почему сон про провал ничего не предсказывает и почему он возвращается через годы после выпуска.",
-    "pubDate": "2026-09-01",
+    "slug": "rem-otskok",
+    "title": "Почему после недосыпа снятся яркие сны",
+    "description": "У REM-сна отдельный счёт: потерянное мозг возвращает при первой возможности - и не только минутами. Что такое REM-отскок и когда он случается.",
+    "pubDate": "2026-08-25",
     "lang": "ru",
-    "cover": "exam-dreams"
+    "cover": "rem-rebound"
+  },
+  {
+    "slug": "how-sleep-consolidates-memory",
+    "title": "How Sleep Rebuilds Memory While You Dream",
+    "description": "Sleep doesn't store your day - it takes it apart and rebuilds it. What consolidation actually does, which famous claims failed to replicate, and how to see it.",
+    "pubDate": "2026-08-18",
+    "lang": "en",
+    "cover": "how-sleep-consolidates-memory"
+  },
+  {
+    "slug": "son-i-pamyat",
+    "title": "Как сон влияет на память и почему день возвращается в снах",
+    "description": "Ночью мозг не складывает воспоминания на полку, а разбирает прожитый день и складывает по-новому. Что про сон и память доказано, что нет и как увидеть это у себя.",
+    "pubDate": "2026-08-18",
+    "lang": "ru",
+    "cover": "how-sleep-consolidates-memory"
   },
   {
     "slug": "falling-dreams",
