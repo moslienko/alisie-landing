@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "why-freud-was-wrong-about-dreams",
+    "title": "Why Freud's Dream Theory Did Not Survive Testing",
+    "description": "Freud promised dreams were disguised wishes. Once dreams could be collected and counted, no independent evidence for a disguise, a censor or a symbol key turned up in them.",
+    "pubDate": "2026-09-08",
+    "lang": "en",
+    "cover": "why-freud-was-wrong-about-dreams"
+  },
+  {
+    "slug": "teoriya-freyda-o-snah",
+    "title": "Почему теория Фрейда о снах не выдержала проверки",
+    "description": "Фрейд обещал, что сон - зашифрованное желание. Когда сны научились собирать и считать, независимых свидетельств маскировки, цензора и ключа к символам не нашли.",
+    "pubDate": "2026-09-08",
+    "lang": "ru",
+    "cover": "why-freud-was-wrong-about-dreams"
+  },
+  {
     "slug": "exam-dreams",
     "title": "Dreams About Exams and Being Late",
     "description": "School, exams and arriving late are among the most common scenes in dreams. Why a dream of failing predicts nothing, and why it returns years after graduation.",
