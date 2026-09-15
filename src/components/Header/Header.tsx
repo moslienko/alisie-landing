@@ -37,21 +37,17 @@ export default function Header() {
                     </a>
                     <div className='flex justify-center md:justify-start mt-5'>
                         <div className='ratingBadge inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[rgb(var(--fg-rgb)/0.1)] bg-[rgb(var(--fg-rgb)/0.04)]'>
-                            {data.rating && (
-                                <>
-                                    <span className='flex items-center gap-1.5'>
-                                        <span className='flex'>
-                                            {[0, 1, 2, 3, 4].map((i) => (
-                                                <svg key={i} viewBox='0 0 24 24' fill='#FFB300' className='w-4 h-4'>
-                                                    <path d='M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 7.1-1.01L12 2z' />
-                                                </svg>
-                                            ))}
-                                        </span>
-                                        <span className='font-bold text-color'>{data.rating}</span>
-                                    </span>
-                                    <span className='w-px h-4 bg-[rgb(var(--fg-rgb)/0.15)]' aria-hidden='true'></span>
-                                </>
-                            )}
+                            <span className='flex items-center gap-1.5'>
+                                <span className='flex'>
+                                    {[0, 1, 2, 3, 4].map((i) => (
+                                        <svg key={i} viewBox='0 0 24 24' fill='#FFB300' className='w-4 h-4'>
+                                            <path d='M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 7.1-1.01L12 2z' />
+                                        </svg>
+                                    ))}
+                                </span>
+                                {data.rating && <span className='font-bold text-color'>{data.rating}</span>}
+                            </span>
+                            <span className='w-px h-4 bg-[rgb(var(--fg-rgb)/0.15)]' aria-hidden='true'></span>
                             <span className='text-sm text-color opacity-70'>{data.sinceLabel}</span>
                         </div>
                     </div>

@@ -29,13 +29,20 @@ export const getData = (locale: Locale) => {
                 title: 'No account required',
                 description: 'Download and start writing. No sign-up, no email, no password to recover.',
             },
+            {
+                id: 'p5',
+                icon: 'no-ai',
+                title: 'No AI interpretations',
+                wide: true,
+                description: 'Only you know your own context - your characters, your places, your history. Alisie never retells your dreams in someone else’s words. Instead it turns them into structure: characters, creatures, locations and artifacts you build yourself, with statistics and patterns calculated right on your device.',
+            },
         ],
     }
     if (locale === 'ru') {
         return {
             ...en,
             title: 'Ваши сны остаются вашими',
-            subtitle: 'Alisie создан по принципу «приватность прежде всего». То, что вы пишете, никогда не покидает ваши устройства.',
+            subtitle: 'Alisie создана по принципу «приватность прежде всего». То, что вы пишете, никогда не покидает ваши устройства.',
             points: [
                 {
                     id: 'p1',
@@ -60,6 +67,13 @@ export const getData = (locale: Locale) => {
                     icon: 'user-x',
                     title: 'Без регистрации',
                     description: 'Скачайте и начинайте писать. Без регистрации, без email, без пароля, который нужно восстанавливать.',
+                },
+                {
+                    id: 'p5',
+                    icon: 'no-ai',
+                    title: 'Без ИИ-толкований',
+                    wide: true,
+                    description: 'Свой контекст знаете только вы - своих персонажей, свои места, свою историю. Alisie не пересказывает ваши сны чужими словами. Вместо этого она превращает их в структуру: персонажи, существа, локации и артефакты, которые вы создаёте сами, а статистика и закономерности считаются прямо на устройстве.',
                 },
             ],
         }

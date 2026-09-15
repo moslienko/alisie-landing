@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "mild-technique",
+    "title": "What the MILD Technique Is and How to Do It",
+    "description": "MILD is a lucid dreaming technique built on memory. What to recall after waking, which oddity to look for in your own dream, and why falling back asleep quickly matters.",
+    "pubDate": "2026-09-15",
+    "lang": "en",
+    "cover": "mild-technique"
+  },
+  {
+    "slug": "mild-tehnika",
+    "title": "Что такое техника MILD и как её делать",
+    "description": "MILD - это техника осознанных сновидений, построенная на памяти. Что вспоминать после пробуждения, какую странность искать в своём сне и почему важно быстро уснуть обратно.",
+    "pubDate": "2026-09-15",
+    "lang": "ru",
+    "cover": "mild-technique"
+  },
+  {
     "slug": "why-freud-was-wrong-about-dreams",
     "title": "Why Freud's Dream Theory Did Not Survive Testing",
     "description": "Freud promised dreams were disguised wishes. Once dreams could be collected and counted, no independent evidence for a disguise, a censor or a symbol key turned up in them.",
