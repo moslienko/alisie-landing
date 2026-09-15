@@ -14,6 +14,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
                     <Component.Pricing />
                     <Component.ProMax />
                     <Component.Privacy />
+                    <Component.Reviews />
                     <Component.FAQ />
                     <Component.FinalCTA />
                 </main>

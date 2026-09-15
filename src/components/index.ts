@@ -5,6 +5,7 @@ import Features from "./Features/Features"
 import Pricing from "./Pricing/Pricing"
 import ProMax from "./Pricing/ProMax"
 import Privacy from "./Privacy/Privacy"
+import Reviews from "./Reviews/Reviews"
 import FAQ from "./FAQ/FAQ"
 import FinalCTA from "./FinalCTA/FinalCTA"
 import Footer from "./Footer/Footer"
@@ -18,6 +19,7 @@ export {
     Pricing,
     ProMax,
     Privacy,
+    Reviews,
     FAQ,
     FinalCTA,
     Footer,
