@@ -5,7 +5,7 @@ export const getData = (locale: Locale) => {
     const en = {
         title: 'Start remembering your dreams tonight',
         subtitle: 'Download Alisie for free and turn fleeting memories into a lifelong journal.',
-        ctaLabel: 'Download',
+        ctaLabel: "Record tonight's dream",
         ctaLink: APP_STORE_URL,
         microTrust: getAppStats(locale).trustPoints,
         screenshot: 'journal.png',
@@ -15,7 +15,7 @@ export const getData = (locale: Locale) => {
             ...en,
             title: 'Начните вспоминать свои сны уже сегодня',
             subtitle: 'Скачайте Alisie бесплатно и превратите ускользающие воспоминания в журнал на всю жизнь.',
-            ctaLabel: 'Скачать',
+            ctaLabel: 'Записать первый сон',
         }
     }
     return en

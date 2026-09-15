@@ -1,4 +1,5 @@
 'use client'
+import { MessageCircleOff } from 'lucide-react'
 import { getData } from './Privacy.data'
 import { useLocale } from '../../i18n/useLocale'
 
@@ -28,6 +29,7 @@ const icons: Record<string, React.ReactNode> = {
             <line x1='23' y1='8' x2='18' y2='13' />
         </svg>
     ),
+    'no-ai': <MessageCircleOff className='w-7 h-7' strokeWidth={2} />,
 }
 
 export default function Privacy() {
@@ -49,7 +51,7 @@ export default function Privacy() {
                 {data.points.map((point) => (
                     <div
                         key={point.id}
-                        className='privacyCard relative p-6 rounded-3xl border-2 overflow-hidden flex items-start gap-5'
+                        className={`privacyCard relative p-6 rounded-3xl border-2 overflow-hidden flex items-start gap-5${point.wide ? ' md:col-span-2' : ''}`}
                     >
                         <div className='privacyTint absolute inset-0 rounded-3xl pointer-events-none'></div>
                         <div className='relative z-10 flex items-start gap-5'>

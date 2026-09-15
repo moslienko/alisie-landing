@@ -17,14 +17,19 @@ interface LocalizedAppStats {
 const localized: Record<Locale, LocalizedAppStats> = {
   en: {
     privacyDescription: "Private & offline-first",
-    trustPoints: ["Free forever", "No ads", "Offline-first", "iOS 13+"],
+    trustPoints: [
+      "Free forever, no limits",
+      "No account, no internet",
+      "No ads",
+      "iOS 13+",
+    ],
   },
   ru: {
     privacyDescription: "Приватно и работает офлайн",
     trustPoints: [
-      "Бесплатно навсегда",
+      "Бесплатно навсегда, без лимитов",
+      "Без аккаунта и интернета",
       "Без рекламы",
-      "Работает без интернета",
       "iOS 13+",
     ],
   },

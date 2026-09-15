@@ -2,8 +2,8 @@ import type { Locale } from '../../i18n/locale'
 
 export const getData = (locale: Locale) => {
     const en = {
-        title: 'Simple, honest pricing',
-        subtitle: 'Use Alisie free, with no entry limits. Or unlock the full experience with a one-time purchase you own forever - most apps charge that every year.',
+        title: 'Free with no limits. Pro with no subscription',
+        subtitle: 'A single App Store purchase. No scheduled charges, no fine print.',
         plans: [
             {
                 id: 'free',
@@ -11,7 +11,7 @@ export const getData = (locale: Locale) => {
                 tagline: 'Everything you need to start journaling',
                 price: '$0',
                 priceNote: 'No limits, no trial, no account required',
-                cta: 'Download',
+                cta: 'Start free',
                 featured: false,
                 features: [
                     { text: 'Unlimited dream entries', included: true },
@@ -19,7 +19,7 @@ export const getData = (locale: Locale) => {
                     { text: 'Characters, creatures, locations & artifacts', included: true },
                     { text: 'Basic statistics', included: true },
                     { text: 'Morning reminder notifications', included: true },
-                    { text: 'Light & dark theme', included: true },
+                    { text: 'Light, dark & sepia themes', included: true },
                     { text: 'Local backup & restore', included: true },
                     { text: 'iCloud sync across devices', included: false },
                     { text: 'Advanced statistics & charts', included: false },
@@ -30,7 +30,7 @@ export const getData = (locale: Locale) => {
                 name: 'Pro',
                 tagline: 'Unlock the full dream journal',
                 price: '$24.99',
-                priceNote: 'Pay once, own forever · One-time App Store purchase',
+                priceNote: 'One-time App Store purchase · Yours forever',
                 cta: 'Unlock Pro',
                 featured: true,
                 badge: 'Most Popular',
@@ -41,7 +41,7 @@ export const getData = (locale: Locale) => {
                     { text: 'Moon phase insights', included: true },
                     { text: 'Stats by tags & categories', included: true },
                     { text: 'Reality checks for lucid dreaming', included: true },
-                    { text: 'Flexible export (PDF, HTML, Markdown, CSV, text, image) - all data or individual objects', included: true },
+                    { text: 'Flexible export (PDF, HTML, Markdown, CSV, JSON, text, image) - all data or individual objects', included: true },
                     { text: 'Accent color & select app icons', included: true },
                     { text: 'Advanced search filters', included: true },
                 ],
@@ -75,8 +75,8 @@ export const getData = (locale: Locale) => {
     if (locale === 'ru') {
         return {
             ...en,
-            title: 'Простые и честные цены',
-            subtitle: 'Пользуйтесь Alisie бесплатно, без ограничений на количество записей. Или откройте все возможности разовой покупкой, которая останется вашей навсегда - большинство приложений берут за это плату каждый год.',
+            title: 'Бесплатно без лимитов. Pro без подписки',
+            subtitle: 'Разовая покупка в App Store. Ни платежей по расписанию, ни скрытых условий.',
             plans: [
                 {
                     id: 'free',
@@ -84,7 +84,7 @@ export const getData = (locale: Locale) => {
                     tagline: 'Всё, что нужно, чтобы начать вести дневник',
                     price: '0 ₽',
                     priceNote: 'Без ограничений, без пробного периода, без аккаунта',
-                    cta: 'Скачать',
+                    cta: 'Начать бесплатно',
                     featured: false,
                     features: [
                         { text: 'Неограниченное число записей о снах', included: true },
@@ -92,7 +92,7 @@ export const getData = (locale: Locale) => {
                         { text: 'Персонажи, существа, локации и артефакты', included: true },
                         { text: 'Базовая статистика', included: true },
                         { text: 'Утренние напоминания', included: true },
-                        { text: 'Светлая и тёмная темы', included: true },
+                        { text: 'Светлая, тёмная темы и «Сепия»', included: true },
                         { text: 'Локальное резервное копирование и восстановление', included: true },
                         { text: 'Синхронизация через iCloud между устройствами', included: false },
                         { text: 'Расширенная статистика и графики', included: false },
@@ -103,7 +103,7 @@ export const getData = (locale: Locale) => {
                     name: 'Pro',
                     tagline: 'Откройте полный дневник снов',
                     price: '2 290 ₽',
-                    priceNote: 'Заплатите один раз - пользуйтесь всегда · Разовая покупка в App Store',
+                    priceNote: 'Разовая покупка в App Store · Навсегда ваша',
                     cta: 'Открыть Pro',
                     featured: true,
                     badge: 'Популярный выбор',
@@ -114,7 +114,7 @@ export const getData = (locale: Locale) => {
                         { text: 'Информация о фазах луны', included: true },
                         { text: 'Статистика по тегам и категориям', included: true },
                         { text: 'Проверки реальности для осознанных сновидений', included: true },
-                        { text: 'Гибкий экспорт (PDF, HTML, Markdown, CSV, текст, изображение) - все данные или отдельные объекты', included: true },
+                        { text: 'Гибкий экспорт (PDF, HTML, Markdown, CSV, JSON, текст, изображение) - все данные или отдельные объекты', included: true },
                         { text: 'Акцентный цвет и выбор иконки приложения', included: true },
                         { text: 'Расширенные фильтры поиска', included: true },
                     ],
