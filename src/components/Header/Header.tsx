@@ -51,7 +51,7 @@ export default function Header() {
                             <span className='text-sm text-color opacity-70'>{data.sinceLabel}</span>
                         </div>
                     </div>
-                    <div className='grid grid-cols-2 gap-x-6 gap-y-2 justify-items-center md:justify-items-start mt-5 text-sm max-w-xs md:max-w-md mx-auto md:mx-0'>
+                    <div className='flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 mt-5 text-sm mx-auto md:mx-0'>
                         {data.trust.map((item) => (
                             <span
                                 key={item}

@@ -38,7 +38,7 @@ export const getData = (locale: Locale) => {
             {
                 id: 'q5',
                 question: 'Is there an Android version?',
-                answer: 'Not yet. Alisie is built for iOS and iPadOS (13.0 and above), which lets us focus on a polished experience and deep integration with iCloud.',
+                answer: 'Not yet. Alisie is built for iOS and iPadOS (15.0 and above), which lets us focus on a polished experience and deep integration with iCloud.',
             },
             {
                 id: 'q6',
@@ -92,7 +92,7 @@ export const getData = (locale: Locale) => {
                 {
                     id: 'q5',
                     question: 'Есть ли версия для Android?',
-                    answer: 'Пока нет. Alisie создана для iOS и iPadOS (13.0 и выше), что позволяет нам сосредоточиться на отточенном опыте и глубокой интеграции с iCloud.',
+                    answer: 'Пока нет. Alisie создана для iOS и iPadOS (15.0 и выше), что позволяет нам сосредоточиться на отточенном опыте и глубокой интеграции с iCloud.',
                 },
                 {
                     id: 'q6',

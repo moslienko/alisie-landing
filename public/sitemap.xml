@@ -38,6 +38,28 @@
   </url>
   <!-- BLOG:START (auto-generated) -->
   <url>
+    <loc>https://alisie.app/blog/screen-light-at-night/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/screen-light-at-night.png</image:loc>
+      <image:title>What Screen Light at Night Does to Your Dreams</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/screen-light-at-night/evening-light-threshold-dark.png</image:loc>
+      <image:title>Illuminance scale from 6 to 350 lux: the most sensitive participant needed 6 lux, the group average was 30 lux, and the least sensitive needed 350. A phone in a dark room delivers 25 to 60 lux.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/svet-ekrana-nochyu/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/screen-light-at-night.png</image:loc>
+      <image:title>Что свет экрана ночью делает со снами</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/svet-ekrana-nochyu/porog-chuvstvitelnosti-k-svetu-dark.png</image:loc>
+      <image:title>Шкала освещённости от 6 до 350 люкс: самому чувствительному участнику хватило 6 люкс, среднее по группе - 30 люкс, наименее чувствительному потребовалось 350. Телефон в тёмной комнате даёт 25-60 люкс.</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://alisie.app/blog/mild-technique/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/_covers/mild-technique.png</image:loc>
