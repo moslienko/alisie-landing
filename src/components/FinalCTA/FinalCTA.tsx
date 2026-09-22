@@ -34,7 +34,7 @@ export default function FinalCTA() {
                                 <path d='m19 12-7 7-7-7' />
                             </svg>
                         </a>
-                        <div className='grid grid-cols-2 gap-x-6 gap-y-2 justify-items-center md:justify-items-start mt-6 text-sm max-w-xs md:max-w-md mx-auto md:mx-0'>
+                        <div className='flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 mt-6 text-sm mx-auto md:mx-0'>
                             {data.microTrust.map((item) => (
                                 <span
                                     key={item}

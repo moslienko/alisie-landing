@@ -21,7 +21,6 @@ const localized: Record<Locale, LocalizedAppStats> = {
       "Free forever, no limits",
       "No account, no internet",
       "No ads",
-      "iOS 13+",
     ],
   },
   ru: {
@@ -30,7 +29,6 @@ const localized: Record<Locale, LocalizedAppStats> = {
       "Бесплатно навсегда, без лимитов",
       "Без аккаунта и интернета",
       "Без рекламы",
-      "iOS 13+",
     ],
   },
 };
