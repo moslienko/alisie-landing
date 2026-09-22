@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "screen-light-at-night",
+    "title": "What Screen Light at Night Does to Your Dreams",
+    "description": "Evening screens cut into REM, the stage most dream reports come from. What the measurements show, how little light it takes, and why a warm filter isn't the fix.",
+    "pubDate": "2026-09-22",
+    "lang": "en",
+    "cover": "screen-light-at-night"
+  },
+  {
+    "slug": "svet-ekrana-nochyu",
+    "title": "Что свет экрана ночью делает со снами",
+    "description": "Экран вечером бьёт не по сну вообще, а по REM - фазе, из которой берутся сны. Что показали замеры, сколько света достаточно и почему тёплый фильтр не спасает.",
+    "pubDate": "2026-09-22",
+    "lang": "ru",
+    "cover": "screen-light-at-night"
+  },
+  {
     "slug": "mild-technique",
     "title": "What the MILD Technique Is and How to Do It",
     "description": "MILD is a lucid dreaming technique built on memory. What to recall after waking, which oddity to look for in your own dream, and why falling back asleep quickly matters.",
