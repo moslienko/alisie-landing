@@ -38,6 +38,28 @@
   </url>
   <!-- BLOG:START (auto-generated) -->
   <url>
+    <loc>https://alisie.app/blog/threat-simulation-theory/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/threat-simulation-theory.png</image:loc>
+      <image:title>Threat Simulation Theory, Why We Have Chase and Fall Nightmares</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/threat-simulation-theory/threat-simulation-theory-statistics-dark.png</image:loc>
+      <image:title>Bar chart comparing two tests of threat simulation theory. Revonsuo and Valli's 2000 study of 592 home dreams from 52 students found at least one threat in 66.4% of reports. Malcolm-Smith and Solms's 2004 analysis found a realistic, life-threatening event in under 20% of dreams, and a successful escape from one in under 2%.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/zachem-mozgu-nuzhny-koshmary/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/threat-simulation-theory.png</image:loc>
+      <image:title>Гипотеза симуляции угрозы, зачем снятся кошмары и погони</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/zachem-mozgu-nuzhny-koshmary/statistika-simulyacii-ugrozy-dark.png</image:loc>
+      <image:title>Столбчатая диаграмма, сравнивающая две проверки гипотезы симуляции угрозы. Исследование Ревонсуо и Валли 2000 года на 592 домашних снах 52 студентов нашло хотя бы одну угрозу в 66,4% отчётов. Анализ Малкольм-Смита и Солмса 2004 года нашёл реалистичную, опасную для жизни ситуацию менее чем в 20% снов, а успешное спасение от неё - менее чем в 2%.</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://alisie.app/blog/screen-light-at-night/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/_covers/screen-light-at-night.png</image:loc>

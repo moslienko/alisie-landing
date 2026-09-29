@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "threat-simulation-theory",
+    "title": "Threat Simulation Theory, Why We Have Chase and Fall Nightmares",
+    "description": "Revonsuo proposed that nightmares are an evolutionary survival simulator. Here's what's known about that theory, and why anxious dreams still aren't random.",
+    "pubDate": "2026-09-29",
+    "lang": "en",
+    "cover": "threat-simulation-theory"
+  },
+  {
+    "slug": "zachem-mozgu-nuzhny-koshmary",
+    "title": "Гипотеза симуляции угрозы, зачем снятся кошмары и погони",
+    "description": "Ревонсуо предположил, что кошмары - это эволюционный тренажёр выживания. Разбираем, что известно об этой гипотезе и почему тревожные сны всё равно не случайны.",
+    "pubDate": "2026-09-29",
+    "lang": "ru",
+    "cover": "threat-simulation-theory"
+  },
+  {
     "slug": "screen-light-at-night",
     "title": "What Screen Light at Night Does to Your Dreams",
     "description": "Evening screens cut into REM, the stage most dream reports come from. What the measurements show, how little light it takes, and why a warm filter isn't the fix.",
