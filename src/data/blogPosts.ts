@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "how-to-stay-in-a-lucid-dream",
+    "title": "How to Stay in a Lucid Dream",
+    "description": "A lucid dream starts fading just as you realise you're asleep. Ways to stay with the dream, try a new scene, and recognise a possible false awakening.",
+    "pubDate": "2026-10-05",
+    "lang": "en",
+    "cover": "how-to-stay-in-a-lucid-dream"
+  },
+  {
+    "slug": "lucid-dream-stabilization",
+    "title": "Как удержаться в осознанном сне",
+    "description": "Что делать, когда осознанный сон расплывается: прикосновения, движение, голос и вкус. Как выбрать приём, вернуть картинку и заметить ложное пробуждение.",
+    "pubDate": "2026-10-05",
+    "lang": "ru",
+    "cover": "how-to-stay-in-a-lucid-dream"
+  },
+  {
     "slug": "threat-simulation-theory",
     "title": "Threat Simulation Theory, Why We Have Chase and Fall Nightmares",
     "description": "Revonsuo proposed that nightmares are an evolutionary survival simulator. Here's what's known about that theory, and why anxious dreams still aren't random.",
