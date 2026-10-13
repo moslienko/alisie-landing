@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "chased-dreams",
+    "title": "Being Chased in Dreams",
+    "description": "Being chased is the most common dream there is, and most of what's said about it is folklore. What the science knows - and why the pursuer matters less than the pattern.",
+    "pubDate": "2026-10-13",
+    "lang": "en",
+    "cover": "chased-dreams"
+  },
+  {
+    "slug": "son-pro-pogonyu",
+    "title": "Сон про погоню",
+    "description": "Погоня снится чаще любого другого сна, и почти всё про неё - сказки. Что наука знает про преследователя и почему важно не от кого вы бежите, а кто гонится опять.",
+    "pubDate": "2026-10-13",
+    "lang": "ru",
+    "cover": "chased-dreams"
+  },
+  {
     "slug": "how-to-stay-in-a-lucid-dream",
     "title": "How to Stay in a Lucid Dream",
     "description": "A lucid dream starts fading just as you realise you're asleep. Ways to stay with the dream, try a new scene, and recognise a possible false awakening.",
