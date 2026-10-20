@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "why-weekend-dreams-are-vivid",
+    "title": "Why Your Weekend Dreams Are So Much More Vivid",
+    "description": "Your alarm cuts the night short exactly where the longest dreams live. Sleep until you wake on your own and they come back.",
+    "pubDate": "2026-10-20",
+    "lang": "en",
+    "cover": "why-weekend-dreams-are-vivid"
+  },
+  {
+    "slug": "dolg-sna",
+    "title": "Почему в выходные снятся такие яркие сны",
+    "description": "Будильник всю неделю обрубает ночь там, где живут самые длинные сновидения. В выходной вы спите до естественного пробуждения - и они возвращаются.",
+    "pubDate": "2026-10-20",
+    "lang": "ru",
+    "cover": "why-weekend-dreams-are-vivid"
+  },
+  {
     "slug": "chased-dreams",
     "title": "Being Chased in Dreams",
     "description": "Being chased is the most common dream there is, and most of what's said about it is folklore. What the science knows - and why the pursuer matters less than the pattern.",
