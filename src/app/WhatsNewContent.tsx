@@ -21,43 +21,40 @@ export default function WhatsNewContent({ locale }: { locale: Locale }) {
 
     return (
         <LocaleProvider locale={locale}>
-        <PageBody title={t.whatsNewTitle}>
-            <p className='!mb-10'>{t.whatsNewIntro}</p>
+            <PageBody title={t.whatsNewTitle}>
+                <ol className='changelog'>
+                    {groups.map((group, index) => (
+                        <li key={group.versionLabel} className='changelogItem'>
+                            <div className='changelogDot' aria-hidden='true' />
 
-            <ol className='changelog'>
-                {groups.map((group, index) => (
-                    <li key={group.versionLabel} className='changelogItem'>
-                        <div className='changelogDot' aria-hidden='true' />
+                            <div className='flex flex-wrap items-baseline gap-x-3 gap-y-1'>
+                                <span
+                                    className={`changelogVersion ${index === 0 ? 'changelogVersionLatest' : ''
+                                        }`}
+                                >
+                                    v{group.versionLabel}
+                                </span>
+                                {index === 0 && (
+                                    <span className='changelogBadge'>{t.latest}</span>
+                                )}
+                                <span className='text-sm text-color opacity-50'>
+                                    {formatDate(group.date)}
+                                </span>
+                            </div>
 
-                        <div className='flex flex-wrap items-baseline gap-x-3 gap-y-1'>
-                            <span
-                                className={`changelogVersion ${
-                                    index === 0 ? 'changelogVersionLatest' : ''
-                                }`}
-                            >
-                                v{group.versionLabel}
-                            </span>
-                            {index === 0 && (
-                                <span className='changelogBadge'>{t.latest}</span>
+                            <ul className='changelogNotes'>
+                                {group.notes.map((note, i) => (
+                                    <li key={i}>{note}</li>
+                                ))}
+                            </ul>
+
+                            {group.footer && (
+                                <p className='changelogFooter'>{group.footer}</p>
                             )}
-                            <span className='text-sm text-color opacity-50'>
-                                {formatDate(group.date)}
-                            </span>
-                        </div>
-
-                        <ul className='changelogNotes'>
-                            {group.notes.map((note, i) => (
-                                <li key={i}>{note}</li>
-                            ))}
-                        </ul>
-
-                        {group.footer && (
-                            <p className='changelogFooter'>{group.footer}</p>
-                        )}
-                    </li>
-                ))}
-            </ol>
-        </PageBody>
+                        </li>
+                    ))}
+                </ol>
+            </PageBody>
         </LocaleProvider>
     )
 }

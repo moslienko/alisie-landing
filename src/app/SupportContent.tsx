@@ -39,7 +39,7 @@ export default function SupportContent({ locale }: { locale: Locale }) {
 
     return (
         <LocaleProvider locale={locale}>
-        <PageBody title={t.supportTitle}>
+        <PageBody title={t.supportTitle} surface={false}>
             <p className='!mb-8'>{t.supportIntro}</p>
 
             <div className='not-prose grid grid-cols-1 sm:grid-cols-2 gap-4'>

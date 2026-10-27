@@ -1,16 +1,10 @@
 'use client'
+import { BookOpen, Brain } from 'lucide-react'
 import { getData } from './HowItWorks.data'
 import { useLocale } from '../../i18n/useLocale'
 
 const icons: Record<string, React.ReactNode> = {
-    memory: (
-        <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' className='w-7 h-7'>
-            <path d='M12 2a4 4 0 0 0-4 4v1a4 4 0 0 0-2 7.5V17a3 3 0 0 0 6 0v-3' />
-            <path d='M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1 2 7.5V17a3 3 0 0 1-6 0' />
-            <path d='M9 13h.01' />
-            <path d='M15 13h.01' />
-        </svg>
-    ),
+    memory: <Brain className='w-7 h-7' strokeWidth={2} />,
     patterns: (
         <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' className='w-7 h-7'>
             <circle cx='12' cy='12' r='10' />
@@ -25,13 +19,7 @@ const icons: Record<string, React.ReactNode> = {
             <circle cx='12' cy='12' r='3' />
         </svg>
     ),
-    archive: (
-        <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' className='w-7 h-7'>
-            <path d='M4 4h16v4H4z' />
-            <path d='M6 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8' />
-            <line x1='10' y1='13' x2='14' y2='13' />
-        </svg>
-    ),
+    archive: <BookOpen className='w-7 h-7' strokeWidth={2} />,
 }
 
 export default function HowItWorks() {
@@ -39,7 +27,7 @@ export default function HowItWorks() {
     return (
         <section id='why' className='flex flex-col py-16 scroll-mt-24'>
             <div className='text-center mb-12'>
-                <h2 className="inline-block text-5xl md:text-6xl font-bold
+                <h2 className="inline-block text-4xl sm:text-5xl md:text-6xl font-bold
                     bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)]
                     bg-clip-text text-transparent py-2">
                     {data.title}

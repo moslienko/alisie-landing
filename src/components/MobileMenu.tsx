@@ -21,7 +21,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ toggleMenu }) => {
             <button
                 onClick={toggleMenu}
                 aria-label={t.closeMenu}
-                className='absolute top-5 right-4 text-[rgb(var(--fg-rgb)/0.7)] hover:text-[var(--color-tint-start)] transition-colors'
+                className='absolute top-5 right-4 text-[rgb(var(--fg-rgb)/0.7)] hover:text-[var(--color-fg)] transition-colors'
             >
                 <X className='w-10 h-10' />
             </button>
@@ -34,7 +34,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ toggleMenu }) => {
                                 href={navHref(item.link, locale)}
                                 onClick={toggleMenu}
                                 className='block px-8 py-3 rounded-2xl font-sora font-semibold text-4xl
-                                    text-[rgb(var(--fg-rgb)/0.8)] hover:text-[var(--color-tint-start)] hover:bg-[rgb(var(--tint-start-rgb)/0.08)]
+                                    text-[rgb(var(--fg-rgb)/0.8)] hover:text-[var(--color-fg)] hover:bg-[rgb(var(--fg-rgb)/0.06)]
                                     transition-colors duration-200'
                             >
                                 {item.title}

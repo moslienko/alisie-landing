@@ -10,9 +10,13 @@ const icons: Record<string, React.ReactNode> = {
             <path d='M7 11V7a5 5 0 0 1 10 0v4' />
         </svg>
     ),
+    // Same as the iCloud icon in the app: filled white cloud, blue tile from CSS.
     cloud: (
-        <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' className='w-7 h-7'>
-            <path d='M17.5 19a4.5 4.5 0 1 0 0-9h-1.8A7 7 0 1 0 4 15.5' />
+        <svg viewBox='0 0 24 24' className='w-14 h-14' fill='#fff' aria-hidden='true'>
+            <rect x='3.8' y='12.4' width='16.6' height='5.4' rx='2.7' />
+            <circle cx='8.6' cy='12.2' r='3.4' />
+            <circle cx='13' cy='11.4' r='4.9' />
+            <circle cx='17.4' cy='14.4' r='3' />
         </svg>
     ),
     'eye-off': (
@@ -37,7 +41,7 @@ export default function Privacy() {
     return (
         <section className='flex flex-col py-16'>
             <div className='text-center mb-12'>
-                <h2 className="inline-block text-5xl md:text-6xl font-bold
+                <h2 className="inline-block text-4xl sm:text-5xl md:text-6xl font-bold
                     bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)]
                     bg-clip-text text-transparent py-2">
                     {data.title}
@@ -55,7 +59,7 @@ export default function Privacy() {
                     >
                         <div className='privacyTint absolute inset-0 rounded-3xl pointer-events-none'></div>
                         <div className='relative z-10 flex items-start gap-5'>
-                            <div className='privacyIcon flex items-center justify-center w-14 h-14 rounded-2xl flex-shrink-0'>
+                            <div className={`privacyIcon privacyIcon--${point.icon} flex items-center justify-center w-14 h-14 rounded-2xl flex-shrink-0 overflow-hidden`}>
                                 {icons[point.icon]}
                             </div>
                             <div>
