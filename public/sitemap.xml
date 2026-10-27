@@ -38,6 +38,28 @@
   </url>
   <!-- BLOG:START (auto-generated) -->
   <url>
+    <loc>https://alisie.app/blog/deja-vu-and-dreams/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/deja-vu-and-dreams.png</image:loc>
+      <image:title>Is Déjà Vu Connected to Your Dreams?</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/deja-vu-and-dreams/which-dreams-memory-keeps-vs-dream-journal-dark.png</image:loc>
+      <image:title>Diagram with two rows of dreams. In the Memory row only the dream that matched an event stays bright, while the rest have faded and been forgotten. In the Journal row every dream is kept, the one that matched and all the ones that matched nothing.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/dezhavyu-i-sny/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/deja-vu-and-dreams.png</image:loc>
+      <image:title>Есть ли связь между дежавю и снами</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/dezhavyu-i-sny/kakie-sny-pomnyatsya-pamyat-i-zapisi-dark.png</image:loc>
+      <image:title>Схема из двух рядов снов. В ряду «Память» ярким остался только сон, который совпал с событием, остальные выцвели и забылись. В ряду «Записи» сохранились все сны, и совпавший, и те, что ни с чем не совпали.</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://alisie.app/blog/why-weekend-dreams-are-vivid/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/_covers/why-weekend-dreams-are-vivid.png</image:loc>

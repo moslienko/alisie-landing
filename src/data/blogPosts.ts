@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "deja-vu-and-dreams",
+    "title": "Is Déjà Vu Connected to Your Dreams?",
+    "description": "Where the waking feeling of \\&quot;I dreamed this\\&quot; comes from, why the brain mistakes the familiar for the lived, and how to check whether that dream ever happened.",
+    "pubDate": "2026-10-27",
+    "lang": "en",
+    "cover": "deja-vu-and-dreams"
+  },
+  {
+    "slug": "dezhavyu-i-sny",
+    "title": "Есть ли связь между дежавю и снами",
+    "description": "Откуда наяву берётся чувство «это мне уже снилось», почему мозг путает знакомое с прожитым и как проверить, был ли тот сон на самом деле.",
+    "pubDate": "2026-10-27",
+    "lang": "ru",
+    "cover": "deja-vu-and-dreams"
+  },
+  {
     "slug": "why-weekend-dreams-are-vivid",
     "title": "Why Your Weekend Dreams Are So Much More Vivid",
     "description": "Your alarm cuts the night short exactly where the longest dreams live. Sleep until you wake on your own and they come back.",
