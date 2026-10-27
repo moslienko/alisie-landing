@@ -12,7 +12,7 @@ export const blogPosts: BlogPostMeta[] = [
   {
     "slug": "deja-vu-and-dreams",
     "title": "Is Déjà Vu Connected to Your Dreams?",
-    "description": "Where the waking feeling of \\&quot;I dreamed this\\&quot; comes from, why the brain mistakes the familiar for the lived, and how to check whether that dream ever happened.",
+    "description": "Where the waking feeling of “I dreamed this” comes from, why the brain mistakes the familiar for the lived, and how to check whether that dream ever happened.",
     "pubDate": "2026-10-27",
     "lang": "en",
     "cover": "deja-vu-and-dreams"
