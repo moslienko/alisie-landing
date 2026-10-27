@@ -5,22 +5,24 @@ import { APP_STORE_URL } from '../../config/appStats'
 
 const icons: Record<string, React.ReactNode> = {
     trends: (
-        <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' className='w-7 h-7'>
-            <polyline points='23 6 13.5 15.5 8.5 10.5 1 18' />
-            <polyline points='17 6 23 6 23 12' />
+        <svg viewBox='0 0 24 24' className='w-14 h-14' aria-hidden='true'>
+            <polyline points='5.9 15.4 9 11.1 12.4 13.7 15.6 9.4'
+                fill='none' stroke='#fff' strokeWidth='1.8' strokeLinecap='round' strokeLinejoin='round' />
+            <polygon points='18.2 6.5 18.2 10.1 14.6 7.6'
+                fill='#fff' stroke='#fff' strokeWidth='1.3' strokeLinejoin='round' />
         </svg>
     ),
     connections: (
-        <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' className='w-7 h-7'>
-            <circle cx='6' cy='6' r='2.5' />
-            <circle cx='18' cy='6' r='2.5' />
-            <circle cx='6' cy='18' r='2.5' />
-            <circle cx='18' cy='18' r='2.5' />
-            <circle cx='12' cy='12' r='2.5' />
-            <line x1='8' y1='7.5' x2='10.5' y2='10.5' />
-            <line x1='16' y1='7.5' x2='13.5' y2='10.5' />
-            <line x1='8' y1='16.5' x2='10.5' y2='13.5' />
-            <line x1='16' y1='16.5' x2='13.5' y2='13.5' />
+        <svg viewBox='0 0 24 24' className='w-14 h-14' aria-hidden='true'>
+            <polyline points='10.6 17.3 5.5 14 9.4 9 14.7 11.8 18.4 6.7'
+                fill='none' stroke='#fff' strokeWidth='0.9' strokeLinejoin='round' />
+            <g fill='#fff'>
+                <circle cx='5.5' cy='14' r='1.8' />
+                <circle cx='9.4' cy='9' r='1.8' />
+                <circle cx='14.7' cy='11.8' r='1.8' />
+                <circle cx='18.4' cy='6.7' r='1.8' />
+                <circle cx='10.6' cy='17.3' r='1.8' />
+            </g>
         </svg>
     ),
 }
@@ -32,7 +34,7 @@ export default function ProMax() {
     return (
         <section className='flex flex-col py-16'>
             <div className='text-center mb-12'>
-                <h2 className="inline-block text-5xl md:text-6xl font-bold
+                <h2 className="inline-block text-4xl sm:text-5xl md:text-6xl font-bold
                     bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)]
                     bg-clip-text text-transparent py-2">
                     {proMax.title}
@@ -52,7 +54,7 @@ export default function ProMax() {
 
                         <div className='relative z-10 flex flex-col h-full'>
                             <div className='flex items-start justify-between gap-4'>
-                                <div className='extensionIcon flex items-center justify-center w-14 h-14 rounded-2xl'>
+                                <div className={`extensionIcon extensionIcon--${ext.icon} flex items-center justify-center w-14 h-14 rounded-2xl overflow-hidden`}>
                                     {icons[ext.icon]}
                                 </div>
                                 <span className='extensionPrice text-2xl font-bold bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)] bg-clip-text text-transparent'>

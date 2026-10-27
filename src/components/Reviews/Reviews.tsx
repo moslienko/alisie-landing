@@ -25,7 +25,7 @@ export default function Reviews() {
     return (
         <section className='flex flex-col py-16'>
             <div className='text-center mb-12'>
-                <h2 className="inline-block text-5xl md:text-6xl font-bold
+                <h2 className="inline-block text-4xl sm:text-5xl md:text-6xl font-bold
                     bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)]
                     bg-clip-text text-transparent py-2">
                     {data.title}

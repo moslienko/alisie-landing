@@ -51,7 +51,7 @@ export default function Navbar() {
                             <a
                                 key={item.title}
                                 href={navHref(item.link, locale)}
-                                className='font-normal text-sl ml-4 mr-4 text-[rgb(var(--fg-rgb)/0.7)] hover:text-[var(--color-tint-start)] transition-colors duration-200'
+                                className='font-normal text-base ml-4 mr-4 text-[rgb(var(--fg-rgb)/0.7)] hover:text-[var(--color-fg)] transition-colors duration-200'
                             >
                                 {item.title}
                             </a>
@@ -69,7 +69,7 @@ export default function Navbar() {
                 <button
                     onClick={toggleMenu}
                     aria-label={isOpen ? t.closeMenu : t.openMenu}
-                    className='md:hidden text-[rgb(var(--fg-rgb)/0.7)] hover:text-[var(--color-tint-start)] transition-colors duration-200'
+                    className='md:hidden text-[rgb(var(--fg-rgb)/0.7)] hover:text-[var(--color-fg)] transition-colors duration-200'
                 >
                     {isOpen ? <X /> : <MenuIcon />}
                 </button>

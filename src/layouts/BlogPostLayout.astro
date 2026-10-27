@@ -92,7 +92,7 @@ const articleSchema = {
       hideLangSwitcher
     />
     <main class="mt-12">
-      <article>
+      <article class="readingSurface">
         <h1
           class="text-3xl md:text-4xl font-bold leading-tight
             bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)]
@@ -104,7 +104,7 @@ const articleSchema = {
           <time datetime={pubDate.toISOString()}>{fmt(pubDate)}</time>
           {updatedDate && <> · updated <time datetime={updatedDate.toISOString()}>{fmt(updatedDate)}</time></>}
         </p>
-        <div class="legalBody blogBody mt-8 text-color opacity-90" set:html={bodyHtml} />
+        <div class="legalBody blogBody mt-8" set:html={bodyHtml} />
       </article>
 
       {showCta && (

@@ -87,54 +87,6 @@ body {
 
 .featureCard {
     box-sizing: border-box;
-    border-radius: 50px;
-    border: 1px solid rgb(var(--fg-rgb) / 0.06);
-
-    background: radial-gradient(
-        135% 135% at 3% 1%,
-        rgb(var(--fg-rgb) / 0.07) 0%,
-        rgb(var(--fg-rgb) / 0) 60%
-    );
-    transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 600ms cubic-bezier(0.22, 1, 0.36, 1),
-                border-color 600ms ease;
-    will-change: transform;
-}
-.featureCard:hover {
-    transform: translateY(-10px);
-    border-color: rgb(var(--fg-rgb) / 0.12);
-    box-shadow:
-        0 30px 60px -20px rgba(0, 0, 0, 0.25),
-        0 0 0 1px rgb(var(--fg-rgb) / 0.04) inset;
-}
-
-.theme-light .featureCard {
-    border: 1px solid rgb(var(--tint-start-rgb) / 0.08);
-    background:
-        radial-gradient(
-            135% 135% at 3% 1%,
-            rgb(var(--tint-start-rgb) / 0.07) 0%,
-            rgb(var(--tint-start-rgb) / 0) 55%
-        ),
-        #ffffff;
-    box-shadow:
-        0 1px 2px rgb(var(--tint-start-rgb) / 0.04),
-        0 12px 28px -18px rgb(var(--tint-start-rgb) / 0.22);
-}
-.theme-light .featureCard:hover {
-    border-color: rgb(var(--tint-start-rgb) / 0.18);
-    box-shadow:
-        0 30px 60px -22px rgb(var(--tint-start-rgb) / 0.3),
-        0 0 0 1px rgb(var(--tint-start-rgb) / 0.05) inset;
-}
-.featureCard .featureTint {
-    transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
-                transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-    transform: scale(1);
-}
-.featureCard:hover .featureTint {
-    opacity: 0.18;
-    transform: scale(1.1);
 }
 .featureCard .featureContent > h1,
 .featureCard .featureContent > p {
@@ -145,174 +97,6 @@ body {
 }
 .featureCard:hover .featureContent > p {
     transform: translateY(-2px);
-}
-
-.theme-light .privacyCard {
-    border: 1px solid rgb(var(--tint-start-rgb) / 0.08);
-    background:
-        radial-gradient(
-            135% 135% at 3% 1%,
-            rgb(var(--tint-start-rgb) / 0.07) 0%,
-            rgb(var(--tint-start-rgb) / 0) 55%
-        ),
-        #ffffff;
-    box-shadow:
-        0 1px 2px rgb(var(--tint-start-rgb) / 0.04),
-        0 12px 28px -18px rgb(var(--tint-start-rgb) / 0.22);
-}
-.theme-light .privacyCard:hover {
-    border-color: rgb(var(--tint-start-rgb) / 0.18);
-    box-shadow:
-        0 30px 60px -22px rgb(var(--tint-start-rgb) / 0.3),
-        0 0 0 1px rgb(var(--tint-start-rgb) / 0.05) inset;
-}
-.theme-light .privacyCard .privacyTint,
-.theme-light .privacyCard:hover .privacyTint {
-    opacity: 0;
-}
-
-.theme-light .faqCard {
-    border: 1px solid rgb(var(--tint-start-rgb) / 0.08);
-    background:
-        radial-gradient(
-            135% 135% at 3% 1%,
-            rgb(var(--tint-start-rgb) / 0.07) 0%,
-            rgb(var(--tint-start-rgb) / 0) 55%
-        ),
-        #ffffff;
-    box-shadow:
-        0 1px 2px rgb(var(--tint-start-rgb) / 0.04),
-        0 12px 28px -18px rgb(var(--tint-start-rgb) / 0.22);
-}
-.theme-light .faqCard:hover {
-    border-color: rgb(var(--tint-start-rgb) / 0.18);
-}
-.theme-light .faqCardOpen {
-    border-color: rgb(var(--tint-start-rgb) / 0.45) !important;
-    box-shadow:
-        0 1px 2px rgb(var(--tint-start-rgb) / 0.04),
-        0 20px 45px -20px rgb(var(--tint-start-rgb) / 0.28);
-}
-.theme-light .faqCard .faqTint,
-.theme-light .faqCardOpen .faqTint {
-    opacity: 0;
-}
-
-.theme-light .reasonCard {
-    border: 1px solid rgb(var(--tint-start-rgb) / 0.08);
-    background:
-        radial-gradient(
-            135% 135% at 3% 1%,
-            rgb(var(--tint-start-rgb) / 0.07) 0%,
-            rgb(var(--tint-start-rgb) / 0) 55%
-        ),
-        #ffffff;
-    box-shadow:
-        0 1px 2px rgb(var(--tint-start-rgb) / 0.04),
-        0 12px 28px -18px rgb(var(--tint-start-rgb) / 0.22);
-}
-.theme-light .reasonCard:hover {
-    border-color: rgb(var(--tint-start-rgb) / 0.18);
-    box-shadow:
-        0 30px 60px -22px rgb(var(--tint-start-rgb) / 0.3),
-        0 0 0 1px rgb(var(--tint-start-rgb) / 0.05) inset;
-}
-.theme-light .reasonCard .reasonTint,
-.theme-light .reasonCard:hover .reasonTint {
-    opacity: 0;
-}
-
-.theme-light .pricingCardFree {
-    border: 1px solid rgb(var(--tint-start-rgb) / 0.08);
-    background:
-        radial-gradient(
-            135% 135% at 3% 1%,
-            rgb(var(--tint-start-rgb) / 0.07) 0%,
-            rgb(var(--tint-start-rgb) / 0) 55%
-        ),
-        #ffffff;
-    box-shadow:
-        0 1px 2px rgb(var(--tint-start-rgb) / 0.04),
-        0 12px 28px -18px rgb(var(--tint-start-rgb) / 0.22);
-}
-.theme-light .pricingCardFree:hover {
-    border-color: rgb(var(--tint-start-rgb) / 0.18);
-    box-shadow:
-        0 30px 60px -22px rgb(var(--tint-start-rgb) / 0.3),
-        0 0 0 1px rgb(var(--tint-start-rgb) / 0.05) inset;
-}
-.theme-light .pricingCardFree .pricingTint,
-.theme-light .pricingCardFree:hover .pricingTint {
-    opacity: 0;
-}
-
-.theme-light .pricingCardFeatured {
-    border-color: rgb(var(--tint-start-rgb) / 0.4);
-    background:
-        radial-gradient(
-            circle at 70% 80%,
-            rgb(var(--tint-start-rgb) / 0.1) 0%,
-            rgb(var(--tint-end-rgb) / 0.06) 40%,
-            rgb(var(--tint-start-rgb) / 0) 75%
-        ),
-        #ffffff;
-    box-shadow:
-        0 1px 2px rgb(var(--tint-start-rgb) / 0.04),
-        0 18px 45px -16px rgb(var(--tint-start-rgb) / 0.3);
-}
-.theme-light .pricingCardFeatured .pricingTint {
-    opacity: 0.4;
-}
-.theme-light .pricingCardFeatured:hover .pricingTint {
-    opacity: 0.55;
-}
-
-.theme-light .extensionCard {
-    border: 1px solid rgb(var(--tint-start-rgb) / 0.08);
-    background:
-        radial-gradient(
-            135% 135% at 3% 1%,
-            rgb(var(--tint-start-rgb) / 0.07) 0%,
-            rgb(var(--tint-start-rgb) / 0) 55%
-        ),
-        #ffffff;
-    box-shadow:
-        0 1px 2px rgb(var(--tint-start-rgb) / 0.04),
-        0 12px 28px -18px rgb(var(--tint-start-rgb) / 0.22);
-}
-.theme-light .extensionCard:hover {
-    border-color: rgb(var(--tint-start-rgb) / 0.18);
-    box-shadow:
-        0 30px 60px -22px rgb(var(--tint-start-rgb) / 0.3),
-        0 0 0 1px rgb(var(--tint-start-rgb) / 0.05) inset;
-}
-.theme-light .extensionCard .extensionTint,
-.theme-light .extensionCard:hover .extensionTint {
-    opacity: 0;
-}
-
-.theme-light .finalCtaCard {
-    border: 1px solid rgb(var(--tint-start-rgb) / 0.08);
-    background:
-        radial-gradient(
-            135% 135% at 3% 1%,
-            rgb(var(--tint-start-rgb) / 0.07) 0%,
-            rgb(var(--tint-start-rgb) / 0) 55%
-        ),
-        #ffffff;
-    box-shadow:
-        0 1px 2px rgb(var(--tint-start-rgb) / 0.04),
-        0 12px 28px -18px rgb(var(--tint-start-rgb) / 0.22);
-}
-.theme-light .finalCtaCard:hover {
-    border-color: rgb(var(--tint-start-rgb) / 0.18);
-    box-shadow:
-        0 30px 60px -22px rgb(var(--tint-start-rgb) / 0.3),
-        0 0 0 1px rgb(var(--tint-start-rgb) / 0.05) inset;
-}
-.theme-light .finalCtaCard .finalCtaTint,
-.theme-light .finalCtaCard:hover .finalCtaTint {
-    opacity: 0;
 }
 
 .heroShot {
@@ -483,63 +267,6 @@ body {
     50% { transform: translateY(3px); }
 }
 
-.pricingCard {
-    transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 600ms cubic-bezier(0.22, 1, 0.36, 1);
-    will-change: transform;
-}
-.pricingCardFree {
-    border-color: rgba(128, 128, 128, 0.3);
-    background: transparent;
-}
-.pricingCardFree:hover {
-    transform: translateY(-6px);
-    border-color: var(--color-tint-start);
-    box-shadow: 0 20px 50px -15px rgb(var(--tint-start-rgb) / 0.3);
-}
-.pricingCardFeatured {
-    border-color: var(--color-tint-start);
-    box-shadow: 0 10px 40px -10px rgb(var(--tint-start-rgb) / 0.35);
-}
-.pricingCardFeatured:hover {
-    transform: translateY(-10px);
-    box-shadow:
-        0 30px 70px -15px rgb(var(--tint-start-rgb) / 0.6),
-        0 10px 30px -10px rgb(var(--tint-end-rgb) / 0.45);
-}
-
-.pricingCardFree .pricingTint {
-    background: radial-gradient(
-        circle at 85% 95%,
-        rgb(var(--tint-start-rgb) / 0.18) 0%,
-        transparent 60%
-    );
-    filter: blur(20px);
-    opacity: 0.6;
-    transition: opacity 700ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-    transform: scale(1);
-}
-.pricingCardFree:hover .pricingTint {
-    opacity: 1;
-    transform: scale(1.1);
-}
-.pricingCardFeatured .pricingTint {
-    background: radial-gradient(
-        circle at 70% 80%,
-        rgb(var(--tint-start-rgb) / 0.55) 0%,
-        rgb(var(--tint-end-rgb) / 0.35) 40%,
-        transparent 75%
-    );
-    filter: blur(28px);
-    opacity: 0.75;
-    transition: opacity 700ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-    transform: scale(1);
-}
-.pricingCardFeatured:hover .pricingTint {
-    opacity: 1;
-    transform: scale(1.15);
-}
-
 .pricingBadge {
     background: var(--tint-gradient);
     box-shadow: 0 4px 16px -4px rgb(var(--tint-start-rgb) / 0.6);
@@ -579,223 +306,6 @@ body {
 .pricingBtnFree:active {
     transform: translateY(0) scale(1);
 }
-
-.extensionCard {
-    border-color: rgb(var(--tint-start-rgb) / 0.35);
-    background: transparent;
-    transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 600ms cubic-bezier(0.22, 1, 0.36, 1),
-                border-color 600ms ease;
-    will-change: transform;
-}
-.extensionCard:hover {
-    transform: translateY(-8px);
-    border-color: var(--color-tint-start);
-    box-shadow: 0 24px 55px -15px rgb(var(--tint-start-rgb) / 0.45),
-                0 8px 20px -10px rgb(var(--tint-end-rgb) / 0.35);
-}
-.extensionCard .extensionTint {
-    background: radial-gradient(
-        circle at 20% 10%,
-        rgb(var(--tint-start-rgb) / 0.35) 0%,
-        transparent 55%
-    );
-    filter: blur(24px);
-    opacity: 0.55;
-    transition: opacity 700ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-    transform: scale(1);
-}
-.extensionCard:hover .extensionTint {
-    opacity: 0.95;
-    transform: scale(1.15);
-}
-.extensionIcon {
-    background: linear-gradient(135deg, rgb(var(--tint-start-rgb) / 0.2) 0%, rgb(var(--tint-end-rgb) / 0.2) 100%);
-    color: var(--color-tint-start);
-    border: 1px solid rgb(var(--tint-start-rgb) / 0.35);
-    transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
-                background 500ms ease,
-                color 500ms ease;
-}
-.extensionCard:hover .extensionIcon {
-    transform: scale(1.08) rotate(-4deg);
-    background: var(--tint-gradient);
-    color: white;
-}
-
-.statCard {
-    border-color: rgb(var(--tint-start-rgb) / 0.25);
-    background: transparent;
-    transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 600ms cubic-bezier(0.22, 1, 0.36, 1),
-                border-color 600ms ease;
-    will-change: transform;
-}
-.statCard:hover {
-    transform: translateY(-6px);
-    border-color: var(--color-tint-start);
-    box-shadow: 0 20px 45px -18px rgb(var(--tint-start-rgb) / 0.5),
-                0 6px 18px -10px rgb(var(--tint-end-rgb) / 0.35);
-}
-.statCard .statTint {
-    background: radial-gradient(
-        circle at 50% 0%,
-        rgb(var(--tint-start-rgb) / 0.3) 0%,
-        transparent 60%
-    );
-    filter: blur(22px);
-    opacity: 0.5;
-    transition: opacity 700ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-    transform: scale(1);
-}
-.statCard:hover .statTint {
-    opacity: 0.9;
-    transform: scale(1.2);
-}
-
-.reviewCard {
-    border-color: rgb(var(--tint-start-rgb) / 0.25);
-    background: transparent;
-    transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 600ms cubic-bezier(0.22, 1, 0.36, 1),
-                border-color 600ms ease;
-    will-change: transform;
-}
-.reviewCard:hover {
-    transform: translateY(-8px);
-    border-color: var(--color-tint-start);
-    box-shadow: 0 24px 55px -15px rgb(var(--tint-start-rgb) / 0.45),
-                0 8px 20px -10px rgb(var(--tint-end-rgb) / 0.35);
-}
-.reviewCard .reviewTint {
-    background: radial-gradient(
-        circle at 80% 0%,
-        rgb(var(--tint-end-rgb) / 0.35) 0%,
-        transparent 55%
-    );
-    filter: blur(26px);
-    opacity: 0.5;
-    transition: opacity 700ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-    transform: scale(1);
-}
-.reviewCard:hover .reviewTint {
-    opacity: 0.9;
-    transform: scale(1.15);
-}
-
-.reasonCard {
-    border-color: rgb(var(--tint-start-rgb) / 0.25);
-    background: transparent;
-    transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 600ms cubic-bezier(0.22, 1, 0.36, 1),
-                border-color 600ms ease;
-    will-change: transform;
-}
-.reasonCard:hover {
-    transform: translateY(-6px);
-    border-color: var(--color-tint-start);
-    box-shadow: 0 22px 50px -15px rgb(var(--tint-start-rgb) / 0.45),
-                0 8px 20px -10px rgb(var(--tint-end-rgb) / 0.35);
-}
-.reasonCard .reasonTint {
-    background: radial-gradient(
-        circle at 10% 50%,
-        rgb(var(--tint-start-rgb) / 0.3) 0%,
-        transparent 55%
-    );
-    filter: blur(24px);
-    opacity: 0.5;
-    transition: opacity 700ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-    transform: scale(1);
-}
-.reasonCard:hover .reasonTint {
-    opacity: 0.9;
-    transform: scale(1.15);
-}
-.reasonIcon {
-    background: linear-gradient(135deg, rgb(var(--tint-start-rgb) / 0.2) 0%, rgb(var(--tint-end-rgb) / 0.2) 100%);
-    color: var(--color-tint-start);
-    border: 1px solid rgb(var(--tint-start-rgb) / 0.35);
-    transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
-                background 500ms ease,
-                color 500ms ease;
-}
-.reasonCard:hover .reasonIcon {
-    transform: scale(1.08) rotate(-4deg);
-    background: var(--tint-gradient);
-    color: white;
-}
-
-.privacyCard {
-    border-color: rgb(var(--tint-start-rgb) / 0.25);
-    background: transparent;
-    transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 600ms cubic-bezier(0.22, 1, 0.36, 1),
-                border-color 600ms ease;
-    will-change: transform;
-}
-.privacyCard:hover {
-    transform: translateY(-6px);
-    border-color: var(--color-tint-start);
-    box-shadow: 0 22px 50px -15px rgb(var(--tint-start-rgb) / 0.45),
-                0 8px 20px -10px rgb(var(--tint-end-rgb) / 0.35);
-}
-.privacyCard .privacyTint {
-    background: radial-gradient(
-        circle at 10% 50%,
-        rgb(var(--tint-start-rgb) / 0.3) 0%,
-        transparent 55%
-    );
-    filter: blur(24px);
-    opacity: 0.5;
-    transition: opacity 700ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-    transform: scale(1);
-}
-.privacyCard:hover .privacyTint {
-    opacity: 0.9;
-    transform: scale(1.15);
-}
-.privacyIcon {
-    background: linear-gradient(135deg, rgb(var(--tint-start-rgb) / 0.2) 0%, rgb(var(--tint-end-rgb) / 0.2) 100%);
-    color: var(--color-tint-start);
-    border: 1px solid rgb(var(--tint-start-rgb) / 0.35);
-    transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
-                background 500ms ease,
-                color 500ms ease;
-}
-.privacyCard:hover .privacyIcon {
-    transform: scale(1.08) rotate(-4deg);
-    background: var(--tint-gradient);
-    color: white;
-}
-
-.faqCard {
-    border-color: rgb(var(--tint-start-rgb) / 0.2);
-    background: transparent;
-    transition: border-color 500ms ease,
-                box-shadow 500ms ease;
-}
-.faqCard:hover {
-    border-color: rgb(var(--tint-start-rgb) / 0.45);
-}
-.faqCardOpen {
-    border-color: var(--color-tint-start) !important;
-    box-shadow: 0 20px 45px -18px rgb(var(--tint-start-rgb) / 0.4),
-                0 6px 18px -10px rgb(var(--tint-end-rgb) / 0.3);
-}
-.faqCard .faqTint {
-    background: radial-gradient(
-        circle at 0% 50%,
-        rgb(var(--tint-start-rgb) / 0.25) 0%,
-        transparent 55%
-    );
-    filter: blur(22px);
-    opacity: 0;
-    transition: opacity 600ms ease;
-}
-.faqCardOpen .faqTint {
-    opacity: 0.75;
-}
 .faqChevron {
     background: rgb(var(--tint-start-rgb) / 0.12);
     color: var(--color-tint-start);
@@ -821,45 +331,17 @@ body {
     opacity: 1;
 }
 
-.finalCtaCard {
-    border-color: rgb(var(--tint-start-rgb) / 0.4);
-    background: transparent;
-    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 700ms cubic-bezier(0.22, 1, 0.36, 1),
-                border-color 700ms ease;
-    will-change: transform;
-}
-.finalCtaCard:hover {
-    border-color: var(--color-tint-start);
-    box-shadow: 0 30px 70px -15px rgb(var(--tint-start-rgb) / 0.55),
-                0 12px 35px -15px rgb(var(--tint-end-rgb) / 0.4);
-}
-.finalCtaCard .finalCtaTint {
-    background: radial-gradient(
-        ellipse at 50% 0%,
-        rgb(var(--tint-start-rgb) / 0.4) 0%,
-        rgb(var(--tint-end-rgb) / 0.25) 35%,
-        transparent 70%
-    );
-    filter: blur(40px);
-    opacity: 0.6;
-    transition: opacity 800ms ease, transform 1000ms cubic-bezier(0.22, 1, 0.36, 1);
-    transform: scale(1);
-}
-.finalCtaCard:hover .finalCtaTint {
-    opacity: 0.95;
-    transform: scale(1.1);
-}
-
 .footer {
     background: transparent;
 }
 .footerLink {
-    transition: color 300ms ease, opacity 300ms ease;
+    transition: color 300ms cubic-bezier(0.22, 1, 0.36, 1), opacity 300ms cubic-bezier(0.22, 1, 0.36, 1);
 }
+/* Hover brightens the link instead of turning it purple: purple on the dark,
+   wave-lit background is less readable than the idle grey. Same in the header menu. */
 .footerLink:hover {
     opacity: 1;
-    color: var(--color-tint-start);
+    color: var(--color-fg);
 }
 
 .legalBody p {
@@ -895,6 +377,9 @@ body {
 .blogBody {
     font-size: 1.075rem;
     line-height: 1.75;
+    /* Muted text via colour, not opacity: opacity would isolate the block and
+       break the image blending on the reading panel. */
+    color: rgb(var(--fg-rgb) / 0.8);
 }
 .blogBody p {
     margin-bottom: 1.25rem;
@@ -963,13 +448,6 @@ body {
 .blogCard {
     display: block;
     overflow: hidden;
-    border: 1px solid rgb(var(--fg-rgb) / 0.1);
-    border-radius: 1rem;
-    transition: border-color 300ms ease, background-color 300ms ease;
-}
-.blogCard:hover {
-    border-color: rgb(var(--fg-rgb) / 0.2);
-    background-color: rgb(var(--fg-rgb) / 0.03);
 }
 .blogCardCover {
     aspect-ratio: 1200 / 630;
@@ -997,9 +475,6 @@ body {
     gap: 1rem;
     flex-wrap: wrap;
     padding: 1.25rem 1.5rem;
-    border: 1px solid rgb(var(--fg-rgb) / 0.1);
-    border-radius: 1rem;
-    background: rgb(var(--fg-rgb) / 0.02);
 }
 .blogCtaIcon {
     width: 56px;
@@ -1132,7 +607,7 @@ body {
     transition: color 200ms ease, background 200ms ease;
 }
 .langSwitcherBtn:hover {
-    color: var(--color-tint-start);
+    color: var(--color-fg);
 }
 .langSwitcherActive {
     color: #ffffff;
@@ -1140,25 +615,6 @@ body {
 }
 .langSwitcherActive:hover {
     color: #ffffff;
-}
-
-.supportCard {
-    border: 1px solid rgb(var(--fg-rgb) / 0.1);
-    background: rgb(var(--fg-rgb) / 0.02);
-    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1),
-                border-color 400ms ease,
-                background 400ms ease,
-                box-shadow 400ms ease;
-}
-.supportCard:hover {
-    transform: translateY(-4px);
-    border-color: rgb(var(--tint-start-rgb) / 0.4);
-    box-shadow: 0 16px 36px -18px rgb(var(--tint-start-rgb) / 0.4);
-}
-
-.supportCardPrimary {
-    border-color: rgb(var(--tint-start-rgb) / 0.35);
-    background: rgb(var(--tint-start-rgb) / 0.06);
 }
 .supportCardIcon {
     background: var(--tint-gradient);
@@ -1168,13 +624,190 @@ body {
 .supportCard:hover .supportCardIcon {
     transform: scale(1.08) rotate(-4deg);
 }
-.theme-light .supportCard {
-    background: #ffffff;
-    border-color: rgb(var(--tint-start-rgb) / 0.12);
+
+/* ───────────── Surfaces ─────────────
+   One card style for the whole site: every card and the reading panel use these
+   tokens. The surface is near-opaque so text stays readable over the animated
+   background. Accent cards (featured plan, primary support) only change the border. */
+:root,
+.theme-dark {
+  --surface: rgb(22 22 26 / 0.66);
+  --surface-reading: rgb(18 18 22 / 0.8);
+  --surface-sheen: rgb(255 255 255 / 0.05);
+  --surface-border: rgb(255 255 255 / 0.08);
+  --surface-border-hover: rgb(var(--tint-start-rgb) / 0.5);
+  --surface-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.05),
+    0 18px 40px -24px rgb(0 0 0 / 0.7);
+  --surface-shadow-hover:
+    inset 0 1px 0 rgb(255 255 255 / 0.06),
+    0 26px 50px -22px rgb(var(--tint-start-rgb) / 0.45);
+  --surface-radius: 1.75rem;
+  --surface-radius-sm: 1.25rem;
 }
-.theme-light .supportCardPrimary {
-    background:
-        radial-gradient(135% 135% at 3% 1%, rgb(var(--tint-start-rgb) / 0.08) 0%, rgb(var(--tint-start-rgb) / 0) 60%),
-        #ffffff;
-    border-color: rgb(var(--tint-start-rgb) / 0.25);
+
+.theme-light {
+  --surface: rgb(255 255 255 / 0.74);
+  /* Same as the light article images' background, so they blend in (see .blogBody img). */
+  --surface-reading: rgb(247 246 251 / 0.92);
+  --surface-sheen: rgb(var(--tint-start-rgb) / 0.06);
+  --surface-border: rgb(var(--tint-start-rgb) / 0.1);
+  --surface-border-hover: rgb(var(--tint-start-rgb) / 0.3);
+  --surface-shadow:
+    0 1px 2px rgb(var(--tint-start-rgb) / 0.04),
+    0 12px 28px -18px rgb(var(--tint-start-rgb) / 0.22);
+  --surface-shadow-hover:
+    0 1px 2px rgb(var(--tint-start-rgb) / 0.04),
+    0 28px 55px -22px rgb(var(--tint-start-rgb) / 0.3);
+}
+
+:is(.featureCard, .reasonCard, .privacyCard, .pricingCard, .extensionCard, .statCard,
+    .reviewCard, .faqCard, .finalCtaCard, .blogCard, .blogCta, .supportCard, .readingSurface) {
+  border: 1px solid var(--surface-border);
+  border-radius: var(--surface-radius);
+  background:
+    radial-gradient(120% 120% at 0% 0%, var(--surface-sheen) 0%, transparent 55%),
+    var(--surface);
+  box-shadow: var(--surface-shadow);
+  /* Frosted glass: the background wave shows through, softened. */
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  transition:
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 400ms ease,
+    box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:is(.blogCta, .supportCard) {
+  border-radius: var(--surface-radius-sm);
+}
+
+/* Cards that lift on hover. FAQ (accordion), final CTA and panels stay put. */
+:is(.featureCard, .reasonCard, .privacyCard, .pricingCard, .extensionCard, .statCard,
+    .reviewCard, .blogCard, .supportCard):hover {
+  transform: translateY(-6px);
+  border-color: var(--surface-border-hover);
+  box-shadow: var(--surface-shadow-hover);
+}
+
+:is(.faqCard, .finalCtaCard):hover {
+  border-color: var(--surface-border-hover);
+}
+
+.faqCardOpen {
+  border-color: var(--surface-border-hover);
+  box-shadow: var(--surface-shadow-hover);
+}
+
+/* Accent cards */
+:is(.pricingCardFeatured, .supportCardPrimary, .finalCtaCard) {
+  border-color: rgb(var(--tint-start-rgb) / 0.55);
+}
+
+.pricingCardFeatured {
+  box-shadow:
+    var(--surface-shadow),
+    0 12px 40px -14px rgb(var(--tint-start-rgb) / 0.4);
+}
+
+.pricingCardFeatured:hover {
+  border-color: var(--color-tint-start);
+  box-shadow:
+    var(--surface-shadow-hover),
+    0 12px 36px -14px rgb(var(--tint-end-rgb) / 0.4);
+}
+
+/* Long-form text (articles, legal pages, changelog) sits on one big panel. */
+.readingSurface {
+  padding: clamp(1.5rem, 5vw, 3rem);
+  /* No backdrop blur here: it would cut article images off from the page behind
+     and break their blending (see .blogBody img). Denser fill keeps text readable. */
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background:
+    radial-gradient(120% 120% at 0% 0%, var(--surface-sheen) 0%, transparent 55%),
+    var(--surface-reading);
+}
+
+/* Card glow: the same for every card. Hidden at rest, a soft corner glow on hover
+   (and while an FAQ item is open). */
+:is(.featureTint, .reasonTint, .privacyTint, .pricingTint, .extensionTint,
+    .statTint, .reviewTint, .faqTint, .finalCtaTint) {
+  background: radial-gradient(
+    120% 90% at 100% 100%,
+    rgb(var(--tint-start-rgb) / 0.32) 0%,
+    rgb(var(--tint-end-rgb) / 0.14) 40%,
+    transparent 70%
+  );
+  filter: blur(24px);
+  opacity: 0;
+  transform: scale(1);
+  transition:
+    opacity 600ms ease,
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:is(.featureCard, .reasonCard, .privacyCard, .pricingCard, .extensionCard,
+    .statCard, .reviewCard, .faqCard, .finalCtaCard):hover :is(.featureTint, .reasonTint,
+    .privacyTint, .pricingTint, .extensionTint, .statTint, .reviewTint, .faqTint, .finalCtaTint),
+.faqCardOpen .faqTint {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.theme-light :is(.featureTint, .reasonTint, .privacyTint, .pricingTint, .extensionTint,
+    .statTint, .reviewTint, .faqTint, .finalCtaTint) {
+  background: radial-gradient(
+    120% 90% at 100% 100%,
+    rgb(var(--tint-start-rgb) / 0.1) 0%,
+    transparent 65%
+  );
+}
+
+/* Icon tiles: coloured gradient with a white glyph, like the tiles in the app's
+   Data screen (colours sampled from it). Cards in a section take the colours in
+   order, so neighbours never match and every section follows the same pattern. */
+:is(.reasonCard, .privacyCard, .extensionCard) {
+  --tile-top: #3e6ef8;
+  --tile-bottom: #8657eb;
+}
+:is(.reasonCard, .privacyCard, .extensionCard):nth-child(8n + 2) { --tile-top: #4eb4a9; --tile-bottom: #2f9dd9; }
+:is(.reasonCard, .privacyCard, .extensionCard):nth-child(8n + 3) { --tile-top: #7021b8; --tile-bottom: #8c2cdf; }
+:is(.reasonCard, .privacyCard, .extensionCard):nth-child(8n + 4) { --tile-top: #f7991d; --tile-bottom: #ffcc03; }
+:is(.reasonCard, .privacyCard, .extensionCard):nth-child(8n + 5) { --tile-top: #0d8277; --tile-bottom: #01c89b; }
+:is(.reasonCard, .privacyCard, .extensionCard):nth-child(8n + 6) { --tile-top: #ca51bf; --tile-bottom: #f85fa9; }
+:is(.reasonCard, .privacyCard, .extensionCard):nth-child(8n + 7) { --tile-top: #ff743f; --tile-bottom: #ff3054; }
+:is(.reasonCard, .privacyCard, .extensionCard):nth-child(8n + 8) { --tile-top: #d92839; --tile-bottom: #fe4c4e; }
+
+:is(.reasonIcon, .privacyIcon, .extensionIcon) {
+  color: #ffffff;
+  background: linear-gradient(to bottom, var(--tile-top), var(--tile-bottom));
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.18);
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:is(.reasonCard, .privacyCard, .extensionCard):hover :is(.reasonIcon, .privacyIcon, .extensionIcon) {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+/* Pro Max add-ons keep the exact gradients of their icons in the app. */
+.extensionIcon--trends {
+  background: linear-gradient(135deg, #2f7deb 0%, #55c8f2 100%);
+}
+.extensionIcon--connections {
+  background: linear-gradient(135deg, #ff0080 0%, #7b2ac8 100%);
+}
+.privacyIcon--cloud {
+  background: linear-gradient(to bottom, #5aa0f6 0%, #3a7ee9 100%);
+}
+
+/* Article images are drawn on the site background colour. On the reading panel
+   that colour no longer matches, so blend it away: in the dark theme the near-black
+   background loses to the panel (lighten); in the light theme the panel matches the
+   image background and darken keeps the diagram. */
+.theme-dark .readingSurface :is(.blogBody img, .blogFigure img) {
+  mix-blend-mode: lighten;
+}
+.theme-light .readingSurface :is(.blogBody img, .blogFigure img) {
+  mix-blend-mode: darken;
 }

@@ -63,7 +63,12 @@ function parseFrontmatter(raw) {
     if (idx === -1) continue
     const key = line.slice(0, idx).trim()
     let val = line.slice(idx + 1).trim()
-    val = val.replace(/^["']|["']$/g, '')
+    // YAML-строки в кавычках: снять внешние кавычки и раскрыть экранирование
+    if (val.length >= 2 && val.startsWith('"') && val.endsWith('"')) {
+      val = val.slice(1, -1).replace(/\\(["\\])/g, '$1')
+    } else if (val.length >= 2 && val.startsWith("'") && val.endsWith("'")) {
+      val = val.slice(1, -1).replace(/''/g, "'")
+    }
     data[key] = val
   }
   return { data, body: m[2] }
@@ -218,9 +223,9 @@ function collapseFigures(html) {
 
     out.push(
       `<figure class="blogFigure">\n` +
-        `  <img class="blogImg" src="${darkSrc}" data-light="${lightSrc}" alt="${alt}"` +
-        ` width="${size.width}" height="${size.height}" loading="lazy" decoding="async" />` +
-        `${figcaption}\n</figure>`
+      `  <img class="blogImg" src="${darkSrc}" data-light="${lightSrc}" alt="${alt}"` +
+      ` width="${size.width}" height="${size.height}" loading="lazy" decoding="async" />` +
+      `${figcaption}\n</figure>`
     )
     i += cap ? 2 : 1
   }
@@ -249,7 +254,7 @@ function coverSlugFor(slug, lang, pubDate) {
       const d = c.match(/pubDate=\{new Date\('([^']*)'\)\}/)?.[1]
       if (d && d === pubDate) return f.replace(/\.astro$/, '')
     }
-  } catch {}
+  } catch { }
   return slug
 }
 

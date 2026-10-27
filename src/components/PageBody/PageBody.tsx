@@ -6,13 +6,14 @@ interface PageBodyProps {
     title: string
     updated?: string
     children: React.ReactNode
+    surface?: boolean
 }
 
-export default function PageBody({ title, updated, children }: PageBodyProps) {
+export default function PageBody({ title, updated, children, surface = true }: PageBodyProps) {
     const t = ui(useLocale())
 
     return (
-        <>
+        <div className={surface ? 'readingSurface' : undefined}>
             <h1 className="inline-block text-4xl md:text-5xl font-bold
                 bg-gradient-to-b from-[var(--color-tint-start)] to-[var(--color-tint-end)]
                 bg-clip-text text-transparent py-2">
@@ -33,6 +34,6 @@ export default function PageBody({ title, updated, children }: PageBodyProps) {
                     {t.rightsReserved(new Date().getFullYear())}
                 </p>
             </footer>
-        </>
+        </div>
     )
 }

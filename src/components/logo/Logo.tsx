@@ -1,5 +1,7 @@
 import React from 'react';
 import { data } from './Logo.data'
+import { useLocale } from '../../i18n/useLocale'
+import { localizedPath } from '../../i18n/locale'
 
 interface LogoProps {
     size: 'big' | 'small';
@@ -16,8 +18,10 @@ const Logo: React.FC<LogoProps> = ({ size }) => {
         small: 'w-6',
     };
 
+    const homeHref = localizedPath('/', useLocale());
+
     return (
-        <a href='#' className={`font-semibold flex mr-4 ${sizeClasses[size]}`}>
+        <a href={homeHref} className={`font-semibold flex mr-4 ${sizeClasses[size]}`}>
             <img
                 className={`${iconSizeClasses[size]} aspect-square object-cover mr-2 rounded-[22%]`}
                 src={data.icon}
