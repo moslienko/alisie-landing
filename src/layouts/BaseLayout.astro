@@ -1,5 +1,7 @@
 ---
 import "../index.css";
+import "../components/DreamBackground/dream-background.css";
+import DreamBackground from "../components/DreamBackground/DreamBackground";
 import { ClientRouter } from "astro:transitions";
 import { APP_STORE_URL } from "../config/appStats";
 
@@ -288,6 +290,10 @@ const siteSchema = {
       </div></noscript
     >
     <!-- /Yandex.Metrika counter -->
+
+    <!-- Site-wide animated background. Persisted across View Transitions so the
+         animation keeps running instead of restarting on every navigation. -->
+    <DreamBackground client:load transition:persist="dream-sky" />
 
     <slot />
   </body>
