@@ -2,6 +2,26 @@ import type { ChangelogEntry } from "./changelog.types";
 
 export const changelogEn: ChangelogEntry[] = [
   {
+    version: "2.1.1",
+    date: "2026-10-31",
+    notes: [
+      "Smart Categories: dreams are automatically added to a category based on the selected filters - making it easier to find dreams and explore your statistics. Smart categories are included in Trends: see which ones are gaining ground, fading away or staying stable.",
+      "Updated Filters: you can now filter dreams by mood, colors, emotions and words & phrases.",
+      "Improved Export: export is now several times faster, the interface has been updated, and data can now be exported in JSON format. Additionally, any objects can now be exported as an image.",
+      "Improvements: the app is now faster and more stable, and the interface is even more beautiful. iPad adaptation has been improved, with search now compactly built into the navigation bar. The audio creation screen and audio list have also been updated. A setting has been added to bring back the classic dream creation interface. Journal wallpapers have been improved.",
+    ],
+  },
+  {
+    version: "2.1.0",
+    date: "2026-10-31",
+    notes: [
+      "Smart Categories: dreams are automatically added to a category based on the selected filters - making it easier to find dreams and explore your statistics. Smart categories are included in Trends: see which ones are gaining ground, fading away or staying stable.",
+      "Updated Filters: you can now filter dreams by mood, colors, emotions and words & phrases.",
+      "Improved Export: export is now several times faster, the interface has been updated, and data can now be exported in JSON format. Additionally, any objects can now be exported as an image.",
+      "Improvements: the app is now faster and more stable, and the interface is even more beautiful. iPad adaptation has been improved, with search now compactly built into the navigation bar. The audio creation screen and audio list have also been updated. A setting has been added to bring back the classic dream creation interface. Journal wallpapers have been improved.",
+    ],
+  },
+  {
     version: "2.0.1",
     date: "2026-06-30",
     footer: "We're now Alisie! Same app, new name.",
