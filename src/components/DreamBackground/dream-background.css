@@ -1,6 +1,10 @@
 .dream-sky {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    height: 100lvh;
     /* Behind all page content; body's background is painted on the root canvas below it. */
     z-index: -1;
     overflow: hidden;
