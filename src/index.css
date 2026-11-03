@@ -811,3 +811,85 @@ body {
 .theme-light .readingSurface :is(.blogBody img, .blogFigure img) {
   mix-blend-mode: darken;
 }
+
+/* Organize card: compact tabs beside a cropped phone that swaps screenshots. */
+.organizeItem {
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  background: rgb(var(--fg-rgb) / 0.04);
+  transition:
+    background-color 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.organizeItem:hover {
+  background: rgb(var(--fg-rgb) / 0.07);
+}
+.organizeItem:focus-visible {
+  outline: 2px solid rgb(var(--tint-start-rgb) / 0.7);
+  outline-offset: 2px;
+}
+.organizeItemActive,
+.organizeItemActive:hover {
+  border-color: var(--surface-border-hover);
+  background: rgb(var(--tint-start-rgb) / 0.12);
+}
+.organizeText {
+  text-wrap: pretty;
+}
+.organizeIcon {
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.18);
+}
+/* Colours taken from the app icons. */
+.organizeIcon--tags { background: linear-gradient(135deg, #c450c0 0%, #ff5fa2 100%); }
+.organizeIcon--categories { background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%); }
+.organizeIcon--smart { background: linear-gradient(135deg, #ff4566 0%, #bf24d3 100%); }
+.organizeIcon--filter { background: linear-gradient(135deg, #9d5cff 0%, #ff3b7f 100%); }
+
+.organizePhone img {
+  transition: opacity 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .organizeItem,
+  .organizePhone img {
+    transition: none;
+  }
+}
+
+/* On phones a stack of mini cards becomes one card with divided rows:
+   same text, far less scrolling. */
+@media (max-width: 767px) {
+  .miniStack {
+    gap: 0;
+    border: 1px solid var(--surface-border);
+    border-radius: var(--surface-radius);
+    background:
+      radial-gradient(120% 120% at 0% 0%, var(--surface-sheen) 0%, transparent 55%),
+      var(--surface);
+    box-shadow: var(--surface-shadow);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    backdrop-filter: blur(14px) saturate(140%);
+    overflow: hidden;
+  }
+  .miniStack > .featureCard {
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    padding-block: 16px;
+  }
+  .miniStack > .featureCard:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .miniStack > .featureCard + .featureCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 24px;
+    right: 24px;
+    height: 1px;
+    background: var(--surface-border);
+  }
+}

@@ -33,7 +33,7 @@ export const getData = (locale: Locale): FeaturesData => {
                 items: [
                     {
                         variant: 'split',
-                        name: 'Remember Every Dream',
+                        name: 'Remember every dream',
                         subtitle: 'Easy on the eyes, even after midnight.',
                         splitImage: 'dream.png',
                     },
@@ -48,21 +48,21 @@ export const getData = (locale: Locale): FeaturesData => {
                         stack: [
                             {
                                 variant: 'mini',
-                                name: 'iCloud Sync',
+                                name: 'iCloud sync',
                                 subtitle: 'Full data sync across devices.',
                                 icon: 'Cloud',
                                 gradient: ['#38BDF8', '#2563EB'],
                             },
                             {
                                 variant: 'mini',
-                                name: 'Backup & Restore',
-                                subtitle: 'Create backups and quickly restore, export, or import your data.',
+                                name: 'Backup & restore',
+                                subtitle: 'Create backups and restore them in a tap.',
                                 icon: 'ArrowUpDown',
                                 gradient: ['#A78BFA', '#6D28D9'],
                             },
                             {
                                 variant: 'mini',
-                                name: 'Dream Reminder',
+                                name: 'Dream reminder',
                                 subtitle: 'Reminders to log dreams in the morning.',
                                 icon: 'Bell',
                                 gradient: ['#FBBF24', '#F97316'],
@@ -75,7 +75,7 @@ export const getData = (locale: Locale): FeaturesData => {
                 items: [
                     {
                         variant: 'large',
-                        name: 'Pro Analysis',
+                        name: 'Pro analysis',
                         subtitle: 'Analyze dreams using charts and graphs. Also statistics available for characters, creatures, locations, artefacts, tags, targets, categories and nightmares.',
                         image: 'stats.png',
                         images: [
@@ -89,10 +89,16 @@ export const getData = (locale: Locale): FeaturesData => {
             {
                 items: [
                     {
-                        stack: [
+                        variant: 'default',
+                        name: 'Export your data',
+                        subtitle: 'Export the whole journal or only the sections you need - in 7 formats, from PDF to JSON.',
+                        image: 'export.png',
+                        crop: 'bottom',
+                    },
+                    { stack: [
                             {
                                 variant: 'mini',
-                                name: 'Dream Templates',
+                                name: 'Dream templates',
                                 subtitle: 'Save a template and log new dreams in seconds with prefilled details.',
                                 icon: 'Copy',
                                 gradient: ['#22D3EE', '#0E7490'],
@@ -106,16 +112,26 @@ export const getData = (locale: Locale): FeaturesData => {
                             },
                             {
                                 variant: 'mini',
-                                name: 'Widget Dream Signs',
+                                name: 'Dream signs widget',
                                 subtitle: 'Show random dream signs right on your home or lock screen.',
                                 icon: 'AppWindow',
                                 gradient: ['#34D399', '#059669'],
                             },
-                        ],
+                    ] },
+                ],
+            },
+            {
+                items: [
+                    {
+                        variant: 'default',
+                        name: 'Audio recording',
+                        subtitle: 'Say your dream out loud before it fades.',
+                        image: 'audio_recording.png',
+                        crop: 'bottom',
                     },
                     {
                         variant: 'default',
-                        name: 'Reality Check',
+                        name: 'Reality check',
                         subtitle: 'Form habits that support lucid dreaming',
                         image: 'reality_checker.png',
                         crop: 'top',
@@ -166,7 +182,7 @@ export const getData = (locale: Locale): FeaturesData => {
                                 {
                                     variant: 'mini',
                                     name: 'Резервное копирование',
-                                    subtitle: 'Создавайте резервные копии и быстро восстанавливайте, экспортируйте или импортируйте свои данные.',
+                                    subtitle: 'Создавайте резервные копии и восстанавливайте их в одно касание.',
                                     icon: 'ArrowUpDown',
                                     gradient: ['#A78BFA', '#6D28D9'],
                                 },
@@ -199,7 +215,13 @@ export const getData = (locale: Locale): FeaturesData => {
                 {
                     items: [
                         {
-                            stack: [
+                            variant: 'default',
+                            name: 'Экспорт данных',
+                            subtitle: 'Выгрузите весь дневник или только нужные разделы - в 7 форматах, от PDF до JSON.',
+                            image: 'export.png',
+                            crop: 'bottom',
+                        },
+                        { stack: [
                                 {
                                     variant: 'mini',
                                     name: 'Шаблоны снов',
@@ -221,7 +243,17 @@ export const getData = (locale: Locale): FeaturesData => {
                                     icon: 'AppWindow',
                                     gradient: ['#34D399', '#059669'],
                                 },
-                            ],
+                        ] },
+                    ],
+                },
+                {
+                    items: [
+                        {
+                            variant: 'default',
+                            name: 'Запись аудио',
+                            subtitle: 'Расскажите сон вслух, пока он не забылся.',
+                            image: 'audio_recording.png',
+                            crop: 'bottom',
                         },
                         {
                             variant: 'default',

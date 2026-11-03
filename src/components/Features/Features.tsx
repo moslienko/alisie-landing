@@ -8,6 +8,7 @@ import { useTheme } from '../../hooks/useTheme'
 import { useLocale } from '../../i18n/useLocale'
 import { screenshotSrc } from '../../utils/screenshots'
 import type { Theme } from '../../hooks/useTheme'
+import Organize from '../Organize/Organize'
 
 const ICONS: Record<string, LucideIcon> = {
     Cloud,
@@ -129,9 +130,9 @@ function LargeCard({ item, theme }: { item: FeatureItem; theme: Theme }) {
         <div className='featureCard relative overflow-hidden'>
             <div className='featureTint absolute inset-0 tintBackground opacity-0 blur-2xl pointer-events-none'></div>
             <div className='featureContent relative z-10 grid grid-cols-1 md:grid-cols-2 items-center'>
-                <div className='p-10 md:p-12 lg:p-14 text-center md:text-left'>
-                    <h3 className='font-sora font-semibold text-fg text-[44px] leading-[1.05]'>{item.name}</h3>
-                    <p className='font-sora font-semibold text-[rgb(var(--fg-rgb)/0.66)] text-[24px] leading-snug mt-4'>{item.subtitle}</p>
+                <div className='p-8 text-center md:text-left'>
+                    <h3 className='font-sora font-semibold text-fg text-[24px] leading-tight'>{item.name}</h3>
+                    <p className='font-sora font-semibold text-[rgb(var(--fg-rgb)/0.66)] text-[16px] leading-snug mt-2'>{item.subtitle}</p>
                 </div>
                 <div className='relative h-full flex items-end justify-center md:justify-end gap-3 md:translate-y-4 overflow-hidden'>
                     {visuals.map((src, i) => (
@@ -193,7 +194,7 @@ function SplitCard({ item }: { item: FeatureItem }) {
 function Column({ entry, theme }: { entry: ColumnEntry; theme: Theme }) {
     if ('stack' in entry) {
         return (
-            <div className='flex flex-col gap-5 h-full'>
+            <div className='miniStack flex flex-col gap-5 h-full'>
                 {entry.stack.map((mini, i) => (
                     <MiniCard key={i} item={mini} index={i} />
                 ))}
@@ -246,6 +247,8 @@ export default function Features() {
                     );
                 })}
             </div>
+
+            <Organize />
 
             <div className='andMore relative mt-16 flex items-center justify-center gap-6'>
                 <span className='andMoreLine hidden sm:block' />
