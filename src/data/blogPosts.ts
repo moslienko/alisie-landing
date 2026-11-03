@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "breathing-for-sleep",
+    "title": "How to Calm Down Before Sleep and Keep Your Dreams",
+    "description": "How to quiet your thoughts at bedtime with slow breathing, then hold on to what you dreamed in the morning. Five techniques and a reason to start a dream journal.",
+    "pubDate": "2026-11-03",
+    "lang": "en",
+    "cover": "breathing-for-sleep"
+  },
+  {
+    "slug": "dyhanie-dlya-sna",
+    "title": "Как успокоиться перед сном и сохранить свои сны",
+    "description": "Как успокоить мысли перед сном с помощью дыхания, а утром сохранить то, что приснилось. Пять техник и повод наконец начать собственный дневник сновидений.",
+    "pubDate": "2026-11-03",
+    "lang": "ru",
+    "cover": "breathing-for-sleep"
+  },
+  {
     "slug": "deja-vu-and-dreams",
     "title": "Is Déjà Vu Connected to Your Dreams?",
     "description": "Where the waking feeling of “I dreamed this” comes from, why the brain mistakes the familiar for the lived, and how to check whether that dream ever happened.",
