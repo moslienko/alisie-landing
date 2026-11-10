@@ -12,6 +12,7 @@ export default defineConfig({
   // Emit /privacy/index.html etc. so deep links and reloads work on GitHub Pages.
   build: {
     format: 'directory',
+    inlineStylesheets: 'always',
   },
   integrations: [react()],
   vite: {

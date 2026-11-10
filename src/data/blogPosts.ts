@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "meditation-and-lucid-dreams",
+    "title": "Why Meditators Have More Lucid Dreams",
+    "description": "Daily meditators report more lucid dreams than others. But an eight-week course won't buy it, and whether it works for you only your own tracking can settle.",
+    "pubDate": "2026-11-10",
+    "lang": "en",
+    "cover": "meditation-and-lucid-dreams"
+  },
+  {
+    "slug": "meditaciya-i-osoznannye-sny",
+    "title": "Почему медитирующим чаще снятся осознанные сны",
+    "description": "Кто медитирует каждый день, видит осознанные сны чаще остальных. Но 8-недельный курс этого не даёт, а работает ли это у вас - покажет только ваша практика.",
+    "pubDate": "2026-11-10",
+    "lang": "ru",
+    "cover": "meditation-and-lucid-dreams"
+  },
+  {
     "slug": "breathing-for-sleep",
     "title": "How to Calm Down Before Sleep and Keep Your Dreams",
     "description": "How to quiet your thoughts at bedtime with slow breathing, then hold on to what you dreamed in the morning. Five techniques and a reason to start a dream journal.",

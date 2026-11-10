@@ -3,9 +3,9 @@ import { getData } from './Reviews.data'
 import { useLocale } from '../../i18n/useLocale'
 
 const Stars = ({ count }: { count: number }) => (
-    <div className='flex gap-0.5' aria-label={`${count} / 5`}>
+    <div className='flex gap-0.5' role='img' aria-label={`${count} / 5`}>
         {Array.from({ length: count }).map((_, i) => (
-            <svg key={i} viewBox='0 0 24 24' fill='currentColor' className='w-4 h-4'>
+            <svg key={i} viewBox='0 0 24 24' fill='currentColor' className='w-4 h-4' aria-hidden='true'>
                 <path d='M12 2l2.9 6.2 6.6.9-4.8 4.7 1.2 6.7L12 17.3 6.1 20.5l1.2-6.7L2.5 9.1l6.6-.9L12 2z' />
             </svg>
         ))}
@@ -20,6 +20,7 @@ export default function Reviews() {
         new Date(iso).toLocaleDateString(locale === 'ru' ? 'ru-RU' : 'en-US', {
             year: 'numeric',
             month: 'long',
+            timeZone: 'UTC',
         })
 
     return (
