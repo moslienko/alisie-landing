@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HomePage from "../app/HomePage";
+import HomePage from "../app/HomePage.astro";
 import { ui } from "../i18n/ui";
 import { buildFaqSchema } from "../utils/faqSchema";
 
@@ -40,7 +40,7 @@ const faqSchema = buildFaqSchema(locale);
       } catch (e) {}
     })();
   </script>
-  <HomePage locale={locale} client:load />
+  <HomePage locale={locale} />
   <script
     type="application/ld+json"
     is:inline

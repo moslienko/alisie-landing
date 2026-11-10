@@ -1,0 +1,42 @@
+---
+import type { Locale } from '../i18n/locale'
+import ThemeToggle from '../components/ThemeToggle/ThemeToggle'
+import NavbarIsland from './home/NavbarIsland'
+import FeaturesIsland from './home/FeaturesIsland'
+import FAQIsland from './home/FAQIsland'
+import FinalCTAIsland from './home/FinalCTAIsland'
+import {
+  HeaderSection,
+  HowItWorksSection,
+  PricingSection,
+  ProMaxSection,
+  PrivacySection,
+  ReviewsSection,
+  FooterSection,
+} from './home/static'
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+---
+
+<div class="dream-home">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <NavbarIsland locale={locale} client:load />
+    <main>
+      <HeaderSection locale={locale} />
+      <HowItWorksSection locale={locale} />
+      <FeaturesIsland locale={locale} client:idle />
+      <PricingSection locale={locale} />
+      <ProMaxSection locale={locale} />
+      <PrivacySection locale={locale} />
+      <ReviewsSection locale={locale} />
+      <FAQIsland locale={locale} client:visible />
+      <FinalCTAIsland locale={locale} client:idle />
+    </main>
+    <FooterSection locale={locale} />
+    <ThemeToggle locale={locale} client:idle />
+  </div>
+</div>

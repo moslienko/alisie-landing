@@ -15,6 +15,7 @@ export default function WhatsNewContent({ locale }: { locale: Locale }) {
             year: 'numeric',
             month: 'long',
             day: 'numeric',
+            timeZone: 'UTC',
         })
 
     const groups = groupChangelog(getChangelog(locale))

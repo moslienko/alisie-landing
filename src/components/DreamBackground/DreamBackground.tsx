@@ -127,10 +127,27 @@ export default function DreamBackground() {
             }
             animation = requestAnimationFrame(animate)
         }
+
+        const sky = canvas.parentElement
+        let started = false
+        let startTimer = 0
+        const startEvents = ['pointerdown', 'pointermove', 'keydown', 'wheel', 'touchstart', 'scroll'] as const
+        const start = () => {
+            if (started) return
+            started = true
+            clearTimeout(startTimer)
+            window.removeEventListener('load', scheduleStart)
+            startEvents.forEach((name) => window.removeEventListener(name, start))
+            sky?.classList.add('is-moving')
+            updateMotion()
+        }
+        const scheduleStart = () => {
+            startTimer = window.setTimeout(start, 6000)
+        }
         const updateMotion = () => {
             cancelAnimationFrame(animation)
             draw()
-            if (!reducedMotion.matches && !document.hidden && !contextLost) {
+            if (started && !reducedMotion.matches && !document.hidden && !contextLost) {
                 lastFrame = performance.now()
                 animation = requestAnimationFrame(animate)
             }
@@ -148,8 +165,14 @@ export default function DreamBackground() {
         canvas.addEventListener('webglcontextlost', loseContext)
         resize()
         updateMotion()
+        startEvents.forEach((name) => window.addEventListener(name, start, { passive: true, once: true }))
+        if (document.readyState === 'complete') scheduleStart()
+        else window.addEventListener('load', scheduleStart, { once: true })
         return () => {
             cancelAnimationFrame(animation)
+            clearTimeout(startTimer)
+            window.removeEventListener('load', scheduleStart)
+            startEvents.forEach((name) => window.removeEventListener(name, start))
             observer.disconnect()
             reducedMotion.removeEventListener('change', updateMotion)
             document.removeEventListener('visibilitychange', updateMotion)
