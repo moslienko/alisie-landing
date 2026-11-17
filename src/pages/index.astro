@@ -14,6 +14,7 @@ const faqSchema = buildFaqSchema(locale);
   title={t.metaTitle}
   description={t.metaDescription}
   path="/"
+  preloadDisplayFont
 >
   <!-- Root language redirect: send Russian-preferring visitors to /ru,
        unless they have an explicit saved preference. Mirrors the old SPA

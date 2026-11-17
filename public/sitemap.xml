@@ -38,6 +38,36 @@
   </url>
   <!-- BLOG:START (auto-generated) -->
   <url>
+    <loc>https://alisie.app/blog/sleep-and-age/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/sleep-and-age.png</image:loc>
+      <image:title>How Dreams Change as You Age</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/sleep-and-age/lab-versus-survey-dark.png</image:loc>
+      <image:title>Bar chart: after REM awakenings 60% of participants aged 18-29 reported a dream against 48% of those aged 60-79, a difference that is not statistically significant.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/sleep-and-age/what-shifts-per-decade-dark.png</image:loc>
+      <image:title>Comparison of age-related sleep changes per decade: time awake mid-night plus 10 minutes, total sleep minus 8 to 10 minutes, deep sleep minus 1.7 percent, REM share minus 0.6 percent.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/kak-menyayutsya-sny-s-vozrastom/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/sleep-and-age.png</image:loc>
+      <image:title>Как меняются сны с возрастом</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/kak-menyayutsya-sny-s-vozrastom/laboratoriya-protiv-oprosa-dark.png</image:loc>
+      <image:title>Столбчатая диаграмма: после пробуждений из REM-сна сон вспомнили 60% участников 18-29 лет и 48% участников 60-79 лет, разница статистически не значима.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/kak-menyayutsya-sny-s-vozrastom/chto-menyaetsya-za-desyatiletie-dark.png</image:loc>
+      <image:title>Сравнение скорости возрастных изменений сна за десятилетие: бодрствование среди ночи плюс 10 минут, общий сон минус 8-10 минут, глубокий сон минус 1,7 процента, доля REM-сна минус 0,6 процента.</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://alisie.app/blog/meditation-and-lucid-dreams/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/_covers/meditation-and-lucid-dreams.png</image:loc>

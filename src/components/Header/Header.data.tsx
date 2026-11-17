@@ -14,6 +14,7 @@ export const getData = (locale: Locale) => {
         trust: stats.trustPoints,
         icon: '/app_icon_192.png',
         screenshot: 'journal.png',
+        screenshotSmall: 'journal-640.webp',
         screenshotAlt: 'Alisie dream journal — list of recorded dreams on iPhone',
     }
     if (locale === 'ru') {
