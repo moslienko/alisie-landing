@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "sleep-and-age",
+    "title": "How Dreams Change as You Age",
+    "description": "Dreams seem to thin out with age. But wake older adults in a lab and they report dreams about as often as students do. What changes is the morning, not the dreaming.",
+    "pubDate": "2026-11-17",
+    "lang": "en",
+    "cover": "sleep-and-age"
+  },
+  {
+    "slug": "kak-menyayutsya-sny-s-vozrastom",
+    "title": "Как меняются сны с возрастом",
+    "description": "С годами снов будто становится меньше. Но в лаборатории пожилые рассказывают сны почти так же часто, как молодые: меняется не сновидение, а доступ к нему наутро.",
+    "pubDate": "2026-11-17",
+    "lang": "ru",
+    "cover": "sleep-and-age"
+  },
+  {
     "slug": "meditation-and-lucid-dreams",
     "title": "Why Meditators Have More Lucid Dreams",
     "description": "Daily meditators report more lucid dreams than others. But an eight-week course won't buy it, and whether it works for you only your own tracking can settle.",
