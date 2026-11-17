@@ -69,6 +69,8 @@ export default function Header() {
                     <img
                         className='heroShotDark w-80 object-cover'
                         src={screenshotSrc(data.screenshot, 'dark')}
+                        srcSet={`${screenshotSrc(data.screenshotSmall, 'dark')} 640w, ${screenshotSrc(data.screenshot, 'dark')} 1160w`}
+                        sizes='320px'
                         alt={data.screenshotAlt}
                         width={1160}
                         height={2362}
@@ -78,6 +80,8 @@ export default function Header() {
                     <img
                         className='heroShotLight w-80 object-cover'
                         src={screenshotSrc(data.screenshot, 'light')}
+                        srcSet={`${screenshotSrc(data.screenshotSmall, 'light')} 640w, ${screenshotSrc(data.screenshot, 'light')} 1160w`}
+                        sizes='320px'
                         alt=''
                         aria-hidden='true'
                         width={1160}

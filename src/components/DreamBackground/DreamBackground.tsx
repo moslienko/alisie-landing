@@ -108,7 +108,7 @@ export default function DreamBackground() {
             if (contextLost) return
             gl.uniform1f(time, phase)
             gl.drawArrays(gl.TRIANGLES, 0, 6)
-            canvas.style.opacity = '1'
+            if (started) canvas.style.opacity = '1'
         }
         const resize = () => {
             const rect = canvas.getBoundingClientRect()

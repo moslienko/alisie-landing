@@ -30,6 +30,7 @@ export interface Props {
   ogImageWidth?: number;
   ogImageHeight?: number;
   ogImageAlt?: string;
+  preloadDisplayFont?: boolean;
 }
 
 const {
@@ -42,6 +43,7 @@ const {
   ogImageWidth = 1200,
   ogImageHeight = 630,
   ogImageAlt = "Alisie — a private dream journal",
+  preloadDisplayFont = false,
 } = Astro.props;
 
 const SITE = "https://alisie.app";
@@ -170,6 +172,17 @@ const siteSchema = {
       type="font/woff2"
       crossorigin
     />
+    {
+      preloadDisplayFont && (
+        <link
+          rel="preload"
+          href="/fonts/playfair-700-italic.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin
+        />
+      )
+    }
     <title>{title}</title>
     <!-- Set the theme before first paint to avoid a flash of the wrong theme.
          Re-runs after each View Transition swap so navigation never flashes. -->
@@ -293,7 +306,7 @@ const siteSchema = {
 
     <!-- Site-wide animated background. Persisted across View Transitions so the
          animation keeps running instead of restarting on every navigation. -->
-    <DreamBackground client:load transition:persist="dream-sky" />
+    <DreamBackground client:idle transition:persist="dream-sky" />
 
     <slot />
   </body>
