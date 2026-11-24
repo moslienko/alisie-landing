@@ -38,6 +38,28 @@
   </url>
   <!-- BLOG:START (auto-generated) -->
   <url>
+    <loc>https://alisie.app/blog/video-games-lucid-dreams/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/video-games-lucid-dreams.png</image:loc>
+      <image:title>Can Video Games Help You Have Lucid Dreams?</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/video-games-lucid-dreams/game-to-dream-journal-dark.png</image:loc>
+      <image:title>A turn you know from a game comes back in a dream, with a different place beyond it. The next morning, write down what changed.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alisie.app/ru/blog/videoigry-i-osoznannye-sny/</loc>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/_covers/video-games-lucid-dreams.png</image:loc>
+      <image:title>Влияют ли видеоигры на осознанность во сне</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://alisie.app/blog-img/videoigry-i-osoznannye-sny/igra-son-dnevnik-dark.png</image:loc>
+      <image:title>Знакомый поворот из игры снится снова, но за ним оказывается другое место. Утром можно записать, что изменилось.</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://alisie.app/blog/sleep-and-age/</loc>
     <image:image>
       <image:loc>https://alisie.app/blog-img/_covers/sleep-and-age.png</image:loc>

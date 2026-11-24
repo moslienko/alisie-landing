@@ -10,6 +10,22 @@ export interface BlogPostMeta {
 
 export const blogPosts: BlogPostMeta[] = [
   {
+    "slug": "video-games-lucid-dreams",
+    "title": "Can Video Games Help You Have Lucid Dreams?",
+    "description": "Gamers sometimes report more lucid dreams, but the findings are mixed. See what VR research has found and what to look for in your own dream journal.",
+    "pubDate": "2026-11-24",
+    "lang": "en",
+    "cover": "video-games-lucid-dreams"
+  },
+  {
+    "slug": "videoigry-i-osoznannye-sny",
+    "title": "Влияют ли видеоигры на осознанность во сне",
+    "description": "Игровые впечатления могут вернуться во сне. Что известно об осознанных снах у геймеров, как изучают виртуальную реальность и что записывать по утрам.",
+    "pubDate": "2026-11-24",
+    "lang": "ru",
+    "cover": "video-games-lucid-dreams"
+  },
+  {
     "slug": "sleep-and-age",
     "title": "How Dreams Change as You Age",
     "description": "Dreams seem to thin out with age. But wake older adults in a lab and they report dreams about as often as students do. What changes is the morning, not the dreaming.",
